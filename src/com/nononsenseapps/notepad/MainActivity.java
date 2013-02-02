@@ -63,6 +63,7 @@ import android.widget.Toast;
 
 import com.nononsenseapps.helpers.Log;
 import com.nononsenseapps.helpers.NotificationHelper;
+import com.nononsenseapps.helpers.SyncHelper;
 import com.nononsenseapps.helpers.UpdateNotifier;
 import com.nononsenseapps.helpers.dualpane.DualLayoutActivity;
 import com.nononsenseapps.notepad.NotesListFragment.Callbacks;
@@ -141,19 +142,6 @@ public class MainActivity extends DualLayoutActivity implements
 			leftOrTabletCreate(savedInstanceState);
 		} else {
 			rightCreate();
-		}
-
-		// Synchronize on app open
-		final SharedPreferences prefs = PreferenceManager
-				.getDefaultSharedPreferences(this);
-		String accountName = prefs.getString(SyncPrefs.KEY_ACCOUNT, "");
-		boolean syncEnabled = prefs
-				.getBoolean(SyncPrefs.KEY_SYNC_ENABLE, false);
-		boolean syncOnStart = prefs.getBoolean(SyncPrefs.KEY_SYNC_ON_START,
-				true);
-		if (accountName != null && !accountName.equals("") && syncEnabled
-				&& syncOnStart) {
-			requestSync(accountName);
 		}
 		
 		// Schedule notifications if needed
@@ -1025,6 +1013,8 @@ public class MainActivity extends DualLayoutActivity implements
 			break;
 		case R.id.menu_sync:
 
+            SyncHelper.requestSyncIf(this, SyncHelper.MANUAL);
+
 			String accountName = PreferenceManager.getDefaultSharedPreferences(
 					this).getString(SyncPrefs.KEY_ACCOUNT, "");
 			boolean syncEnabled = PreferenceManager
@@ -1080,17 +1070,8 @@ public class MainActivity extends DualLayoutActivity implements
 
 									// Write to pref
 									editor.putBoolean(
-											SyncPrefs.KEY_SYNC_ENABLE, true)
-											.putBoolean(
-													SyncPrefs.KEY_BACKGROUND_SYNC,
-													true);
-
-									// Enable periodic sync
-									long pollFrequency = 3600; // seconds
-									ContentResolver.addPeriodicSync(account,
-											NotePad.AUTHORITY, new Bundle(),
-											pollFrequency);
-
+											SyncPrefs.KEY_SYNC_ENABLE, true);
+									
 									// Commit prefs
 									editor.commit();
 
