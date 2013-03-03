@@ -134,7 +134,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.nononsenseapps.note" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.nononsenseapps.donate.note" />
             </intent-filter>
             <intent-filter android:label="@string/resolve_edit" >
                 <action android:name="android.intent.action.VIEW" />
@@ -142,7 +142,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.nononsenseapps.list" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.nononsenseapps.donate.list" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -236,7 +236,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.nononsenseapps.notification" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.nononsenseapps.donate.notification" />
             </intent-filter>
         </receiver>
     </application>

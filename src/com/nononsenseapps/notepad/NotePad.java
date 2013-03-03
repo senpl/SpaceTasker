@@ -125,7 +125,7 @@ public final class NotePad {
 		 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 		 * note.
 		 */
-		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.note";
+		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.donate.note";
 
 		public static final String CONTENT_TYPE = CONTENT_ITEM_TYPE;
 
@@ -316,13 +316,13 @@ public final class NotePad {
 		 * The MIME type of {@link #CONTENT_URI} providing a directory.
 		 */
 		// public static final String CONTENT_TYPE =
-		// "vnd.android.cursor.dir/vnd.nononsenseapps.list";
+		// "vnd.android.cursor.dir/vnd.nononsenseapps.donate.list";
 
 		/**
 		 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 		 * item.
 		 */
-		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.list";
+		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.donate.list";
 
 		public static final String CONTENT_TYPE = CONTENT_ITEM_TYPE;
 
@@ -441,13 +441,13 @@ public final class NotePad {
 		/**
 		 * The MIME type of {@link #CONTENT_URI} providing a directory of notes.
 		 */
-		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps.gtask";
+		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps.donate.gtask";
 
 		/**
 		 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 		 * note.
 		 */
-		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.gtask";
+		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.donate.gtask";
 
 		/*
 		 * Column definitions
@@ -559,13 +559,13 @@ public final class NotePad {
 		/**
 		 * The MIME type of {@link #CONTENT_URI} providing a directory of notes.
 		 */
-		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps.gtasklist";
+		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps.donate.gtasklist";
 
 		/**
 		 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 		 * note.
 		 */
-		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.gtasklist";
+		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.donate.gtasklist";
 
 		/*
 		 * Column definitions
@@ -696,14 +696,14 @@ public final class NotePad {
 		/**
 		 * The MIME type of {@link #CONTENT_URI} providing a directory of notes.
 		 */
-		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps."
+		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps.donate."
 				+ TABLE_NAME;
 
 		/**
 		 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 		 * note.
 		 */
-		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps."
+		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.donate."
 				+ TABLE_NAME;
 	}
 }
