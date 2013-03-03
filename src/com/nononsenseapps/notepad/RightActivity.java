@@ -11,6 +11,7 @@ import com.nononsenseapps.helpers.dualpane.DualLayoutActivity;
 import com.nononsenseapps.helpers.dualpane.DualLayoutActivity.CONTENTVIEW;
 import com.nononsenseapps.notepad.prefs.MainPrefs;
 import com.nononsenseapps.notepad.prefs.SyncPrefs;
+import com.nononsenseapps.notepad_donate.R;
 
 /**
  * Convenience class where external edits are opened.
