@@ -12,7 +12,7 @@ import android.provider.BaseColumns;
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
 import com.nononsenseapps.notepad.NotePad;
-import com.nononsenseapps.notepad.R;
+import com.nononsenseapps.notepad_donate.R;
 import com.nononsenseapps.util.TimeHelper;
 
 public class TasksExtension extends DashClockExtension {
