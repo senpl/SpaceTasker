@@ -23,21 +23,22 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.dropbox.sync.android.DbxAccount;
-import com.dropbox.sync.android.DbxAccountManager;
-import com.dropbox.sync.android.DbxException;
-import com.dropbox.sync.android.DbxFile;
-import com.dropbox.sync.android.DbxFileInfo;
-import com.dropbox.sync.android.DbxFileStatus;
-import com.dropbox.sync.android.DbxFileSystem;
-import com.dropbox.sync.android.DbxPath;
+import com.dropbox.client2.DropboxAPI;
+import com.dropbox.client2.android.AndroidAuthSession;
+import com.dropbox.client2.exception.DropboxException;
+import com.dropbox.client2.exception.DropboxServerException;
 import com.nononsenseapps.build.Config;
 import com.nononsenseapps.notepad.prefs.SyncPrefs;
 
 import org.cowboyprogrammer.org.OrgFile;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringReader;
 import java.util.HashSet;
 import java.util.List;
@@ -52,62 +53,17 @@ public class DropboxSynchronizer extends Synchronizer implements
     public static final String PREF_ENABLED = SyncPrefs.KEY_DROPBOX_ENABLE;
     public final static String SERVICENAME = "DROPBOXORG";
     protected final boolean enabled;
-    protected DbxPath DIR;
-    private DbxAccountManager accountManager = null;
-    private DbxAccount account = null;
-    private DbxFileSystem fs = null;
+    private final DropboxAPI<AndroidAuthSession> dbApi;
+    protected File DIR;
 
     public DropboxSynchronizer(final Context context) {
         super(context);
         final SharedPreferences prefs = PreferenceManager
                 .getDefaultSharedPreferences(context);
-        enabled = prefs.getBoolean(PREF_ENABLED, false);
-        DIR = new DbxPath(prefs.getString(PREF_DIR, DEFAULT_DIR));
-
-    }
-
-    /**
-     * Link a DropboxAccount. Must be called from a GUI. Activity
-     * receives result in OnActivityResult with the specific code. Returns
-     * RESULT_OK if all is good.
-     *
-     * @param activity
-     * @param requestCode
-     */
-    public static void linkAccount(final Activity activity,
-                                   final int requestCode) {
-        final String APP_KEY = Config.getKeyDropboxSyncPublic(activity);
-        final String APP_SECRET = Config.getKeyDropboxSyncSecret(activity);
-        DbxAccountManager.getInstance(activity.getApplicationContext(),
-                APP_KEY, APP_SECRET).startLink(activity, requestCode);
-    }
-
-    /**
-     * Link a DropboxAccount. Must be called from a GUI. Activity
-     * receives result in OnActivityResult with the specific code. Returns
-     * RESULT_OK if all is good.
-     *
-     * @param fragment
-     * @param requestCode
-     */
-    public static void linkAccount(final Fragment fragment,
-                                   final int requestCode) {
-        final String APP_KEY = Config.getKeyDropboxSyncPublic(fragment.getActivity());
-        final String APP_SECRET = Config.getKeyDropboxSyncSecret(fragment.getActivity());
-        DbxAccountManager.getInstance(fragment.getActivity().getApplicationContext(),
-                APP_KEY, APP_SECRET).startLink(fragment, requestCode);
-    }
-
-    /**
-     * Unlink a Dropbox Connection.
-     *
-     * @param activity
-     */
-    public static void unlink(final Activity activity) {
-        final String APP_KEY = Config.getKeyDropboxSyncPublic(activity);
-        final String APP_SECRET = Config.getKeyDropboxSyncSecret(activity);
-        DbxAccountManager.getInstance(activity.getApplicationContext(),
-                APP_KEY, APP_SECRET).unlink();
+        dbApi = DropboxSyncHelper.getDBApi(context);
+        enabled = prefs.getBoolean(PREF_ENABLED, false) && dbApi.getSession()
+                .isLinked();
+        DIR = new File(prefs.getString(PREF_DIR, DEFAULT_DIR));
     }
 
     /**
@@ -124,7 +80,11 @@ public class DropboxSynchronizer extends Synchronizer implements
      */
     @Override
     public String getAccountName() {
-        return accountManager.getLinkedAccount().getUserId();
+        try {
+            return Long.toString(dbApi.accountInfo().uid);
+        } catch (DropboxException e) {
+            return null;
+        }
     }
 
     /**
@@ -137,36 +97,19 @@ public class DropboxSynchronizer extends Synchronizer implements
         if (!enabled) return false;
 
         // Need to ask dropbox if we are linked.
-        if (accountManager == null) {
-            final String APP_KEY = Config.getKeyDropboxSyncPublic(context);
-            final String APP_SECRET = Config.getKeyDropboxSyncSecret(context);
-
-            if (APP_KEY.contains(" ") || APP_SECRET.contains(" ")) {
-                return false;
-            }
-
-            accountManager = DbxAccountManager.getInstance(context
-                    .getApplicationContext(), APP_KEY, APP_SECRET);
-
-            if (accountManager.hasLinkedAccount()) {
-                account = accountManager.getLinkedAccount();
+        if (dbApi.getSession().isLinked()) {
                 try {
-                    fs = DbxFileSystem.forAccount(account);
-
-                    fs.syncNowAndWait();
-
-                    if (!fs.isFolder(DIR)) {
-                        fs.createFolder(DIR);
+                    if (!dbApi.metadata(DIR.getPath(), 1, null, false,
+                            null).isDir) {
+                        dbApi.createFolder(DIR.getPath());
                     }
-                } catch (DbxException.Unauthorized unauthorized) {
-                    return false;
-                } catch (DbxException e) {
+                } catch (DropboxException e) {
                     return false;
                 }
-            }
+            return true;
+        } else {
+            return false;
         }
-
-        return accountManager.hasLinkedAccount();
     }
 
     /**
@@ -194,11 +137,22 @@ public class DropboxSynchronizer extends Synchronizer implements
                 } else {
                     filename = desiredName + i + ".org";
                 }
-                if (!fs.exists(new DbxPath(DIR, filename))) {
+
+                boolean exists = true;
+                try {
+                    DropboxAPI.Entry entry =
+                            dbApi.metadata(new File(DIR, filename).getPath(), 1,
+                                    null, false, null);
+                    exists = entry.isDeleted;
+                } catch (DropboxServerException e) {
+                    exists = false;
+                }
+
+                if (!exists) {
                     return new OrgFile(filename);
                 }
             }
-        } catch (DbxPath.InvalidPathException e) {
+        } catch (DropboxException e) {
             throw new IOException(e);
         }
         throw new IllegalArgumentException("Filename not accessible");
@@ -211,18 +165,16 @@ public class DropboxSynchronizer extends Synchronizer implements
      */
     @Override
     public void putRemoteFile(final OrgFile orgFile) throws IOException {
-        DbxPath path = new DbxPath(DIR, orgFile.getFilename());
         try {
-            DbxFile file;
-            try {
-                file = fs.open(path);
-            } catch (DbxException.NotFound e) {
-                file = fs.create(path);
-            }
-            file.writeString(orgFile.treeToString());
-            file.close();
-        } catch (DbxException e) {
-            throw new IOException(e);
+            final File file = new File(DIR, orgFile.getFilename());
+            final byte[] bytes = orgFile.treeToString().getBytes("UTF-8");
+            final ByteArrayInputStream inputStream = new ByteArrayInputStream
+                    (bytes);
+            dbApi.putFileOverwrite(file.getPath(), inputStream, bytes.length,
+                    null);
+            inputStream.close();
+        } catch (DropboxException e) {
+            throw new IOException(e.getLocalizedMessage());
         }
     }
 
@@ -237,10 +189,10 @@ public class DropboxSynchronizer extends Synchronizer implements
             // Nothing to do
             return;
         }
-        DbxPath path = new DbxPath(DIR, orgFile.getFilename());
+        String path = new File(DIR, orgFile.getFilename()).getPath();
         try {
-            fs.delete(path);
-        } catch (DbxException e) {
+            dbApi.delete(path);
+        } catch (DropboxException e) {
             //e.printStackTrace();
         }
     }
@@ -253,13 +205,13 @@ public class DropboxSynchronizer extends Synchronizer implements
      */
     @Override
     public void renameRemoteFile(final String oldName, final OrgFile orgFile) {
-        DbxPath newPath = new DbxPath(DIR, orgFile.getFilename());
-        DbxPath oldPath = new DbxPath(DIR, oldName);
+        String newPath = new File(DIR, orgFile.getFilename()).getPath();
+        String oldPath = new File(DIR, oldName).getPath();
 
         try {
-            fs.move(oldPath, newPath);
-        } catch (DbxException e) {
-            //e.printStackTrace();
+            dbApi.move(oldPath, newPath);
+        } catch (DropboxException e) {
+           // e.printStackTrace();
         }
     }
 
@@ -270,21 +222,24 @@ public class DropboxSynchronizer extends Synchronizer implements
      */
     @Override
     public BufferedReader getRemoteFile(final String filename) {
-        DbxPath path = new DbxPath(DIR, filename);
+        String path = new File(DIR, filename).getPath();
         BufferedReader br = null;
         try {
-            if (fs.isFile(path)) {
-                DbxFile file = fs.open(path);
-                // Get latest version
-                waitUntilSynced(file);
+            DropboxAPI.Entry entry = dbApi.metadata(path, 1, null, false, null);
+            if (!entry.isDir && !entry.isDeleted) {
+                ByteArrayOutputStream outputStream = new
+                        ByteArrayOutputStream();
+                DropboxAPI.DropboxFileInfo info = dbApi.getFile(path, null,
+                        outputStream, null);
                 // Read it
-                br = new BufferedReader(new StringReader(file.readString()));
-                file.close();
+                br = new BufferedReader(new StringReader(outputStream.toString(
+                        "UTF-8")));
+                outputStream.close();
             }
-        } catch (DbxException e) {
+        } catch (IOException e) {
             Log.d(TAG, e.getLocalizedMessage());
             br = null;
-        } catch (IOException e) {
+        } catch (DropboxException e) {
             Log.d(TAG, e.getLocalizedMessage());
             br = null;
         }
@@ -292,34 +247,34 @@ public class DropboxSynchronizer extends Synchronizer implements
         return br;
     }
 
-    /**
-     * Wait until the file has been synced to the newest state. Will wait a
-     * maximum of 30s.
-     * @param file
-     */
-    private void waitUntilSynced(final DbxFile file) {
-        final long MAXTIME = 30*1000;
-        final long STARTTIME = System.currentTimeMillis();
-        try {
-            DbxFileStatus status = file.getNewerStatus();
-
-            while (MAXTIME > (System.currentTimeMillis() - STARTTIME) &&
-                    status != null && !status.isCached) {
-                Log.d(TAG, "Waiting on latest version: " + status
-                        .bytesTransferred + " / " + status.bytesTotal);
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ignored) {
-                }
-                // Check latest
-                status = file.getNewerStatus();
-            }
-            // Update
-            file.update();
-        } catch (DbxException e) {
-            e.printStackTrace();
-        }
-    }
+//    /**
+//     * Wait until the file has been synced to the newest state. Will wait a
+//     * maximum of 30s.
+//     * @param file
+//     */
+//    private void waitUntilSynced(final DbxFile file) {
+//        final long MAXTIME = 30*1000;
+//        final long STARTTIME = System.currentTimeMillis();
+//        try {
+//            DbxFileStatus status = file.getNewerStatus();
+//
+//            while (MAXTIME > (System.currentTimeMillis() - STARTTIME) &&
+//                    status != null && !status.isCached) {
+//                Log.d(TAG, "Waiting on latest version: " + status
+//                        .bytesTransferred + " / " + status.bytesTotal);
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException ignored) {
+//                }
+//                // Check latest
+//                status = file.getNewerStatus();
+//            }
+//            // Update
+//            file.update();
+//        } catch (DbxException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     /**
      * @return a set of all remote files.
@@ -328,29 +283,20 @@ public class DropboxSynchronizer extends Synchronizer implements
     public HashSet<String> getRemoteFilenames() {
         final HashSet<String> filenames = new HashSet<String>();
         try {
-            while (fs.getSyncStatus().download.inProgress) {
-                Log.d(TAG, "Waiting on Dropbox sync...");
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    //e.printStackTrace();
-                }
-            }
-            List<DbxFileInfo> fileInfos = fs.listFolder(DIR);
-            for (DbxFileInfo fileInfo : fileInfos) {
-                if (fileInfo.path.getName().toLowerCase().endsWith((".org"))) {
-                    if (fs.isFile(fileInfo.path)) {
-                        Log.d(TAG, "Adding: " + fileInfo.path.getName());
-                        filenames.add(fileInfo.path.getName());
+            DropboxAPI.Entry dirEntry = dbApi.metadata(DIR.getPath(), 0, null, true,
+                    null);
+            for (DropboxAPI.Entry entry: dirEntry.contents) {
+                if (entry.fileName().toLowerCase().endsWith(".org")) {
+                    if (entry.isDeleted || entry.isDir) {
+                        Log.d(TAG, "Caught invalid file: " + entry.fileName());
                     } else {
-                        Log.d(TAG, "Caught invalid file: " + fileInfo.path
-                                .getName());
+                        Log.d(TAG, "Adding: " + entry.fileName());
+                        filenames.add(entry.fileName());
                     }
                 }
             }
-        } catch (DbxException e) {
+        } catch (DropboxException e) {
             Log.d(TAG, e.getLocalizedMessage());
-            //e.printStackTrace();
         }
         return filenames;
     }
@@ -365,48 +311,48 @@ public class DropboxSynchronizer extends Synchronizer implements
 
     @Override
     public Monitor getMonitor() {
-        return new DropboxMonitor(fs, DIR);
+        return null;
     }
 
-    public final class DropboxMonitor implements Monitor,
-    DbxFileSystem.PathListener {
-
-        private DbxFileSystem fs;
-        private final DbxPath dir;
-        private OrgSyncService.SyncHandler handler;
-
-        public DropboxMonitor(final DbxFileSystem fs, final DbxPath dir) {
-            this.fs = fs;
-            this.dir = dir;
-        }
-
-        @Override
-        public void startMonitor(final OrgSyncService.SyncHandler handler) {
-            this.handler = handler;
-            if (fs != null) {
-                fs.addPathListener(this, dir, DbxFileSystem.PathListener.Mode.PATH_OR_CHILD);
-            }
-        }
-
-        @Override
-        public void pauseMonitor() {
-            if (fs != null) {
-                fs.removePathListenerForAll(this);
-            }
-        }
-
-        @Override
-        public void terminate() {
-            pauseMonitor();
-            fs = null;
-        }
-
-        @Override
-        public void onPathChange(final DbxFileSystem dbxFileSystem,
-                final DbxPath dbxPath, final Mode mode) {
-            if (handler != null) {
-                handler.onMonitorChange();
-            }
-        }
-    }
+//    public final class DropboxMonitor implements Monitor,
+//    DbxFileSystem.PathListener {
+//
+//        private DbxFileSystem fs;
+//        private final DbxPath dir;
+//        private OrgSyncService.SyncHandler handler;
+//
+//        public DropboxMonitor(final DbxFileSystem fs, final DbxPath dir) {
+//            this.fs = fs;
+//            this.dir = dir;
+//        }
+//
+//        @Override
+//        public void startMonitor(final OrgSyncService.SyncHandler handler) {
+//            this.handler = handler;
+//            if (fs != null) {
+//                fs.addPathListener(this, dir, DbxFileSystem.PathListener.Mode.PATH_OR_CHILD);
+//            }
+//        }
+//
+//        @Override
+//        public void pauseMonitor() {
+//            if (fs != null) {
+//                fs.removePathListenerForAll(this);
+//            }
+//        }
+//
+//        @Override
+//        public void terminate() {
+//            pauseMonitor();
+//            fs = null;
+//        }
+//
+//        @Override
+//        public void onPathChange(final DbxFileSystem dbxFileSystem,
+//                final DbxPath dbxPath, final Mode mode) {
+//            if (handler != null) {
+//                handler.onMonitorChange();
+//            }
+//        }
+//    }
 }

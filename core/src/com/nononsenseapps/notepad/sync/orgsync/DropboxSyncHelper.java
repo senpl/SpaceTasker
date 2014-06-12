@@ -16,92 +16,38 @@
 
 package com.nononsenseapps.notepad.sync.orgsync;
 
-import android.app.IntentService;
-import android.content.Intent;
 import android.content.Context;
+import android.preference.PreferenceManager;
 
-import com.dropbox.sync.android.DbxAccountManager;
-import com.dropbox.sync.android.DbxException;
-import com.dropbox.sync.android.DbxFileSystem;
+import com.dropbox.client2.DropboxAPI;
+import com.dropbox.client2.android.AndroidAuthSession;
+import com.dropbox.client2.session.AppKeyPair;
 import com.nononsenseapps.build.Config;
+import com.nononsenseapps.notepad.prefs.SyncPrefs;
 
-/**
- * An {@link IntentService} subclass that synchronizes the Dropbox Cache in
- * the background
- */
-public class DropboxSyncHelper extends IntentService {
-
-    public final static String ACTION_SYNC_FULL = "ACTION_SYNC_FULL";
-    public final static String ACTION_SYNC_FIRST = "ACTION_SYNC_FIRST";
+public class DropboxSyncHelper {
 
     /**
-     * Execute first sync. If first sync has been completed,
-     * this method does nothing.
+     * Returns a Dropbox API object which is used for synchronization.
      */
-    public static void doFirstSync(final Context context) {
-        Intent intent = new Intent(context, DropboxSyncHelper.class);
-        intent.setAction(ACTION_SYNC_FIRST);
-        context.startService(intent);
-    }
+    public static DropboxAPI<AndroidAuthSession> getDBApi(final Context context) {
+        final DropboxAPI<AndroidAuthSession> mDBApi;
 
-    /**
-     * Do a full sync regardless of state.
-     */
-    public static void doFullSync(final Context context) {
-        Intent intent = new Intent(context, DropboxSyncHelper.class);
-        intent.setAction(ACTION_SYNC_FULL);
-        context.startService(intent);
-    }
+        // And later in some initialization function:
+        final AppKeyPair appKeys = new AppKeyPair(Config.getKeyDropboxSyncPublic
+                (context),
+                Config.getKeyDropboxSyncSecret(context));
+        final AndroidAuthSession session;
 
-    /**
-     *
-     * @param context
-     * @return true if we have synced and it's ok to bring up the file picker.
-     */
-    public static boolean hasSynced(final Context context) {
-        final DbxAccountManager accountManager = DbxAccountManager.getInstance
-                (context.getApplicationContext(),
-                        Config.getKeyDropboxSyncPublic(context),
-                        Config.getKeyDropboxSyncSecret(context));
-
-        if (accountManager.hasLinkedAccount()) {
-            try {
-                final DbxFileSystem fs = DbxFileSystem.forAccount(accountManager
-                        .getLinkedAccount());
-                return fs.hasSynced();
-            } catch (DbxException.Unauthorized ignored) {
-            } catch (DbxException ignored) {
-            }
+        if (PreferenceManager.getDefaultSharedPreferences(context).contains
+                (SyncPrefs.KEY_DROPBOX_TOKEN)) {
+            session = new AndroidAuthSession(appKeys,
+                    PreferenceManager.getDefaultSharedPreferences(context)
+                            .getString(SyncPrefs.KEY_DROPBOX_TOKEN, ""));
+        } else {
+            session = new AndroidAuthSession(appKeys);
         }
-        return false;
-    }
-
-    public DropboxSyncHelper() {
-        super("DropboxSyncHelper");
-    }
-
-    @Override
-    protected void onHandleIntent(Intent intent) {
-        final DbxAccountManager accountManager = DbxAccountManager.getInstance
-                (getApplicationContext(),
-                Config.getKeyDropboxSyncPublic(this),
-                Config.getKeyDropboxSyncSecret(this));
-
-        if (accountManager.hasLinkedAccount()) {
-            try {
-                final DbxFileSystem fs = DbxFileSystem.forAccount(accountManager
-                        .getLinkedAccount());
-
-                if (ACTION_SYNC_FULL.equals(intent.getAction())) {
-                    fs.syncNowAndWait();
-                } else if (ACTION_SYNC_FIRST.equals(intent.getAction()) &&
-                        !fs.hasSynced()) {
-                    fs.syncNowAndWait();
-                }
-
-            } catch (DbxException.Unauthorized ignored) {
-            } catch (DbxException ignored) {
-            }
-        }
+        mDBApi = new DropboxAPI<AndroidAuthSession>(session);
+        return mDBApi;
     }
 }
