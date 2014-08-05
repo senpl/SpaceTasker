@@ -42,7 +42,9 @@ configurations {
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    compile 'com.android.support:support-v4:19.0.1+'
+    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:recyclerview-v7:+'
+    compile 'com.android.support:cardview-v7:+'
     compile 'com.google.android.gms:play-services:4.2.42+'
     compile 'joda-time:joda-time:2.3'
     // FilePicker
@@ -82,7 +84,7 @@ def getVersionName = { ->
 }
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion "android-L"
     buildToolsVersion "19.1.0"
 
     lintOptions {
@@ -92,7 +94,7 @@ android {
     defaultConfig {
       applicationId "com.nononsenseapps.notepad"
       minSdkVersion 14
-      targetSdkVersion 19
+      targetSdkVersion "android-L"
       versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild * 10
       //versionName "${versionMajor}.${versionMinor}.${versionPatch}"
       versionName getVersionName()
