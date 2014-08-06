@@ -67,9 +67,6 @@
         <item name="LeftDrawerListItemStyle">@style/LeftDrawerListItemStyleDark</item>
         <item name="LeftDrawerListItemSecondaryStyle">@style/LeftDrawerListItemSecondaryStyleDark</item>
         
-        <!-- ShowCaseView -->
-        <item name="showcaseViewStyle">@style/CustomShowcaseTheme</item>
-        
         <!-- Pull to refresh style -->
         <item name="ptrHeaderStyle">@style/PullToRefreshStyle</item>
     </style>
@@ -147,10 +144,7 @@
          <item name="LeftDrawerStyle">@style/LeftDrawerStyleLight</item>
         <item name="LeftDrawerListItemStyle">@style/LeftDrawerListItemStyleLight</item>
         <item name="LeftDrawerListItemSecondaryStyle">@style/LeftDrawerListItemSecondaryStyleLight</item>
-        
-        <!-- ShowCaseView -->
-        <item name="showcaseViewStyle">@style/CustomShowcaseTheme</item>
-        
+
         <!-- Pull to refresh style -->
         <item name="ptrHeaderStyle">@style/PullToRefreshStyle</item>
     </style>
