@@ -12,7 +12,11 @@
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
-     limitations under the License.
+     limitations under the License.
+
+
+
+
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -89,8 +93,10 @@
         <item name="ListMarginStyle">@style/ListMarginStyleCard</item>
     </style>
 
-    <!-- This theme doesn't exist in honeycomb -->
-    <style name="ThemeHoloLightDarkActonBar" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+    <style name="ThemeLightBase"
+           parent="@android:style/Theme.Holo.Light.DarkActionBar"/>
+
+    <style name="ThemeHoloLightDarkActonBar" parent="@style/ThemeLightBase">
         <item name="android:background">@null</item>
         <item name="android:windowBackground">@color/googlenow_grey</item>
         <item name="android:colorBackgroundCacheHint">@color/googlenow_grey</item>
