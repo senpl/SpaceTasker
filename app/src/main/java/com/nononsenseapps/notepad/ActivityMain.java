@@ -795,6 +795,7 @@ public class ActivityMain extends FragmentActivity
             transaction.setCustomAnimations(R.anim.slide_in_top,
                     R.anim.slide_out_bottom, R.anim.slide_in_bottom,
                     R.anim.slide_out_top);
+            transaction.setCustomAnimations()
         }
 
 		/*
@@ -1004,7 +1005,7 @@ public class ActivityMain extends FragmentActivity
         // TODO strings
         if (mDrawerToggle == null) {
             mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
-                    R.drawable.ic_drawer_dark, android.R.string.ok, R.string.about) {
+                    R.drawable.ic_drawer, android.R.string.ok, R.string.about) {
 
                 /**
                  * Called when a drawer has settled in a completely closed
