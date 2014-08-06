@@ -795,7 +795,6 @@ public class ActivityMain extends FragmentActivity
             transaction.setCustomAnimations(R.anim.slide_in_top,
                     R.anim.slide_out_bottom, R.anim.slide_in_bottom,
                     R.anim.slide_out_top);
-            transaction.setCustomAnimations()
         }
 
 		/*

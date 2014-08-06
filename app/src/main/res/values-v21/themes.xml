@@ -26,7 +26,15 @@
         <!--   theme UI controls like checkboxes and text fields -->
         <item name="android:colorAccent">@color/accent</item>
 
-        <item name="android:navigationBarColor">#000</item>
+        <item name="android:navigationBarColor">#AAA</item>
+
+        <item name="actionBarIconColor">#fff</item>
+        <item name="actionBarOverlayTopOffset">0dp</item> <!-- action bars replaced by Toolbars -->
+        <item name="actionBarInsetStart">@dimen/keyline_2</item>
+        <item name="spinnerBarInsetStart">@dimen/keyline_2_minus_16dp</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackgroundBorderless</item>
+        <item name="popupItemBackground">@drawable/popup_item_background</item>
+        <item name="photoItemForeground">@drawable/photo_item_foreground</item>
 
         <!-- used only if windowContentTransitions is true -->
         <item name="android:windowSharedElementEnterTransition">@transition/shared_element</item>
