@@ -70,4 +70,10 @@
     <dimen name="keyline_1_minus_8dp">8dp</dimen>
     <dimen name="keyline_2">72dp</dimen>
     <dimen name="keyline_2_minus_16dp">56dp</dimen>
+
+    <!-- including padding -->
+    <dimen name="floating_add_button_height">56dp</dimen>
+    <dimen name="floating_add_button_height_no_padding">40dp</dimen>
+    <dimen name="fab_elevation">2dp</dimen>
+    <dimen name="fab_press_translation_z">2dp</dimen>
 </resources>

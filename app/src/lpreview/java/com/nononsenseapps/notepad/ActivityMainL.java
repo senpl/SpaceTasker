@@ -22,6 +22,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.nononsenseapps.notepad.views.FloatingAddButtonFrameLayout;
 
 
 public class ActivityMainL extends Activity {
@@ -29,8 +32,13 @@ public class ActivityMainL extends Activity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private String[] myDataset = new String[] {"London", "Tokyo", "Moscow",
-            "Budapest", "Paris", "Kyoto"};
+    private FloatingAddButtonFrameLayout mFloatingAddButton;
+    private String[] myDataset = new String[]{"London",
+            "Tokyo",
+            "Moscow",
+            "Budapest",
+            "Paris",
+            "Kyoto"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +54,18 @@ public class ActivityMainL extends Activity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        // specify an adapter (see also next example)
+        // I want some dividers
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this,
+                DividerItemDecoration.VERTICAL_LIST));
+
+        // specify an adapter
         mAdapter = new FileAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
+
+        // FAB
+        mFloatingAddButton =
+                (FloatingAddButtonFrameLayout) findViewById(R.id.add_button);
+        mFloatingAddButton.setVisibility(View.VISIBLE);
     }
 
 
@@ -65,9 +82,9 @@ public class ActivityMainL extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-       // if (id == R.id.action_settings) {
-       //     return true;
-      //  }
+        // if (id == R.id.action_settings) {
+        //     return true;
+        //  }
         return super.onOptionsItemSelected(item);
     }
 }

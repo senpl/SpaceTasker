@@ -42,5 +42,12 @@
     <!-- For dashclock settings -->
     <dimen name="configure_dialog_width">480dp</dimen>
     <dimen name="configure_dialog_max_height">600dp</dimen>
+
+    <!-- L-preview -->
+
+
+    <!-- including padding -->
+    <dimen name="floating_add_button_height">72dp</dimen>
+    <dimen name="floating_add_button_height_no_padding">56dp</dimen>
     
 </resources>
