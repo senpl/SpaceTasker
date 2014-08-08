@@ -16,75 +16,19 @@
 
 package com.nononsenseapps.notepad;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-
-import com.nononsenseapps.notepad.views.FloatingAddButtonFrameLayout;
+import android.app.Fragment;
 
 
-public class ActivityMainL extends Activity {
+public class ActivityMainL extends ActivitySinglePane {
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private FloatingAddButtonFrameLayout mFloatingAddButton;
-    private String[] myDataset = new String[]{"London",
-            "Tokyo",
-            "Moscow",
-            "Budapest",
-            "Paris",
-            "Kyoto"};
-
+    /**
+     * Called in <code>onCreate</code> when the fragment constituting this
+     * activity is needed.
+     * The returned fragment's arguments will be set to the intent used to
+     * invoke this activity.
+     */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_l);
-        mRecyclerView = (RecyclerView) findViewById(android.R.id.list);
-
-        // improve performance if you know that changes in content
-        // do not change the size of the RecyclerView
-        mRecyclerView.setHasFixedSize(true);
-
-        // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
-        // I want some dividers
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(this,
-                DividerItemDecoration.VERTICAL_LIST));
-
-        // specify an adapter
-        mAdapter = new FileAdapter(myDataset);
-        mRecyclerView.setAdapter(mAdapter);
-
-        // FAB
-        mFloatingAddButton =
-                (FloatingAddButtonFrameLayout) findViewById(R.id.add_button);
-        mFloatingAddButton.setVisibility(View.VISIBLE);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        // if (id == R.id.action_settings) {
-        //     return true;
-        //  }
-        return super.onOptionsItemSelected(item);
+    protected Fragment onCreatePane() {
+        return new FragmentOrgList();
     }
 }
