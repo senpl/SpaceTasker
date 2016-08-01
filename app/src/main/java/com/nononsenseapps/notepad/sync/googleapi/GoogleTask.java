@@ -41,22 +41,78 @@ public class GoogleTask extends RemoteTask {
 	public static final String PARENT = "parent";
 	public static final String POSITION = "position";
 	public static final String HIDDEN = "hidden";
-	public String title = null;
-	public String notes = null;
-	public String status = null;
-	public String dueDate = null;
-	public String parent = null;
-	public String position = null;
+	private boolean remotelyDeleted;
 
-	public boolean remotelydeleted = false;
-	//public int hidden = 0;
-	//public boolean didRemoteInsert = false;
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-	public String possort = "";
-	//public int indentLevel = 0;
+	public String getNotes() {
+		return notes;
+	}
 
-//	public JSONObject json = null;
-	//public boolean conflict = false;
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getDueDate() {
+		return dueDate;
+	}
+
+	public void setDueDate(String dueDate) {
+		this.dueDate = dueDate;
+	}
+
+	public String getParent() {
+		return parent;
+	}
+
+	public void setParent(String parent) {
+		this.parent = parent;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	public boolean isRemotelydeleted() {
+		return remotelydeleted;
+	}
+
+	public void setRemotelydeleted(boolean remotelydeleted) {
+		this.remotelydeleted = remotelydeleted;
+	}
+
+	public String getPossort() {
+		return possort;
+	}
+
+	public void setPossort(String possort) {
+		this.possort = possort;
+	}
+
+	private String title = null;
+	private String notes = null;
+	private String status = null;
+	private String dueDate = null;
+	private String parent = null;
+	private String position = null;
+
+	private boolean remotelydeleted = false;
+
+	private String possort = "";
 
 	public GoogleTask(final String accountName) {
 		super();
@@ -226,5 +282,13 @@ public class GoogleTask extends RemoteTask {
 			}
 		}
 		return equal;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public boolean getRemotelyDeleted() {
+		return remotelyDeleted;
 	}
 }

@@ -28,17 +28,32 @@ public class GoogleTaskList extends RemoteTaskList {
 	private static final String TAG = "nononsenseapps";
 	public static final String SERVICENAME = "googletasks";
 	//public String id = null;
-	public String title = null;
-	public boolean remotelyDeleted = false;
-	//public boolean deleted = false;
-	// public String selfLink = null;
-	//public JSONObject json = null;
-	//public String updated = null;
+	private String title = null;
 
-	//public boolean didRemoteInsert = false;
-	//public int modified = 0;
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public boolean isRemotelyDeleted() {
+        return remotelyDeleted;
+    }
+
+    public boolean isRedownload() {
+        return redownload;
+    }
+
+    public void setRedownload(boolean redownload) {
+        this.redownload = redownload;
+    }
+
+    private boolean remotelyDeleted = false;
+
 	// Intended for when default list is deleted. When that fails, redownload it and its contents
-	public boolean redownload = false;
+	private boolean redownload = false;
 
 	// private GoogleAPITalker api;
 
@@ -120,4 +135,12 @@ public class GoogleTaskList extends RemoteTaskList {
 		}
 		return equal;
 	}
+
+    public void setRemotelyDeleted(boolean remotelyDeleted) {
+        this.remotelyDeleted = remotelyDeleted;
+    }
+
+    public boolean getRemotelyDeleted() {
+        return remotelyDeleted;
+    }
 }
