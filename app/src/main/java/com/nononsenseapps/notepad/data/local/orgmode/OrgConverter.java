@@ -19,6 +19,7 @@ package com.nononsenseapps.notepad.data.local.orgmode;
 
 import android.annotation.SuppressLint;
 
+import android.support.annotation.Nullable;
 import com.nononsenseapps.notepad.data.model.orgmode.RemoteTaskListFile;
 import com.nononsenseapps.notepad.data.model.orgmode.RemoteTaskNode;
 import com.nononsenseapps.notepad.data.model.sql.Notification;
@@ -274,6 +275,7 @@ public class OrgConverter {
 	 * Returns the id from the meta-section, if present. Null otherwise.
 	 */
 	@SuppressLint("DefaultLocale")
+	@Nullable
 	public static String getNodeId(final OrgNode node) {
 		final Matcher m = PatternId.matcher(node.getComments());
 		if (m.find()) {
