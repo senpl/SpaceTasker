@@ -31,10 +31,10 @@ import android.util.Pair;
 import com.nononsenseapps.build.Config;
 import com.nononsenseapps.notepad.data.model.gtasks.GoogleTask;
 import com.nononsenseapps.notepad.data.model.gtasks.GoogleTaskList;
+import com.nononsenseapps.notepad.ui.settings.Constants;
 import com.nononsenseapps.notepad.util.Log;
 import com.nononsenseapps.notepad.data.model.sql.Task;
 import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
 import com.nononsenseapps.notepad.util.PermissionsHelper;
 import com.nononsenseapps.notepad.util.SyncGtaskHelper;
 import com.nononsenseapps.notepad.util.RFC3339Date;
@@ -86,7 +86,7 @@ public class GoogleTaskSync {
             // Temporary fix for delete all bug
 //					if (PreferenceManager.getDefaultSharedPreferences(context)
 //							.getBoolean(SyncPrefs.KEY_FULLSYNC, false)) {
-            PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(SyncPrefs
+            PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(Constants
                     .KEY_FULLSYNC, false).putLong(PREFS_GTASK_LAST_SYNC_TIME, 0).commit();
 //					}
 

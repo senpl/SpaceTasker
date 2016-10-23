@@ -28,7 +28,6 @@ import com.dropbox.client2.exception.DropboxServerException;
 import com.nononsenseapps.notepad.data.local.orgmode.Monitor;
 import com.nononsenseapps.notepad.data.local.orgmode.Synchronizer;
 import com.nononsenseapps.notepad.data.local.orgmode.SynchronizerInterface;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
 
 import org.cowboyprogrammer.org.OrgFile;
 import org.cowboyprogrammer.org.parser.OrgParser;
@@ -44,14 +43,17 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.util.HashSet;
 
+import static com.nononsenseapps.notepad.ui.settings.Constants.KEY_DROPBOX_DIR;
+import static com.nononsenseapps.notepad.ui.settings.Constants.KEY_DROPBOX_ENABLE;
+
 
 public class DropboxSynchronizer extends Synchronizer implements
         SynchronizerInterface {
 
     // Where files are kept. User changeable in preferences.
     public static final String DEFAULT_DIR = "/NoNonsenseNotes/";
-    public static final String PREF_DIR = SyncPrefs.KEY_DROPBOX_DIR;
-    public static final String PREF_ENABLED = SyncPrefs.KEY_DROPBOX_ENABLE;
+    public static final String PREF_DIR = KEY_DROPBOX_DIR;
+    public static final String PREF_ENABLED = KEY_DROPBOX_ENABLE;
     public final static String SERVICENAME = "DROPBOXORG";
     protected final boolean enabled;
     private final DropboxAPI<AndroidAuthSession> mDBApi;

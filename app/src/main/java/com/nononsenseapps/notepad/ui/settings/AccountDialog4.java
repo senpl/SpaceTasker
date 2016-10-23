@@ -33,6 +33,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 
+import com.nononsenseapps.notepad.util.AccountsHelper;
 import com.nononsenseapps.notepad.util.Log;
 import com.nononsenseapps.notepad.R;
 import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
@@ -118,8 +119,8 @@ public class AccountDialog4 extends DialogFragment implements
 				SharedPreferences customSharedPreference = PreferenceManager
 						.getDefaultSharedPreferences(activity);
 				customSharedPreference.edit()
-						.putString(SyncPrefs.KEY_ACCOUNT, account.name)
-						.putBoolean(SyncPrefs.KEY_SYNC_ENABLE, true).commit();
+						.putString(Constants.KEY_ACCOUNT, account.name)
+						.putBoolean(Constants.KEY_SYNC_ENABLE, true).commit();
 
 				// Set it syncable
 				ContentResolver.setSyncAutomatically(account,
@@ -127,7 +128,7 @@ public class AccountDialog4 extends DialogFragment implements
 				ContentResolver.setIsSyncable(account,
 						MyContentProvider.AUTHORITY, 1);
 				// Set sync frequency
-				SyncPrefs.setSyncInterval(activity, customSharedPreference);
+				AccountsHelper.setSyncInterval(activity, customSharedPreference);
 				
 				// And trigger an immediate sync
 				SyncGtaskHelper.requestSyncIf(activity, SyncGtaskHelper.MANUAL);

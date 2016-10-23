@@ -17,12 +17,9 @@
 
 package com.nononsenseapps.notepad.data.remote.orgmodedropbox;
 
-import android.app.Activity;
-
 import com.nononsenseapps.notepad.data.local.orgmode.Monitor;
 import com.nononsenseapps.notepad.data.local.orgmode.SynchronizerInterface;
 import com.nononsenseapps.notepad.data.service.OrgSyncService;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
 
 import org.cowboyprogrammer.org.OrgFile;
 
@@ -35,17 +32,9 @@ import java.util.HashSet;
  * Dummy class. See play flavor.
  */
 public class DropboxSynchronizer implements SynchronizerInterface {
-    public static final String DEFAULT_DIR = "DUMMY";
+    public static final String DEFAULT_DIR = "";
 
     public DropboxSynchronizer(OrgSyncService orgSyncService) {
-
-    }
-
-    public static void linkAccount(SyncPrefs syncPrefs, int dropboxLinkCode) {
-
-    }
-
-    public static void unlink(Activity activity) {
 
     }
 

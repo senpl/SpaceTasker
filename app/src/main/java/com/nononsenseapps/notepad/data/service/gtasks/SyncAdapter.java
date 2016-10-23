@@ -27,7 +27,7 @@ import android.content.SyncResult;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
+import com.nononsenseapps.notepad.ui.settings.Constants;
 import com.nononsenseapps.notepad.data.remote.gtasks.GoogleTaskSync;
 
 /**
@@ -101,11 +101,11 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 			if (com.nononsenseapps.build.Config.getGtasksApiKey(mContext) !=
                 null && !com.nononsenseapps.build.Config
                     .getGtasksApiKey(mContext).contains(" ")) {
-				if (settings.getBoolean(SyncPrefs.KEY_SYNC_ENABLE, false)
-						&& !settings.getString(SyncPrefs.KEY_ACCOUNT, "")
+				if (settings.getBoolean(Constants.KEY_SYNC_ENABLE, false)
+						&& !settings.getString(Constants.KEY_ACCOUNT, "")
 								.isEmpty()
 						&& account.name.equals(settings.getString(
-								SyncPrefs.KEY_ACCOUNT, ""))) {
+								Constants.KEY_ACCOUNT, ""))) {
 
 					mContext.sendBroadcast(new Intent(SYNC_STARTED));
 

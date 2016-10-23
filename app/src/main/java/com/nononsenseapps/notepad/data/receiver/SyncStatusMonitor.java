@@ -31,8 +31,9 @@ import android.widget.Toast;
 
 import com.nononsenseapps.notepad.R;
 import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
+import com.nononsenseapps.notepad.ui.settings.Constants;
 import com.nononsenseapps.notepad.data.service.gtasks.SyncAdapter;
+import com.nononsenseapps.notepad.util.AccountsHelper;
 import com.nononsenseapps.notepad.util.Log;
 
 public class SyncStatusMonitor extends BroadcastReceiver {
@@ -51,10 +52,10 @@ public class SyncStatusMonitor extends BroadcastReceiver {
         activity.registerReceiver(this, new IntentFilter(SyncAdapter.SYNC_STARTED));
 
         final String accountName = PreferenceManager.getDefaultSharedPreferences(activity)
-                .getString(SyncPrefs.KEY_ACCOUNT, "");
+                .getString(Constants.KEY_ACCOUNT, "");
         Account account = null;
         if (accountName != null && !accountName.isEmpty()) {
-            account = SyncPrefs.getAccount(AccountManager.get(activity), accountName);
+            account = AccountsHelper.getAccount(AccountManager.get(activity), accountName);
         }
         // Sync state might have changed, make sure we're spinning when
         // we should

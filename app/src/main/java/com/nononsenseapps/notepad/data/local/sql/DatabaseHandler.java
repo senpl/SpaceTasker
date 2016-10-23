@@ -36,7 +36,7 @@ import com.nononsenseapps.notepad.data.model.sql.Task;
 import com.nononsenseapps.notepad.data.model.sql.TaskList;
 import com.nononsenseapps.notepad.data.model.gtasks.GoogleTask;
 import com.nononsenseapps.notepad.data.model.gtasks.GoogleTaskList;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
+import com.nononsenseapps.notepad.ui.settings.Constants;
 import com.nononsenseapps.notepad.util.RFC3339Date;
 
 import java.util.Calendar;
@@ -413,7 +413,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			// If preferences has sync enabled, don't create this list
 			// The backup agent has restored a reinstallation
 			if (PreferenceManager.getDefaultSharedPreferences(context).contains(
-											SyncPrefs.KEY_ACCOUNT)) {
+											Constants.KEY_ACCOUNT)) {
 
 			} else {
 

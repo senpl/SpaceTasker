@@ -37,12 +37,12 @@ import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSynchronizer
 import com.nononsenseapps.notepad.data.local.orgmode.Monitor;
 import com.nononsenseapps.notepad.data.local.orgmode.SDSynchronizer;
 import com.nononsenseapps.notepad.data.local.orgmode.SynchronizerInterface;
+import com.nononsenseapps.notepad.ui.settings.Constants;
 import com.nononsenseapps.notepad.util.Log;
 import com.nononsenseapps.notepad.BuildConfig;
 import com.nononsenseapps.notepad.data.model.sql.Task;
 import com.nononsenseapps.notepad.data.model.sql.TaskList;
 import com.nononsenseapps.notepad.ui.settings.PrefsActivity;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
 import com.nononsenseapps.notepad.data.service.gtasks.SyncAdapter;
 import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
 
@@ -278,7 +278,7 @@ public class OrgSyncService extends Service {
                     // Save last sync time
                     PreferenceManager
                             .getDefaultSharedPreferences(OrgSyncService.this)
-                            .edit().putLong(SyncPrefs.KEY_LAST_SYNC,
+                            .edit().putLong(Constants.KEY_LAST_SYNC,
                                             Calendar.getInstance()
                                                     .getTimeInMillis())
                             .commit();

@@ -58,6 +58,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import static com.nononsenseapps.filepicker.Utils.getFileForUri;
 import static com.nononsenseapps.notepad.util.PermissionsHelper.hasPermissions;
 import static com.nononsenseapps.notepad.util.PermissionsHelper.permissionsGranted;
 import static com.nononsenseapps.notepad.util.SharedPreferencesHelper.disableDropboxSync;
@@ -205,7 +206,7 @@ public class FragmentSettings extends PreferenceFragment implements SharedPrefer
 
     @SuppressLint("CommitPrefEdits")
     private void saveNewDirectoryPath(Intent data) {
-        File path = new File(data.getData().getPath());
+        File path = getFileForUri(data.getData());
         if (path.exists() && path.isDirectory() && path.canWrite()) {
             SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences
                     (getActivity());

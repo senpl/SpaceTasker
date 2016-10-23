@@ -198,7 +198,7 @@ public class DropboxFilePickerFragment extends AbstractFilePickerFragment<Dropbo
                 try {
                     dbApi.createFolder(path);
                     mCurrentPath = dbApi.metadata(path, 1, null, false, null);
-                    refresh();
+                    refresh(mCurrentPath);
                 } catch (DropboxException e) {
                     Toast.makeText(getActivity(), R.string.nnf_create_folder_error, Toast
                             .LENGTH_SHORT).show();
