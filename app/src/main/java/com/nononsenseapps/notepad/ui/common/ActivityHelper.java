@@ -24,7 +24,7 @@ import android.content.res.Configuration;
 import android.preference.PreferenceManager;
 
 import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.ui.settings.MainPrefs;
+import com.nononsenseapps.notepad.ui.settings.Constants;
 
 import java.util.Locale;
 
@@ -35,7 +35,7 @@ public class ActivityHelper {
 		final SharedPreferences prefs = PreferenceManager
 				.getDefaultSharedPreferences(activity);
 
-		final String theme = prefs.getString(MainPrefs.KEY_THEME,
+		final String theme = prefs.getString(Constants.KEY_THEME,
 				activity.getString(R.string.const_theme_light_ab));
 		if (activity.getString(R.string.const_theme_light_ab).equals(theme)) {
 			activity.setTheme(R.style.ThemeHoloLightDarkActonBar);

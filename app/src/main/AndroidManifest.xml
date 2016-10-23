@@ -130,23 +130,6 @@
             android:windowSoftInputMode="adjustResize"/>
 
         <activity
-            android:name=".ui.settings.PrefsActivity"
-            android:parentActivityName="com.nononsenseapps.notepad.ui.list.ActivityList"
-            android:theme="@style/LightTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.nononsenseapps.notepad.ui.list.ActivityList"/>
-
-            <intent-filter>
-                <category android:name="android.intent.category.PREFERENCE"/>
-
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.EDIT" />
-                <action android:name="android.intent.action.VIEW" />
-                <action android:name="android.settings.SETTINGS" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".ui.settings.ActivitySettings"
             android:label="@string/menu_preferences"
             android:parentActivityName=".ui.list.ActivityList"

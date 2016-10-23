@@ -17,8 +17,6 @@
 
 package com.nononsenseapps.notepad.data.service;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -31,19 +29,17 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.Process;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
 
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSynchronizer;
+import com.nononsenseapps.notepad.BuildConfig;
 import com.nononsenseapps.notepad.data.local.orgmode.Monitor;
 import com.nononsenseapps.notepad.data.local.orgmode.SDSynchronizer;
 import com.nononsenseapps.notepad.data.local.orgmode.SynchronizerInterface;
-import com.nononsenseapps.notepad.ui.settings.Constants;
-import com.nononsenseapps.notepad.util.Log;
-import com.nononsenseapps.notepad.BuildConfig;
 import com.nononsenseapps.notepad.data.model.sql.Task;
 import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.ui.settings.PrefsActivity;
+import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSynchronizer;
 import com.nononsenseapps.notepad.data.service.gtasks.SyncAdapter;
+import com.nononsenseapps.notepad.ui.settings.Constants;
+import com.nononsenseapps.notepad.util.Log;
 import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
 
 import java.io.IOException;
@@ -163,21 +159,6 @@ public class OrgSyncService extends Service {
             monitor.pauseMonitor();
         }
     }
-
-    private void notifyError() {
-		NotificationCompat.Builder notBuilder = new NotificationCompat.Builder(
-				this)
-                // TODO hardcoded
-				.setContentTitle("Could not access files")
-				.setContentText("Please change directory")
-				.setContentIntent(
-						PendingIntent.getActivity(this, 0, new Intent(this,
-								PrefsActivity.class),
-								PendingIntent.FLAG_UPDATE_CURRENT));
-
-		NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		notificationManager.notify(237388, notBuilder.build());
-	}
 
 	@Override
 	public void onDestroy() {

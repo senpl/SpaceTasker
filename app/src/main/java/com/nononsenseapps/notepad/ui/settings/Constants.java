@@ -16,4 +16,5 @@ public class Constants {
     // Dropbox sync
     public static final String KEY_DROPBOX_ENABLE = "pref_sync_dropbox_enabled";
     public static final String KEY_DROPBOX_DIR = "pref_sync_dropbox_dir";
+    public static final String KEY_THEME = "preference_theme";
 }

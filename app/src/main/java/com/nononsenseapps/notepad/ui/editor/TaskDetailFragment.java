@@ -62,7 +62,7 @@ import com.nononsenseapps.notepad.ui.common.DialogPassword.PasswordConfirmedList
 import com.nononsenseapps.notepad.ui.common.MenuStateController;
 import com.nononsenseapps.notepad.ui.common.NotificationItemHelper;
 import com.nononsenseapps.notepad.ui.common.StyledEditText;
-import com.nononsenseapps.notepad.ui.settings.MainPrefs;
+import com.nononsenseapps.notepad.ui.settings.Constants;
 import com.nononsenseapps.notepad.util.FragmentHelper;
 import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
 import com.nononsenseapps.notepad.util.TimeFormatter;
@@ -772,7 +772,7 @@ public class TaskDetailFragment extends Fragment implements OnDateSetListener {
      */
     public TimePickerDialog getTimePickerDialog() {
         final String theme = PreferenceManager.getDefaultSharedPreferences(getActivity())
-                .getString(MainPrefs.KEY_THEME, getString(R.string.const_theme_light_ab));
+                .getString(Constants.KEY_THEME, getString(R.string.const_theme_light_ab));
 
         final TimePickerDialog timePickerDialog = TimePickerDialog.newInstance(null, 0, 0,
                 android.text.format.DateFormat.is24HourFormat(getActivity()));
