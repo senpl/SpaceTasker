@@ -72,14 +72,14 @@ public class TaskList extends DAO {
 
 		// Legacy URIs
 		sURIMatcher.addURI(MyContentProvider.AUTHORITY,
-				LegacyDBHelper.NotePad.Lists.LISTS, LEGACYBASEURICODE);
+				LegacyDBHelper.SpaceTaskerDB.Lists.LISTS, LEGACYBASEURICODE);
 		sURIMatcher.addURI(MyContentProvider.AUTHORITY,
-				LegacyDBHelper.NotePad.Lists.LISTS + "/#", LEGACYBASEITEMCODE);
+				LegacyDBHelper.SpaceTaskerDB.Lists.LISTS + "/#", LEGACYBASEITEMCODE);
 		sURIMatcher.addURI(MyContentProvider.AUTHORITY,
-				LegacyDBHelper.NotePad.Lists.VISIBLE_LISTS,
+				LegacyDBHelper.SpaceTaskerDB.Lists.VISIBLE_LISTS,
 				LEGACYVISIBLEURICODE);
 		sURIMatcher.addURI(MyContentProvider.AUTHORITY,
-				LegacyDBHelper.NotePad.Lists.VISIBLE_LISTS + "/#",
+				LegacyDBHelper.SpaceTaskerDB.Lists.VISIBLE_LISTS + "/#",
 				LEGACYVISIBLEITEMCODE);
 	}
 

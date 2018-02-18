@@ -20,7 +20,7 @@ package eu.lavarde.spacetasker.data.model.gtasks;
 import android.content.ContentValues;
 import android.database.Cursor;
 
-import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper.NotePad;
+import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper.SpaceTaskerDB;
 import eu.lavarde.spacetasker.data.model.sql.RemoteTask;
 import eu.lavarde.spacetasker.data.model.sql.Task;
 import eu.lavarde.spacetasker.data.remote.gtasks.GoogleTasksAPI;
@@ -154,26 +154,26 @@ public class GoogleTask extends RemoteTask {
 	public ContentValues toNotesContentValues(int modified, long listDbId) {
 		ContentValues values = new ContentValues();
 		if (title != null)
-			values.put(NotePad.Notes.COLUMN_NAME_TITLE, title);
+			values.put(SpaceTaskerDB.Notes.COLUMN_NAME_TITLE, title);
 		if (dueDate != null)
-			values.put(NotePad.Notes.COLUMN_NAME_DUE_DATE, dueDate);
+			values.put(SpaceTaskerDB.Notes.COLUMN_NAME_DUE_DATE, dueDate);
 		if (status != null)
-			values.put(NotePad.Notes.COLUMN_NAME_GTASKS_STATUS, status);
+			values.put(SpaceTaskerDB.Notes.COLUMN_NAME_GTASKS_STATUS, status);
 		if (notes != null)
-			values.put(NotePad.Notes.COLUMN_NAME_NOTE, notes);
+			values.put(SpaceTaskerDB.Notes.COLUMN_NAME_NOTE, notes);
 
 		if (dbid > -1)
-			values.put(NotePad.Notes._ID, dbid);
+			values.put(SpaceTaskerDB.Notes._ID, dbid);
 
-		values.put(NotePad.Notes.COLUMN_NAME_LIST, listDbId);
-		values.put(NotePad.Notes.COLUMN_NAME_MODIFIED, modified);
-		values.put(NotePad.Notes.COLUMN_NAME_DELETED, deleted);
-		values.put(NotePad.Notes.COLUMN_NAME_POSITION, position);
-		values.put(NotePad.Notes.COLUMN_NAME_PARENT, parent);
-		//values.put(NotePad.Notes.COLUMN_NAME_HIDDEN, hidden);
+		values.put(SpaceTaskerDB.Notes.COLUMN_NAME_LIST, listDbId);
+		values.put(SpaceTaskerDB.Notes.COLUMN_NAME_MODIFIED, modified);
+		values.put(SpaceTaskerDB.Notes.COLUMN_NAME_DELETED, deleted);
+		values.put(SpaceTaskerDB.Notes.COLUMN_NAME_POSITION, position);
+		values.put(SpaceTaskerDB.Notes.COLUMN_NAME_PARENT, parent);
+		//values.put(SpaceTaskerDB.Notes.COLUMN_NAME_HIDDEN, hidden);
 
-		values.put(NotePad.Notes.COLUMN_NAME_POSSUBSORT, possort);
-		//values.put(NotePad.Notes.COLUMN_NAME_INDENTLEVEL, indentLevel);
+		values.put(SpaceTaskerDB.Notes.COLUMN_NAME_POSSUBSORT, possort);
+		//values.put(SpaceTaskerDB.Notes.COLUMN_NAME_INDENTLEVEL, indentLevel);
 
 		return values;
 	}
@@ -186,26 +186,26 @@ public class GoogleTask extends RemoteTask {
 	public ContentValues toNotesBackRefContentValues(Integer listIdIndex) {
 		ContentValues values = new ContentValues();
 		if (listIdIndex != null)
-			values.put(NotePad.Notes.COLUMN_NAME_LIST, listIdIndex);
+			values.put(SpaceTaskerDB.Notes.COLUMN_NAME_LIST, listIdIndex);
 
 		return values;
 	}
 
 	public ContentValues toGTasksContentValues(String accountName) {
 		ContentValues values = new ContentValues();
-		values.put(NotePad.GTasks.COLUMN_NAME_DB_ID, dbid);
+		values.put(SpaceTaskerDB.GTasks.COLUMN_NAME_DB_ID, dbid);
 //		if (title.contains("debug"))
 //			Log.d(TAG, title + " saving id: " + id);
-//		values.put(NotePad.GTasks.COLUMN_NAME_ETAG, etag);
-//		values.put(NotePad.GTasks.COLUMN_NAME_GOOGLE_ACCOUNT, accountName);
-//		values.put(NotePad.GTasks.COLUMN_NAME_GTASKS_ID, id);
-		values.put(NotePad.GTasks.COLUMN_NAME_UPDATED, updated);
+//		values.put(SpaceTaskerDB.GTasks.COLUMN_NAME_ETAG, etag);
+//		values.put(SpaceTaskerDB.GTasks.COLUMN_NAME_GOOGLE_ACCOUNT, accountName);
+//		values.put(SpaceTaskerDB.GTasks.COLUMN_NAME_GTASKS_ID, id);
+		values.put(SpaceTaskerDB.GTasks.COLUMN_NAME_UPDATED, updated);
 		return values;
 	}
 
 	public ContentValues toGTasksBackRefContentValues(int pos) {
 		ContentValues values = new ContentValues();
-		values.put(NotePad.GTasks.COLUMN_NAME_DB_ID, pos);
+		values.put(SpaceTaskerDB.GTasks.COLUMN_NAME_DB_ID, pos);
 		return values;
 	}
 

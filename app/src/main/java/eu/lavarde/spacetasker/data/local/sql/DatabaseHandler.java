@@ -253,13 +253,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		return legacyDB.rawQuery("SELECT lists."
 										+ BaseColumns._ID
 										+ ",lists.title,gtasklists.googleid,gtasklists.googleaccount"
-										+ " FROM " + LegacyDBHelper.NotePad.Lists.TABLE_NAME
+										+ " FROM " + LegacyDBHelper.SpaceTaskerDB.Lists.TABLE_NAME
 										+ " LEFT OUTER JOIN "
-										+ LegacyDBHelper.NotePad.GTaskLists.TABLE_NAME + " ON ("
-										+ LegacyDBHelper.NotePad.Lists.TABLE_NAME + "."
-										+ LegacyDBHelper.NotePad.Lists._ID + " = "
-										+ LegacyDBHelper.NotePad.GTaskLists.TABLE_NAME + "."
-										+ LegacyDBHelper.NotePad.GTaskLists.COLUMN_NAME_DB_ID + ")"
+										+ LegacyDBHelper.SpaceTaskerDB.GTaskLists.TABLE_NAME + " ON ("
+										+ LegacyDBHelper.SpaceTaskerDB.Lists.TABLE_NAME + "."
+										+ LegacyDBHelper.SpaceTaskerDB.Lists._ID + " = "
+										+ LegacyDBHelper.SpaceTaskerDB.GTaskLists.TABLE_NAME + "."
+										+ LegacyDBHelper.SpaceTaskerDB.GTaskLists.COLUMN_NAME_DB_ID + ")"
 										+ " WHERE lists.deleted IS NOT 1", null);
 	}
 
@@ -268,24 +268,24 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 										+ BaseColumns._ID
 										+ ",notes.title,notes.note,notes.duedate,notes.gtaskstatus,notes.list,notes.modified,gtasks.googleid,gtasks.googleaccount"
 										+ " FROM "
-										+ LegacyDBHelper.NotePad.Notes.TABLE_NAME
+										+ LegacyDBHelper.SpaceTaskerDB.Notes.TABLE_NAME
 										+ " LEFT OUTER JOIN "
-										+ LegacyDBHelper.NotePad.GTasks.TABLE_NAME
+										+ LegacyDBHelper.SpaceTaskerDB.GTasks.TABLE_NAME
 										+ " ON ("
-										+ LegacyDBHelper.NotePad.Notes.TABLE_NAME
+										+ LegacyDBHelper.SpaceTaskerDB.Notes.TABLE_NAME
 										+ "."
-										+ LegacyDBHelper.NotePad.Notes._ID
+										+ LegacyDBHelper.SpaceTaskerDB.Notes._ID
 										+ " = "
-										+ LegacyDBHelper.NotePad.GTasks.TABLE_NAME
+										+ LegacyDBHelper.SpaceTaskerDB.GTasks.TABLE_NAME
 										+ "."
-										+ LegacyDBHelper.NotePad.GTasks.COLUMN_NAME_DB_ID
+										+ LegacyDBHelper.SpaceTaskerDB.GTasks.COLUMN_NAME_DB_ID
 										+ ")"
 										+ " WHERE notes.deleted IS NOT 1 AND notes.hiddenflag IS NOT 1",
 										null);
 	}
 
 	public static Cursor getLegacyNotifications(final SQLiteDatabase legacyDB) {
-		return legacyDB.query(LegacyDBHelper.NotePad.Notifications.TABLE_NAME, new String[] {
+		return legacyDB.query(LegacyDBHelper.SpaceTaskerDB.Notifications.TABLE_NAME, new String[] {
 										"time", "permanent", "noteid" }, null, null, null, null,
 										null);
 	}

@@ -116,9 +116,9 @@ public class ListHelper {
                 (Intent.ACTION_EDIT.equals(intent.getAction()) ||
                         Intent.ACTION_VIEW.equals(intent.getAction()) ||
                         Intent.ACTION_INSERT.equals(intent.getAction()))) {
-            if ((intent.getData().getPath().startsWith(LegacyDBHelper.NotePad.Lists
+            if ((intent.getData().getPath().startsWith(LegacyDBHelper.SpaceTaskerDB.Lists
                     .PATH_VISIBLE_LISTS) ||
-                    intent.getData().getPath().startsWith(LegacyDBHelper.NotePad.Lists
+                    intent.getData().getPath().startsWith(LegacyDBHelper.SpaceTaskerDB.Lists
                             .PATH_LISTS) ||
                     intent.getData().getPath().startsWith(TaskList.URI.getPath()))) {
                 try {
@@ -126,9 +126,9 @@ public class ListHelper {
                 } catch (NumberFormatException e) {
                     retval = -1;
                 }
-            } else if (-1 != intent.getLongExtra(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_LIST,
+            } else if (-1 != intent.getLongExtra(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_LIST,
                     -1)) {
-                retval = intent.getLongExtra(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_LIST, -1);
+                retval = intent.getLongExtra(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_LIST, -1);
             } else if (-1 != intent.getLongExtra(TaskDetailFragment.ARG_ITEM_LIST_ID, -1)) {
                 retval = intent.getLongExtra(TaskDetailFragment.ARG_ITEM_LIST_ID, -1);
             } else if (-1 != intent.getLongExtra(Task.Columns.DBLIST, -1)) {

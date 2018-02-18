@@ -99,9 +99,9 @@ public class ActivityEditor extends ActivityEditorBase implements TaskDetailFrag
             if (intent.getData().getPath().startsWith(TaskList.URI.getPath())) {
                 // Find it in the extras. See DashClock extension for an example
                 retval = intent.getLongExtra(Task.TABLE_NAME, -1);
-            } else if ((intent.getData().getPath().startsWith(LegacyDBHelper.NotePad.Notes
+            } else if ((intent.getData().getPath().startsWith(LegacyDBHelper.SpaceTaskerDB.Notes
                     .PATH_VISIBLE_NOTES) ||
-                    intent.getData().getPath().startsWith(LegacyDBHelper.NotePad.Notes
+                    intent.getData().getPath().startsWith(LegacyDBHelper.SpaceTaskerDB.Notes
                             .PATH_NOTES) ||
                     intent.getData().getPath().startsWith(Task.URI.getPath()))) {
                 retval = Long.parseLong(intent.getData().getLastPathSegment());

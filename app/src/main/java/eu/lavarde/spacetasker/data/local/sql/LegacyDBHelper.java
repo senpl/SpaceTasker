@@ -213,11 +213,11 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 		}
 	}
 
-	public static final class NotePad {
+	public static final class SpaceTaskerDB {
 		public static final String AUTHORITY = MyContentProvider.AUTHORITY;
 
 		// This class cannot be instantiated
-		private NotePad() {
+		private SpaceTaskerDB() {
 		}
 
 		/**
@@ -826,8 +826,8 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 			public static final String COLUMN_NAME_PERMANENT = "permanent";
 			public static final String COLUMN_NAME_NOTEID = "noteid";
 
-			public static final String JOINED_COLUMN_LIST_TITLE = NotePad.Lists.TABLE_NAME
-					+ "." + NotePad.Lists.COLUMN_NAME_TITLE;
+			public static final String JOINED_COLUMN_LIST_TITLE = SpaceTaskerDB.Lists.TABLE_NAME
+					+ "." + SpaceTaskerDB.Lists.COLUMN_NAME_TITLE;
 
 			/*
 			 * URI definitions
@@ -918,23 +918,23 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 			String col = legacyCols[i];
 			String newCol = col;
 			// Lists
-			if (NotePad.Lists.COLUMN_NAME_TITLE.equals(col)) {
+			if (SpaceTaskerDB.Lists.COLUMN_NAME_TITLE.equals(col)) {
 				newCol = TaskList.Columns.TITLE;
 			}
 			// Tasks
-			else if (NotePad.Notes.COLUMN_NAME_TITLE.equals(col)) {
+			else if (SpaceTaskerDB.Notes.COLUMN_NAME_TITLE.equals(col)) {
 				newCol = Task.Columns.TITLE;
 			}
-			else if (NotePad.Notes.COLUMN_NAME_NOTE.equals(col)) {
+			else if (SpaceTaskerDB.Notes.COLUMN_NAME_NOTE.equals(col)) {
 				newCol = Task.Columns.NOTE;
 			}
-			else if (NotePad.Notes.COLUMN_NAME_LIST.equals(col)) {
+			else if (SpaceTaskerDB.Notes.COLUMN_NAME_LIST.equals(col)) {
 				newCol = Task.Columns.DBLIST;
 			}
-			else if (NotePad.Notes.COLUMN_NAME_DUE_DATE.equals(col)) {
+			else if (SpaceTaskerDB.Notes.COLUMN_NAME_DUE_DATE.equals(col)) {
 				newCol = Task.Columns.DUE;
 			}
-			else if (NotePad.Notes.COLUMN_NAME_GTASKS_STATUS.equals(col)) {
+			else if (SpaceTaskerDB.Notes.COLUMN_NAME_GTASKS_STATUS.equals(col)) {
 				newCol = Task.Columns.COMPLETED;
 			}
 
@@ -955,11 +955,11 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 		for (int i = 0; i < cursor.getColumnCount(); i++) {
 			final String colName = cursor.getColumnName(i);
 			final Object val;
-			if (NotePad.Notes.COLUMN_NAME_DUE_DATE.equals(colName) ||
+			if (SpaceTaskerDB.Notes.COLUMN_NAME_DUE_DATE.equals(colName) ||
 					Task.Columns.DUE.equals(colName)) {
 				val = cursor.isNull(i) ? "" : RFC3339Date.asRFC3339(cursor.getLong(i));
 			}
-			else if (NotePad.Notes.COLUMN_NAME_GTASKS_STATUS.equals(colName) ||
+			else if (SpaceTaskerDB.Notes.COLUMN_NAME_GTASKS_STATUS.equals(colName) ||
 					Task.Columns.COMPLETED.equals(colName)) {
 				val = cursor.isNull(i) ? "needsAction" : "completed";
 			}

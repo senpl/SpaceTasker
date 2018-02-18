@@ -2,7 +2,7 @@ package eu.lavarde.spacetasker.test;
 
 import eu.lavarde.spacetasker.data.local.sql.DatabaseHandler;
 import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper;
-import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper.NotePad;
+import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper.SpaceTaskerDB;
 import eu.lavarde.spacetasker.data.model.sql.Notification;
 import eu.lavarde.spacetasker.data.model.sql.Task;
 import eu.lavarde.spacetasker.data.model.sql.TaskList;
@@ -40,81 +40,81 @@ public class DBUpgradeTest extends AndroidTestCase {
 
 	private void createTables(final SQLiteDatabase legacyDB) {
 		// Lists
-		legacyDB.execSQL("CREATE TABLE " + NotePad.Lists.TABLE_NAME + " ("
+		legacyDB.execSQL("CREATE TABLE " + SpaceTaskerDB.Lists.TABLE_NAME + " ("
 				+ BaseColumns._ID + " INTEGER PRIMARY KEY,"
-				+ NotePad.Lists.COLUMN_NAME_TITLE
+				+ SpaceTaskerDB.Lists.COLUMN_NAME_TITLE
 				+ " TEXT DEFAULT '' NOT NULL,"
-				+ NotePad.Lists.COLUMN_NAME_MODIFIED
+				+ SpaceTaskerDB.Lists.COLUMN_NAME_MODIFIED
 				+ " INTEGER DEFAULT 0 NOT NULL,"
-				+ NotePad.Lists.COLUMN_NAME_MODIFICATION_DATE
+				+ SpaceTaskerDB.Lists.COLUMN_NAME_MODIFICATION_DATE
 				+ " INTEGER DEFAULT 0 NOT NULL,"
-				+ NotePad.Lists.COLUMN_NAME_DELETED
+				+ SpaceTaskerDB.Lists.COLUMN_NAME_DELETED
 				+ " INTEGER DEFAULT 0 NOT NULL" + ");");
 
-		legacyDB.execSQL("CREATE TABLE " + NotePad.GTaskLists.TABLE_NAME + " ("
+		legacyDB.execSQL("CREATE TABLE " + SpaceTaskerDB.GTaskLists.TABLE_NAME + " ("
 				+ BaseColumns._ID + " INTEGER PRIMARY KEY,"
-				+ NotePad.GTaskLists.COLUMN_NAME_DB_ID
+				+ SpaceTaskerDB.GTaskLists.COLUMN_NAME_DB_ID
 				+ " INTEGER UNIQUE NOT NULL REFERENCES "
-				+ NotePad.Lists.TABLE_NAME + ","
-				+ NotePad.GTaskLists.COLUMN_NAME_GTASKS_ID
+				+ SpaceTaskerDB.Lists.TABLE_NAME + ","
+				+ SpaceTaskerDB.GTaskLists.COLUMN_NAME_GTASKS_ID
 				+ " INTEGER NOT NULL,"
-				+ NotePad.GTaskLists.COLUMN_NAME_GOOGLE_ACCOUNT
-				+ " INTEGER NOT NULL," + NotePad.GTaskLists.COLUMN_NAME_UPDATED
-				+ " TEXT," + NotePad.GTaskLists.COLUMN_NAME_ETAG + " TEXT"
+				+ SpaceTaskerDB.GTaskLists.COLUMN_NAME_GOOGLE_ACCOUNT
+				+ " INTEGER NOT NULL," + SpaceTaskerDB.GTaskLists.COLUMN_NAME_UPDATED
+				+ " TEXT," + SpaceTaskerDB.GTaskLists.COLUMN_NAME_ETAG + " TEXT"
 				+ ");");
 
 		// Notes
-		legacyDB.execSQL("CREATE TABLE " + NotePad.Notes.TABLE_NAME + " ("
+		legacyDB.execSQL("CREATE TABLE " + SpaceTaskerDB.Notes.TABLE_NAME + " ("
 				+ BaseColumns._ID + " INTEGER PRIMARY KEY,"
-				+ NotePad.Notes.COLUMN_NAME_TITLE
-				+ " TEXT DEFAULT '' NOT NULL," + NotePad.Notes.COLUMN_NAME_NOTE
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_TITLE
+				+ " TEXT DEFAULT '' NOT NULL," + SpaceTaskerDB.Notes.COLUMN_NAME_NOTE
 				+ " TEXT DEFAULT '' NOT NULL,"
-				+ NotePad.Notes.COLUMN_NAME_CREATE_DATE
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_CREATE_DATE
 				+ " INTEGER DEFAULT 0 NOT NULL,"
-				+ NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_MODIFICATION_DATE
 				+ " INTEGER DEFAULT 0 NOT NULL,"
-				+ NotePad.Notes.COLUMN_NAME_DUE_DATE + " TEXT,"
-				+ NotePad.Notes.COLUMN_NAME_LIST
-				+ " INTEGER NOT NULL REFERENCES " + NotePad.Lists.TABLE_NAME
-				+ "," + NotePad.Notes.COLUMN_NAME_GTASKS_STATUS
-				+ " TEXT NOT NULL," + NotePad.Notes.COLUMN_NAME_POSITION
-				+ " TEXT," + NotePad.Notes.COLUMN_NAME_HIDDEN
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_DUE_DATE + " TEXT,"
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_LIST
+				+ " INTEGER NOT NULL REFERENCES " + SpaceTaskerDB.Lists.TABLE_NAME
+				+ "," + SpaceTaskerDB.Notes.COLUMN_NAME_GTASKS_STATUS
+				+ " TEXT NOT NULL," + SpaceTaskerDB.Notes.COLUMN_NAME_POSITION
+				+ " TEXT," + SpaceTaskerDB.Notes.COLUMN_NAME_HIDDEN
 				+ " INTEGER DEFAULT 0 NOT NULL,"
-				+ NotePad.Notes.COLUMN_NAME_MODIFIED
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_MODIFIED
 				+ " INTEGER DEFAULT 0 NOT NULL,"
 
-				+ NotePad.Notes.COLUMN_NAME_INDENTLEVEL
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_INDENTLEVEL
 				+ " INTEGER DEFAULT 0 NOT NULL,"
-				+ NotePad.Notes.COLUMN_NAME_POSSUBSORT
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_POSSUBSORT
 				+ " TEXT DEFAULT '' NOT NULL,"
-				+ NotePad.Notes.COLUMN_NAME_LOCALHIDDEN + " INTEGER DEFAULT 0,"
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_LOCALHIDDEN + " INTEGER DEFAULT 0,"
 
-				+ NotePad.Notes.COLUMN_NAME_PARENT + " TEXT,"
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_PARENT + " TEXT,"
 
-				+ NotePad.Notes.COLUMN_NAME_DELETED
+				+ SpaceTaskerDB.Notes.COLUMN_NAME_DELETED
 				+ " INTEGER DEFAULT 0 NOT NULL" + ");");
 
-		legacyDB.execSQL("CREATE TABLE " + NotePad.GTasks.TABLE_NAME + " ("
+		legacyDB.execSQL("CREATE TABLE " + SpaceTaskerDB.GTasks.TABLE_NAME + " ("
 				+ BaseColumns._ID + " INTEGER PRIMARY KEY,"
-				+ NotePad.GTasks.COLUMN_NAME_DB_ID
-				+ " INTEGER UNIQUE NOT NULL REFERENCES " + NotePad.Notes.TABLE_NAME
-				+ "," + NotePad.GTasks.COLUMN_NAME_GTASKS_ID
+				+ SpaceTaskerDB.GTasks.COLUMN_NAME_DB_ID
+				+ " INTEGER UNIQUE NOT NULL REFERENCES " + SpaceTaskerDB.Notes.TABLE_NAME
+				+ "," + SpaceTaskerDB.GTasks.COLUMN_NAME_GTASKS_ID
 				+ " INTEGER NOT NULL,"
-				+ NotePad.GTasks.COLUMN_NAME_GOOGLE_ACCOUNT
-				+ " INTEGER NOT NULL," + NotePad.GTasks.COLUMN_NAME_UPDATED
-				+ " TEXT," + NotePad.GTasks.COLUMN_NAME_ETAG + " TEXT" + ");");
+				+ SpaceTaskerDB.GTasks.COLUMN_NAME_GOOGLE_ACCOUNT
+				+ " INTEGER NOT NULL," + SpaceTaskerDB.GTasks.COLUMN_NAME_UPDATED
+				+ " TEXT," + SpaceTaskerDB.GTasks.COLUMN_NAME_ETAG + " TEXT" + ");");
 
 		// Notifications
-		legacyDB.execSQL("CREATE TABLE " + NotePad.Notifications.TABLE_NAME
-				+ " (" + NotePad.Notifications._ID + " INTEGER PRIMARY KEY,"
-				+ NotePad.Notifications.COLUMN_NAME_TIME
+		legacyDB.execSQL("CREATE TABLE " + SpaceTaskerDB.Notifications.TABLE_NAME
+				+ " (" + SpaceTaskerDB.Notifications._ID + " INTEGER PRIMARY KEY,"
+				+ SpaceTaskerDB.Notifications.COLUMN_NAME_TIME
 				+ " INTEGER NOT NULL DEFAULT 0,"
-				+ NotePad.Notifications.COLUMN_NAME_PERMANENT
+				+ SpaceTaskerDB.Notifications.COLUMN_NAME_PERMANENT
 				+ " INTEGER NOT NULL DEFAULT 0,"
-				+ NotePad.Notifications.COLUMN_NAME_NOTEID + " INTEGER,"
-				+ "FOREIGN KEY(" + NotePad.Notifications.COLUMN_NAME_NOTEID
-				+ ") REFERENCES " + NotePad.Notes.TABLE_NAME + "("
-				+ NotePad.Notes._ID + ") ON DELETE CASCADE" + ");");
+				+ SpaceTaskerDB.Notifications.COLUMN_NAME_NOTEID + " INTEGER,"
+				+ "FOREIGN KEY(" + SpaceTaskerDB.Notifications.COLUMN_NAME_NOTEID
+				+ ") REFERENCES " + SpaceTaskerDB.Notes.TABLE_NAME + "("
+				+ SpaceTaskerDB.Notes._ID + ") ON DELETE CASCADE" + ");");
 	}
 
 	private void initializeDB(final SQLiteDatabase legacyDB) {
@@ -128,13 +128,13 @@ public class DBUpgradeTest extends AndroidTestCase {
 		for (int i = 0; i < numOfLegacyLists; i++) {
 			values.clear();
 			// One plain
-			values.put(LegacyDBHelper.NotePad.Lists.COLUMN_NAME_TITLE, "List"
+			values.put(LegacyDBHelper.SpaceTaskerDB.Lists.COLUMN_NAME_TITLE, "List"
 					+ i);
-			values.put(LegacyDBHelper.NotePad.Lists.COLUMN_NAME_MODIFIED, 1);
-			values.put(LegacyDBHelper.NotePad.Lists.COLUMN_NAME_DELETED, 0);
+			values.put(LegacyDBHelper.SpaceTaskerDB.Lists.COLUMN_NAME_MODIFIED, 1);
+			values.put(LegacyDBHelper.SpaceTaskerDB.Lists.COLUMN_NAME_DELETED, 0);
 
 			final long listId = legacyDB.insert(
-					LegacyDBHelper.NotePad.Lists.TABLE_NAME, null, values);
+					LegacyDBHelper.SpaceTaskerDB.Lists.TABLE_NAME, null, values);
 
 			assertTrue("Failed to insert legacy test list: " + listId,
 					listId > 0);
@@ -143,20 +143,20 @@ public class DBUpgradeTest extends AndroidTestCase {
 			// One with google id
 			if (i % 2 == 0) {
 				values.clear();
-				values.put(LegacyDBHelper.NotePad.GTaskLists.COLUMN_NAME_DB_ID,
+				values.put(LegacyDBHelper.SpaceTaskerDB.GTaskLists.COLUMN_NAME_DB_ID,
 						listId);
 				values.put(
-						LegacyDBHelper.NotePad.GTaskLists.COLUMN_NAME_GOOGLE_ACCOUNT,
+						LegacyDBHelper.SpaceTaskerDB.GTaskLists.COLUMN_NAME_GOOGLE_ACCOUNT,
 						anAccount);
 				values.put(
-						LegacyDBHelper.NotePad.GTaskLists.COLUMN_NAME_GTASKS_ID,
+						LegacyDBHelper.SpaceTaskerDB.GTaskLists.COLUMN_NAME_GTASKS_ID,
 						anId);
 				values.put(
-						LegacyDBHelper.NotePad.GTaskLists.COLUMN_NAME_UPDATED,
+						LegacyDBHelper.SpaceTaskerDB.GTaskLists.COLUMN_NAME_UPDATED,
 						aTime);
 
 				gtasklistid = legacyDB.insert(
-						LegacyDBHelper.NotePad.GTaskLists.TABLE_NAME, null,
+						LegacyDBHelper.SpaceTaskerDB.GTaskLists.TABLE_NAME, null,
 						values);
 
 				assertTrue(
@@ -167,36 +167,36 @@ public class DBUpgradeTest extends AndroidTestCase {
 			// Insert notes
 			for (int j = 0; j < numOfLegacyNotes; j++) {
 				values.clear();
-				values.put(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_TITLE,
+				values.put(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_TITLE,
 						"default" + j);
-				values.put(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_NOTE,
+				values.put(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_NOTE,
 						"defaulttext");
-				values.put(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_MODIFIED, 1);
-				values.put(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_DELETED, 0);
-				values.put(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_LIST,
+				values.put(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_MODIFIED, 1);
+				values.put(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_DELETED, 0);
+				values.put(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_LIST,
 						listId);
 
 				// Gets the current system time in milliseconds
 				Long now = Long.valueOf(System.currentTimeMillis());
 				values.put(
-						LegacyDBHelper.NotePad.Notes.COLUMN_NAME_CREATE_DATE,
+						LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_CREATE_DATE,
 						now);
 				values.put(
-						LegacyDBHelper.NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,
+						LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_MODIFICATION_DATE,
 						now);
-				values.put(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_DUE_DATE,
+				values.put(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_DUE_DATE,
 						"");
 				values.put(
-						LegacyDBHelper.NotePad.Notes.COLUMN_NAME_GTASKS_STATUS,
+						LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_GTASKS_STATUS,
 						"needsAction");
 
-				values.put(LegacyDBHelper.NotePad.Notes.COLUMN_NAME_POSSUBSORT,
+				values.put(LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_POSSUBSORT,
 						"");
 				values.put(
-						LegacyDBHelper.NotePad.Notes.COLUMN_NAME_INDENTLEVEL, 0);
+						LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_INDENTLEVEL, 0);
 
 				final long noteId = legacyDB.insert(
-						LegacyDBHelper.NotePad.Notes.TABLE_NAME, null, values);
+						LegacyDBHelper.SpaceTaskerDB.Notes.TABLE_NAME, null, values);
 
 				assertTrue("Note insertion should not fail", noteId > 0);
 				if (gtasklistid > -1) {
@@ -204,20 +204,20 @@ public class DBUpgradeTest extends AndroidTestCase {
 					if (j % 2 == 0) {
 						values.clear();
 						values.put(
-								LegacyDBHelper.NotePad.GTasks.COLUMN_NAME_DB_ID,
+								LegacyDBHelper.SpaceTaskerDB.GTasks.COLUMN_NAME_DB_ID,
 								noteId);
 						values.put(
-								LegacyDBHelper.NotePad.GTasks.COLUMN_NAME_GOOGLE_ACCOUNT,
+								LegacyDBHelper.SpaceTaskerDB.GTasks.COLUMN_NAME_GOOGLE_ACCOUNT,
 								anAccount);
 						values.put(
-								LegacyDBHelper.NotePad.GTasks.COLUMN_NAME_GTASKS_ID,
+								LegacyDBHelper.SpaceTaskerDB.GTasks.COLUMN_NAME_GTASKS_ID,
 								anId + j);
 						values.put(
-								LegacyDBHelper.NotePad.GTasks.COLUMN_NAME_UPDATED,
+								LegacyDBHelper.SpaceTaskerDB.GTasks.COLUMN_NAME_UPDATED,
 								aTime);
 
 						final long gtaskid = legacyDB.insert(
-								LegacyDBHelper.NotePad.GTasks.TABLE_NAME, null,
+								LegacyDBHelper.SpaceTaskerDB.GTasks.TABLE_NAME, null,
 								values);
 						assertTrue("Gtask insert should not fail", gtaskid > 0);
 					}
@@ -226,14 +226,14 @@ public class DBUpgradeTest extends AndroidTestCase {
 				// Give all a notification
 				values.clear();
 				values.put(
-						LegacyDBHelper.NotePad.Notifications.COLUMN_NAME_NOTEID,
+						LegacyDBHelper.SpaceTaskerDB.Notifications.COLUMN_NAME_NOTEID,
 						noteId);
 				values.put(
-						LegacyDBHelper.NotePad.Notifications.COLUMN_NAME_TIME,
+						LegacyDBHelper.SpaceTaskerDB.Notifications.COLUMN_NAME_TIME,
 						System.currentTimeMillis());
 
 				final long notId = legacyDB.insert(
-						LegacyDBHelper.NotePad.Notifications.TABLE_NAME, null,
+						LegacyDBHelper.SpaceTaskerDB.Notifications.TABLE_NAME, null,
 						values);
 				assertTrue("legacy notificaiton insert failed", notId > 0);
 			}

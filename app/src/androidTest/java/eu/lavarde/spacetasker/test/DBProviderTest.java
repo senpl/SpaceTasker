@@ -112,11 +112,11 @@ public class DBProviderTest extends AndroidTestCase {
 
 		// TODO remember legacy uris
 		// TODO need a projection mapper
-		// assertUriReturnsResult(LegacyDBHelper.NotePad.Notes.CONTENT_URI,
-		// new String[] { LegacyDBHelper.NotePad.Notes.COLUMN_NAME_TITLE });
+		// assertUriReturnsResult(LegacyDBHelper.SpaceTaskerDB.Notes.CONTENT_URI,
+		// new String[] { LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_TITLE });
 		// assertUriReturnsResult(
-		// LegacyDBHelper.NotePad.Notes.CONTENT_VISIBLE_URI,
-		// new String[] { LegacyDBHelper.NotePad.Notes.COLUMN_NAME_TITLE });
+		// LegacyDBHelper.SpaceTaskerDB.Notes.CONTENT_VISIBLE_URI,
+		// new String[] { LegacyDBHelper.SpaceTaskerDB.Notes.COLUMN_NAME_TITLE });
 
 		list.delete(context);
 
