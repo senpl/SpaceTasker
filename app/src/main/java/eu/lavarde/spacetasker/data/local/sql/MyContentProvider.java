@@ -40,7 +40,7 @@ import eu.lavarde.spacetasker.data.model.sql.TaskList;
 import java.util.ArrayList;
 
 public class MyContentProvider extends ContentProvider {
-	public static final String AUTHORITY = "com.nononsenseapps.NotePad";
+	public static final String AUTHORITY = "eu.lavarde.SpaceTasker";
 	public static final String SCHEME = "content://";
 	private static final UriMatcher sURIMatcher = new UriMatcher(
 			UriMatcher.NO_MATCH);

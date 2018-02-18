@@ -35,9 +35,9 @@ import java.util.GregorianCalendar;
 public class TasksExtension extends DashClockExtension {
 
 	// final static Uri VISIBLE_NOTES_URI = Uri
-	// .parse("content://com.nononsenseapps.NotePad/visiblenotes");
+	// .parse("content://eu.lavarde.SpaceTasker/visiblenotes");
 	// final static Uri VISIBLE_LISTS_URI = Uri
-	// .parse("content://com.nononsenseapps.NotePad/visiblelists");
+	// .parse("content://eu.lavarde.SpaceTasker/visiblelists");
 	public static final String DUEDATE_SORT_TYPE = new StringBuilder(
 			"CASE WHEN ").append(Task.Columns.DUE).append(" IS NULL OR ")
 			.append(Task.Columns.DUE).append(" IS '' THEN 1 ELSE 0 END, ")

@@ -298,7 +298,7 @@
         <!-- DataBase provider -->
         <provider
             android:name="eu.lavarde.spacetasker.data.local.sql.MyContentProvider"
-            android:authorities="com.nononsenseapps.NotePad"
+            android:authorities="eu.lavarde.SpaceTasker"
             android:enabled="true"
             android:exported="true"
             android:grantUriPermissions="true"></provider>
