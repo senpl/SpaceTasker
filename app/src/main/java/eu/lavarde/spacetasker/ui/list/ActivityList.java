@@ -217,7 +217,7 @@ public class ActivityList extends ActivityBase implements NavigationDrawerFragme
     @Override
     public void openChangelog() {
         startActivity(new Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://github.com/spacecowboy/NotePad/blob/master/CHANGELOG.md")));
+                Uri.parse("https://github.com/ericzolf/SpaceTasker/blob/master/CHANGELOG.md")));
     }
 
     @Override
