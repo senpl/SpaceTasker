@@ -462,7 +462,7 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 			public static final String LISTS = "lists";
 			public static final String PATH_VISIBLE_LISTS = "/visiblelists";
 			public static final String VISIBLE_LISTS = "visiblelists";
-			// Complete entry gotten with a join with GTasksLists table
+			// Complete entry gotten with a join with GTaskLists table
 			private static final String PATH_JOINED_LISTS = "/joinedlists";
 
 			/**
