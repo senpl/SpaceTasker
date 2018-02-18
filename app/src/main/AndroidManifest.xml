@@ -74,7 +74,7 @@
 
         <!-- Broadcast receiver for accepting actions from widget for example -->
         <receiver
-            android:name="eu.lavarde.spacetasker.data.receiver.NotePadBroadcastReceiver"
+            android:name="eu.lavarde.spacetasker.data.receiver.SpaceTaskerBroadcastReceiver"
             tools:ignore="ExportedReceiver">
             <intent-filter>
                 <action android:name="com.nononsenseapps.completenote" />

@@ -27,7 +27,7 @@ import android.widget.Toast;
 import eu.lavarde.spacetasker.R;
 import eu.lavarde.spacetasker.data.model.sql.Task;
 
-public class NotePadBroadcastReceiver extends BroadcastReceiver {
+public class SpaceTaskerBroadcastReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(final Context context, final Intent intent) {

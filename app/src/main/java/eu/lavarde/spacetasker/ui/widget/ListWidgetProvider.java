@@ -33,7 +33,7 @@ import android.widget.RemoteViews;
 import eu.lavarde.spacetasker.R;
 import eu.lavarde.spacetasker.data.model.sql.Task;
 import eu.lavarde.spacetasker.data.model.sql.TaskList;
-import eu.lavarde.spacetasker.data.receiver.NotePadBroadcastReceiver;
+import eu.lavarde.spacetasker.data.receiver.SpaceTaskerBroadcastReceiver;
 import eu.lavarde.spacetasker.ui.editor.ActivityEditor;
 import eu.lavarde.spacetasker.ui.editor.TaskDetailFragment;
 import eu.lavarde.spacetasker.ui.list.ActivityList;
@@ -86,7 +86,7 @@ public class ListWidgetProvider extends AppWidgetProvider {
 			// This will complete the note
 			if (noteId > -1) {
 				Intent bintent = new Intent(context,
-						NotePadBroadcastReceiver.class);
+						SpaceTaskerBroadcastReceiver.class);
 				bintent.setAction(context
 						.getString(R.string.complete_note_broadcast_intent));
 				bintent.putExtra(Task.Columns._ID, noteId);
