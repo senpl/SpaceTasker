@@ -15,13 +15,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.util;
+package eu.lavarde.spacetasker.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 import java.util.Locale;
 

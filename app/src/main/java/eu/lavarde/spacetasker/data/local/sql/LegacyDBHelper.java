@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.sql;
+package eu.lavarde.spacetasker.data.local.sql;
 
 import android.app.SearchManager;
 import android.content.ContentValues;
@@ -27,10 +27,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.util.Log;
-import com.nononsenseapps.notepad.util.RFC3339Date;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.util.Log;
+import eu.lavarde.spacetasker.util.RFC3339Date;
 
 /**
  * This class contains the code that has been called over the versions to

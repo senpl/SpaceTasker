@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.list;
+package eu.lavarde.spacetasker.ui.list;
 
 import android.app.Activity;
 import android.content.Context;
@@ -46,20 +46,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.DAO;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.data.receiver.SyncStatusMonitor;
-import com.nononsenseapps.notepad.data.service.gtasks.SyncHelper;
-import com.nononsenseapps.notepad.ui.common.DialogDeleteCompletedTasks;
-import com.nononsenseapps.notepad.ui.common.DialogMoveToList;
-import com.nononsenseapps.notepad.ui.common.DialogPassword;
-import com.nononsenseapps.notepad.ui.common.DialogPassword.PasswordConfirmedListener;
-import com.nononsenseapps.notepad.ui.common.MenuStateController;
-import com.nononsenseapps.notepad.util.ArrayHelper;
-import com.nononsenseapps.notepad.util.AsyncTaskHelper;
-import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.DAO;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.receiver.SyncStatusMonitor;
+import eu.lavarde.spacetasker.data.service.gtasks.SyncHelper;
+import eu.lavarde.spacetasker.ui.common.DialogDeleteCompletedTasks;
+import eu.lavarde.spacetasker.ui.common.DialogMoveToList;
+import eu.lavarde.spacetasker.ui.common.DialogPassword;
+import eu.lavarde.spacetasker.ui.common.DialogPassword.PasswordConfirmedListener;
+import eu.lavarde.spacetasker.ui.common.MenuStateController;
+import eu.lavarde.spacetasker.util.ArrayHelper;
+import eu.lavarde.spacetasker.util.AsyncTaskHelper;
+import eu.lavarde.spacetasker.util.SharedPreferencesHelper;
 
 import java.security.InvalidParameterException;
 import java.util.Collection;

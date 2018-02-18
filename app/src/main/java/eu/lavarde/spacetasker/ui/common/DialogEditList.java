@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.database.Cursor;
 import android.databinding.DataBindingUtil;
@@ -33,10 +33,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.databinding.FragmentDialogEditlistBinding;
-import com.nononsenseapps.notepad.ui.base.DialogConfirmBase.DialogConfirmedListener;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.databinding.FragmentDialogEditlistBinding;
+import eu.lavarde.spacetasker.ui.base.DialogConfirmBase.DialogConfirmedListener;
 
 public class DialogEditList extends DialogFragment {
 

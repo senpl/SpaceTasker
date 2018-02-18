@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -24,9 +24,9 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.LinearLayout;
 
-import com.nononsenseapps.notepad.util.TimeFormatter;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.util.LocaleHelper;
+import eu.lavarde.spacetasker.util.TimeFormatter;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.util.LocaleHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;

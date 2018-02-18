@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.service.gtasks;
+package eu.lavarde.spacetasker.data.service.gtasks;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -24,7 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 
-import com.nononsenseapps.notepad.util.SyncGtaskHelper;
+import eu.lavarde.spacetasker.util.SyncGtaskHelper;
 
 import java.util.Calendar;
 

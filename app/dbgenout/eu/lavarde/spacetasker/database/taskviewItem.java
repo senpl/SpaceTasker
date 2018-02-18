@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.database;
+package eu.lavarde.spacetasker.database;
 
 import android.content.ContentValues;
 import android.content.UriMatcher;
@@ -44,8 +44,8 @@ public class taskviewItem extends DBItem {
         sURIMatcher.addURI(ItemProvider.AUTHORITY, TABLE_NAME + "/#", BASEITEMCODE);
     }
 
-    public static final String TYPE_DIR = "vnd.android.cursor.dir/vnd.com.nononsenseapps.notepad.database." + TABLE_NAME;
-    public static final String TYPE_ITEM = "vnd.android.cursor.item/vnd.com.nononsenseapps.notepad.database." + TABLE_NAME;
+    public static final String TYPE_DIR = "vnd.android.cursor.dir/vnd.eu.lavarde.spacetasker.database." + TABLE_NAME;
+    public static final String TYPE_ITEM = "vnd.android.cursor.item/vnd.eu.lavarde.spacetasker.database." + TABLE_NAME;
 
     public taskviewItem() {
         super();

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.base;
+package eu.lavarde.spacetasker.ui.base;
 
 import android.app.Dialog;
 import android.app.DialogFragment;

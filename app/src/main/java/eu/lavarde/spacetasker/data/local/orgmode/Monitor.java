@@ -15,9 +15,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.orgmode;
+package eu.lavarde.spacetasker.data.local.orgmode;
 
-import com.nononsenseapps.notepad.data.service.OrgSyncService;
+import eu.lavarde.spacetasker.data.service.OrgSyncService;
 
 /**
  * An interface which defines a "Monitor". A monitor is an object which

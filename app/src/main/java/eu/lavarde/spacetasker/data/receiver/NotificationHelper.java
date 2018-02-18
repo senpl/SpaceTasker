@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.receiver;
+package eu.lavarde.spacetasker.data.receiver;
 
 import android.app.AlarmManager;
 import android.app.Notification;
@@ -33,9 +33,9 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.NotificationCompat;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.util.Log;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.util.Log;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -51,9 +51,9 @@ public class NotificationHelper extends BroadcastReceiver {
     // static final String ARG_MAX_TIME = "maxtime";
 	// static final String ARG_LISTID = "listid";
 	static final String ARG_TASKID = "taskid";
-	private static final String ACTION_COMPLETE = "com.nononsenseapps.notepad.ACTION.COMPLETE";
-	private static final String ACTION_SNOOZE = "com.nononsenseapps.notepad.ACTION.SNOOZE";
-	private static final String ACTION_RESCHEDULE = "com.nononsenseapps.notepad.ACTION.RESCHEDULE";
+	private static final String ACTION_COMPLETE = "eu.lavarde.spacetasker.ACTION.COMPLETE";
+	private static final String ACTION_SNOOZE = "eu.lavarde.spacetasker.ACTION.SNOOZE";
+	private static final String ACTION_RESCHEDULE = "eu.lavarde.spacetasker.ACTION.RESCHEDULE";
 	private static final String TAG = "nononsenseapps.NotificationHelper";
 
 	private static ContextObserver observer = null;
@@ -67,13 +67,13 @@ public class NotificationHelper extends BroadcastReceiver {
 
 	private static void monitorUri(final Context context) {
 		context.getContentResolver().unregisterContentObserver(getObserver(context));
-		context.getContentResolver().registerContentObserver(com.nononsenseapps.notepad.data.model.sql.Notification.URI, true, getObserver(context));
+		context.getContentResolver().registerContentObserver(eu.lavarde.spacetasker.data.model.sql.Notification.URI, true, getObserver(context));
 	}
 
     public static void clearNotification(@NonNull final Context context, @NonNull final Intent
             intent) {
         if (intent.getLongExtra(NOTIFICATION_DELETE_ARG, -1) > 0) {
-            com.nononsenseapps.notepad.data.model.sql.Notification.deleteOrReschedule(context, com.nononsenseapps.notepad.data.model.sql.Notification.getUri(intent.getLongExtra
+            eu.lavarde.spacetasker.data.model.sql.Notification.deleteOrReschedule(context, eu.lavarde.spacetasker.data.model.sql.Notification.getUri(intent.getLongExtra
                             (NOTIFICATION_DELETE_ARG, -1)));
         }
         if (intent.getLongExtra(NOTIFICATION_CANCEL_ARG, -1) > 0) {
@@ -91,7 +91,7 @@ public class NotificationHelper extends BroadcastReceiver {
 		// Get list of past notifications
 		final Calendar now = Calendar.getInstance();
 
-		final List<com.nononsenseapps.notepad.data.model.sql.Notification> notifications = com.nononsenseapps.notepad.data.model.sql.Notification
+		final List<eu.lavarde.spacetasker.data.model.sql.Notification> notifications = eu.lavarde.spacetasker.data.model.sql.Notification
 				.getNotificationsWithTime(context, now.getTimeInMillis(), true);
 
 		// Remove duplicates
@@ -141,7 +141,7 @@ public class NotificationHelper extends BroadcastReceiver {
 			// .getString(R.string.key_pref_ringtone),
 			// "DEFAULT_NOTIFICATION_URI")), alertOnce);
 			//
-			// List<com.nononsenseapps.notepad.data.model.sql.Notification> subList =
+			// List<eu.lavarde.spacetasker.data.model.sql.Notification> subList =
 			// getSubList(
 			// listId, notifications);
 			// if (subList.size() == 1) {
@@ -157,7 +157,7 @@ public class NotificationHelper extends BroadcastReceiver {
 			// }
 			// else {
 			// Notify for each individually
-			for (com.nononsenseapps.notepad.data.model.sql.Notification note : notifications) {
+			for (eu.lavarde.spacetasker.data.model.sql.Notification note : notifications) {
 				builder = getNotificationBuilder(
 						context,
 						lightAndVibrate, Uri.parse(prefs.getString(context.getString(R.string.const_preference_ringtone_key),
@@ -196,11 +196,11 @@ public class NotificationHelper extends BroadcastReceiver {
 	 */
 	private static void makeUnique(
 			final Context context,
-			final List<com.nononsenseapps.notepad.data.model.sql.Notification> notifications) {
+			final List<eu.lavarde.spacetasker.data.model.sql.Notification> notifications) {
 		// get duplicates and iterate over them
-		for (com.nononsenseapps.notepad.data.model.sql.Notification noti : getLatestOccurence(notifications)) {
+		for (eu.lavarde.spacetasker.data.model.sql.Notification noti : getLatestOccurence(notifications)) {
 			// remove all but the first one from database, and big list
-			for (com.nononsenseapps.notepad.data.model.sql.Notification dupNoti : getDuplicates(
+			for (eu.lavarde.spacetasker.data.model.sql.Notification dupNoti : getDuplicates(
 					noti, notifications)) {
 				notifications.remove(dupNoti);
 				cancelNotification(context, dupNoti);
@@ -218,12 +218,12 @@ public class NotificationHelper extends BroadcastReceiver {
 	 * @param notifications
 	 * @return
 	 */
-	private static List<com.nononsenseapps.notepad.data.model.sql.Notification> getLatestOccurence(
-			final List<com.nononsenseapps.notepad.data.model.sql.Notification> notifications) {
+	private static List<eu.lavarde.spacetasker.data.model.sql.Notification> getLatestOccurence(
+			final List<eu.lavarde.spacetasker.data.model.sql.Notification> notifications) {
 		final ArrayList<Long> seenIds = new ArrayList<Long>();
-		final ArrayList<com.nononsenseapps.notepad.data.model.sql.Notification> firsts = new ArrayList<com.nononsenseapps.notepad.data.model.sql.Notification>();
+		final ArrayList<eu.lavarde.spacetasker.data.model.sql.Notification> firsts = new ArrayList<eu.lavarde.spacetasker.data.model.sql.Notification>();
 
-		com.nononsenseapps.notepad.data.model.sql.Notification noti;
+		eu.lavarde.spacetasker.data.model.sql.Notification noti;
 		for (int i = notifications.size() - 1; i >= 0; i--) {
 			noti = notifications.get(i);
 			if (!seenIds.contains(noti.taskID)) {
@@ -234,12 +234,12 @@ public class NotificationHelper extends BroadcastReceiver {
 		return firsts;
 	}
 
-	private static List<com.nononsenseapps.notepad.data.model.sql.Notification> getDuplicates(
-			final com.nononsenseapps.notepad.data.model.sql.Notification first,
-			final List<com.nononsenseapps.notepad.data.model.sql.Notification> notifications) {
-		final ArrayList<com.nononsenseapps.notepad.data.model.sql.Notification> dups = new ArrayList<com.nononsenseapps.notepad.data.model.sql.Notification>();
+	private static List<eu.lavarde.spacetasker.data.model.sql.Notification> getDuplicates(
+			final eu.lavarde.spacetasker.data.model.sql.Notification first,
+			final List<eu.lavarde.spacetasker.data.model.sql.Notification> notifications) {
+		final ArrayList<eu.lavarde.spacetasker.data.model.sql.Notification> dups = new ArrayList<eu.lavarde.spacetasker.data.model.sql.Notification>();
 
-		for (com.nononsenseapps.notepad.data.model.sql.Notification noti : notifications) {
+		for (eu.lavarde.spacetasker.data.model.sql.Notification noti : notifications) {
 			if (noti.taskID == first.taskID && noti._id != first._id) {
 				dups.add(noti);
 			}
@@ -254,7 +254,7 @@ public class NotificationHelper extends BroadcastReceiver {
 	private static void notifyBigText(final Context context,
 			final NotificationManager notificationManager,
 			final NotificationCompat.Builder builder,
-			final com.nononsenseapps.notepad.data.model.sql.Notification note) {
+			final eu.lavarde.spacetasker.data.model.sql.Notification note) {
 		final Intent delIntent = new Intent(Intent.ACTION_DELETE, note.getUri());
 		if (note.repeats != 0) {
 			delIntent.setAction(ACTION_RESCHEDULE);
@@ -322,9 +322,9 @@ public class NotificationHelper extends BroadcastReceiver {
 		notificationManager.notify((int) note._id, noti);
 	}
 
-    private static long getLatestTime(final List<com.nononsenseapps.notepad.data.model.sql.Notification> notifications) {
+    private static long getLatestTime(final List<eu.lavarde.spacetasker.data.model.sql.Notification> notifications) {
         long latest = 0;
-        for (com.nononsenseapps.notepad.data.model.sql.Notification noti : notifications) {
+        for (eu.lavarde.spacetasker.data.model.sql.Notification noti : notifications) {
             if (noti.time > latest)
                 latest = noti.time;
         }
@@ -336,11 +336,11 @@ public class NotificationHelper extends BroadcastReceiver {
 	// final NotificationManager notificationManager,
 	// final NotificationCompat.Builder builder,
 	// final Long idToUse,
-	// final List<com.nononsenseapps.notepad.data.model.sql.Notification>
+	// final List<eu.lavarde.spacetasker.data.model.sql.Notification>
 	// notifications) {
 	// // Delete intent must delete all notifications
 	// Intent delint = new Intent(Intent.ACTION_DELETE,
-	// com.nononsenseapps.notepad.data.model.sql.Notification.URI);
+	// eu.lavarde.spacetasker.data.model.sql.Notification.URI);
 	// // Add extra so we don't delete all
 	// final long maxTime = getLatestTime(notifications);
 	// delint.putExtra(ARG_MAX_TIME, maxTime);
@@ -392,7 +392,7 @@ public class NotificationHelper extends BroadcastReceiver {
 	// ib.setSummaryText("+" + (notifications.size() - 6) + " "
 	// + context.getString(R.string.more));
 	//
-	// for (com.nononsenseapps.notepad.data.model.sql.Notification e : notifications)
+	// for (eu.lavarde.spacetasker.data.model.sql.Notification e : notifications)
 	// {
 	// ib.addLine(e.taskTitle);
 	// }
@@ -407,7 +407,7 @@ public class NotificationHelper extends BroadcastReceiver {
 	private static void scheduleNext(Context context) {
 		// Get first future notification
 		final Calendar now = Calendar.getInstance();
-		final List<com.nononsenseapps.notepad.data.model.sql.Notification> notifications = com.nononsenseapps.notepad.data.model.sql.Notification
+		final List<eu.lavarde.spacetasker.data.model.sql.Notification> notifications = eu.lavarde.spacetasker.data.model.sql.Notification
 				.getNotificationsWithTime(context, now.getTimeInMillis(), false);
 
 		// if not empty, schedule alarm wake up
@@ -444,7 +444,7 @@ public class NotificationHelper extends BroadcastReceiver {
 	 * @param notification
 	 */
 	public static void updateNotification(final Context context,
-			final com.nononsenseapps.notepad.data.model.sql.Notification notification) {
+			final eu.lavarde.spacetasker.data.model.sql.Notification notification) {
 		/*
 		 * Only don't insert if update is success This way the editor can update
 		 * a deleted notification and still have it persisted in the database
@@ -476,7 +476,7 @@ public class NotificationHelper extends BroadcastReceiver {
 	 * @param not
 	 */
 	public static void cancelNotification(final Context context,
-			final com.nononsenseapps.notepad.data.model.sql.Notification not) {
+			final eu.lavarde.spacetasker.data.model.sql.Notification not) {
 		if (not != null) {
 			cancelNotification(context, not.getUri());
 		}
@@ -504,9 +504,9 @@ public class NotificationHelper extends BroadcastReceiver {
 	 * belong to.
 	 */
 	private static Collection<Long> getRelatedLists(
-			final List<com.nononsenseapps.notepad.data.model.sql.Notification> notifications) {
+			final List<eu.lavarde.spacetasker.data.model.sql.Notification> notifications) {
 		final HashSet<Long> lists = new HashSet<Long>();
-		for (com.nononsenseapps.notepad.data.model.sql.Notification not : notifications) {
+		for (eu.lavarde.spacetasker.data.model.sql.Notification not : notifications) {
 			lists.add(not.listID);
 		}
 
@@ -518,7 +518,7 @@ public class NotificationHelper extends BroadcastReceiver {
      */
     // public static void deleteNotification(final Context context, long listId,
     // long maxTime) {
-    // com.nononsenseapps.notepad.data.model.sql.Notification.removeWithListId(
+    // eu.lavarde.spacetasker.data.model.sql.Notification.removeWithListId(
     // context, listId, maxTime);
     //
     // final NotificationManager notificationManager = (NotificationManager)
@@ -531,11 +531,11 @@ public class NotificationHelper extends BroadcastReceiver {
      * Returns a list of those notifications that are associated to notes in the
 	 * specified list.
 	 */
-	private static List<com.nononsenseapps.notepad.data.model.sql.Notification> getSubList(
+	private static List<eu.lavarde.spacetasker.data.model.sql.Notification> getSubList(
 			final long listId,
-			final List<com.nononsenseapps.notepad.data.model.sql.Notification> notifications) {
-		final ArrayList<com.nononsenseapps.notepad.data.model.sql.Notification> subList = new ArrayList<com.nononsenseapps.notepad.data.model.sql.Notification>();
-		for (com.nononsenseapps.notepad.data.model.sql.Notification not : notifications) {
+			final List<eu.lavarde.spacetasker.data.model.sql.Notification> notifications) {
+		final ArrayList<eu.lavarde.spacetasker.data.model.sql.Notification> subList = new ArrayList<eu.lavarde.spacetasker.data.model.sql.Notification>();
+		for (eu.lavarde.spacetasker.data.model.sql.Notification not : notifications) {
 			if (not.listID == listId) {
 				subList.add(not);
 			}
@@ -563,20 +563,20 @@ public class NotificationHelper extends BroadcastReceiver {
             if (Intent.ACTION_DELETE.equals(intent.getAction()) || ACTION_RESCHEDULE.equals
                     (intent.getAction())) {
                 // Just a notification
-                com.nononsenseapps.notepad.data.model.sql.Notification.deleteOrReschedule(context,
+                eu.lavarde.spacetasker.data.model.sql.Notification.deleteOrReschedule(context,
                         intent.getData());
             } else if (ACTION_SNOOZE.equals(intent.getAction())) {
                 // msec/sec * sec/min * 30
                 long delay30min = 1000 * 60 * 30;
                 final Calendar now = Calendar.getInstance();
 
-                com.nononsenseapps.notepad.data.model.sql.Notification.setTime(context, intent.getData
+                eu.lavarde.spacetasker.data.model.sql.Notification.setTime(context, intent.getData
                         (), delay30min + now.getTimeInMillis());
             } else if (ACTION_COMPLETE.equals(intent.getAction())) {
                 // Complete note
                 Task.setCompletedSynced(context, true, intent.getLongExtra(ARG_TASKID, -1));
                 // Delete notifications with the same task id
-                com.nononsenseapps.notepad.data.model.sql.Notification.removeWithTaskIdsSynced(context, intent.getLongExtra(ARG_TASKID, -1));
+                eu.lavarde.spacetasker.data.model.sql.Notification.removeWithTaskIdsSynced(context, intent.getLongExtra(ARG_TASKID, -1));
             }
         }
 

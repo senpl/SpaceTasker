@@ -6,13 +6,13 @@ clean:
 
 test:
 	adb shell am instrument -w \
-com.nononsenseapps.notepad.test/android.test.InstrumentationTestRunner
+eu.lavarde.spacetasker.test/android.test.InstrumentationTestRunner
 
 install:
 	adb install -r bin/Test-debug.apk
 
 uninstall:
-	adb uninstall com.nononsenseapps.notepad.test
+	adb uninstall eu.lavarde.spacetasker.test
 
 makeinstallmother:
 	cd ../NoNonsenseNotes/;make debug install
@@ -27,32 +27,32 @@ testspoon:
 
 testeditor:
 	adb shell am instrument -w \
--e class com.nononsenseapps.notepad.test.FragmentTaskDetailTest \
-com.nononsenseapps.notepad.test/android.test.InstrumentationTestRunner
+-e class eu.lavarde.spacetasker.test.FragmentTaskDetailTest \
+eu.lavarde.spacetasker.test/android.test.InstrumentationTestRunner
 
 testlist:
 	adb shell am instrument -w \
--e class com.nononsenseapps.notepad.test.FragmentTaskListsTest \
-com.nononsenseapps.notepad.test/android.test.InstrumentationTestRunner
+-e class eu.lavarde.spacetasker.test.FragmentTaskListsTest \
+eu.lavarde.spacetasker.test/android.test.InstrumentationTestRunner
 
 testlistpager:
 	adb shell am instrument -w \
--e class com.nononsenseapps.notepad.test.FragmentTaskListsViewPagerTest \
-com.nononsenseapps.notepad.test/android.test.InstrumentationTestRunner
+-e class eu.lavarde.spacetasker.test.FragmentTaskListsViewPagerTest \
+eu.lavarde.spacetasker.test/android.test.InstrumentationTestRunner
 
 
 testprovider:
 	adb shell am instrument -w \
--e class com.nononsenseapps.notepad.test.DBProviderTest \
-com.nononsenseapps.notepad.test/android.test.InstrumentationTestRunner
+-e class eu.lavarde.spacetasker.test.DBProviderTest \
+eu.lavarde.spacetasker.test/android.test.InstrumentationTestRunner
 
 
 testgtask:
 	adb shell am instrument -w \
--e class com.nononsenseapps.notepad.test.GTaskSyncTest \
-com.nononsenseapps.notepad.test/android.test.InstrumentationTestRunner
+-e class eu.lavarde.spacetasker.test.GTaskSyncTest \
+eu.lavarde.spacetasker.test/android.test.InstrumentationTestRunner
 
 testrfc:
 	adb shell am instrument -w \
--e class com.nononsenseapps.notepad.test.RFCDateTest \
-com.nononsenseapps.notepad.test/android.test.InstrumentationTestRunner
+-e class eu.lavarde.spacetasker.test.RFCDateTest \
+eu.lavarde.spacetasker.test/android.test.InstrumentationTestRunner

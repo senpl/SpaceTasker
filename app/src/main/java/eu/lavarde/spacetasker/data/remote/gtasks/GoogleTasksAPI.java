@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.remote.gtasks;
+package eu.lavarde.spacetasker.data.remote.gtasks;
 
 import java.util.List;
 

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.base;
+package eu.lavarde.spacetasker.ui.base;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,8 +23,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.util.ActivityHelper;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.util.ActivityHelper;
 
 /**
  * A base activity which sets the user's configured language and theme.

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.sql;
+package eu.lavarde.spacetasker.data.local.sql;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -28,16 +28,16 @@ import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
 import android.support.annotation.NonNull;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTask;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTaskList;
-import com.nononsenseapps.notepad.data.model.sql.Notification;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.data.model.gtasks.GoogleTask;
-import com.nononsenseapps.notepad.data.model.gtasks.GoogleTaskList;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
-import com.nononsenseapps.notepad.util.RFC3339Date;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTask;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTaskList;
+import eu.lavarde.spacetasker.data.model.sql.Notification;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.model.gtasks.GoogleTask;
+import eu.lavarde.spacetasker.data.model.gtasks.GoogleTaskList;
+import eu.lavarde.spacetasker.ui.settings.SyncPrefs;
+import eu.lavarde.spacetasker.util.RFC3339Date;
 
 import java.util.Calendar;
 import java.util.HashMap;

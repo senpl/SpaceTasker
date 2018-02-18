@@ -15,17 +15,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.orgmode;
+package eu.lavarde.spacetasker.data.local.orgmode;
 
 import android.annotation.SuppressLint;
 
-import com.nononsenseapps.notepad.data.model.orgmode.RemoteTaskListFile;
-import com.nononsenseapps.notepad.data.model.orgmode.RemoteTaskNode;
-import com.nononsenseapps.notepad.data.model.sql.Notification;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTask;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTaskList;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.model.orgmode.RemoteTaskListFile;
+import eu.lavarde.spacetasker.data.model.orgmode.RemoteTaskNode;
+import eu.lavarde.spacetasker.data.model.sql.Notification;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTask;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTaskList;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
 
 import org.cowboyprogrammer.org.OrgFile;
 import org.cowboyprogrammer.org.OrgNode;

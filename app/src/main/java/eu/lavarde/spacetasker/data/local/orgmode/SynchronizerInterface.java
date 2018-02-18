@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.orgmode;
+package eu.lavarde.spacetasker.data.local.orgmode;
 
 import org.cowboyprogrammer.org.OrgFile;
 

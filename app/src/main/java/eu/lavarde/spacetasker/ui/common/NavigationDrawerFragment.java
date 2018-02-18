@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -47,16 +47,16 @@ import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.ui.list.TaskListFragment;
-import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
-import com.nononsenseapps.notepad.util.SyncGtaskHelper;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.ui.list.TaskListFragment;
+import eu.lavarde.spacetasker.util.SharedPreferencesHelper;
+import eu.lavarde.spacetasker.util.SyncGtaskHelper;
 
 import java.util.ArrayList;
 
-import static com.nononsenseapps.notepad.util.ArrayHelper.toArray;
+import static eu.lavarde.spacetasker.util.ArrayHelper.toArray;
 
 /**
  * This fragment is the view which is displayed in the left drawer.

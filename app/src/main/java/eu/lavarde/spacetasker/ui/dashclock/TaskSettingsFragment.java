@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.dashclock;
+package eu.lavarde.spacetasker.ui.dashclock;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -28,8 +28,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
 
 import java.util.ArrayList;
 

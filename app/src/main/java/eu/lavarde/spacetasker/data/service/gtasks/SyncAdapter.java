@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.service.gtasks;
+package eu.lavarde.spacetasker.data.service.gtasks;
 
 import android.accounts.Account;
 import android.content.AbstractThreadedSyncAdapter;
@@ -27,8 +27,8 @@ import android.content.SyncResult;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
-import com.nononsenseapps.notepad.data.remote.gtasks.GoogleTaskSync;
+import eu.lavarde.spacetasker.ui.settings.SyncPrefs;
+import eu.lavarde.spacetasker.data.remote.gtasks.GoogleTaskSync;
 
 /**
  * This adapter syncs with GoogleTasks API. Each sync is an incremental sync
@@ -60,10 +60,10 @@ import com.nononsenseapps.notepad.data.remote.gtasks.GoogleTaskSync;
  */
 public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
-	public static final String SYNC_STARTED = "com.nononsenseapps.notepad.sync.SYNC_STARTED";
-	public static final String SYNC_FINISHED = "com.nononsenseapps.notepad.sync.SYNC_FINISHED";
+	public static final String SYNC_STARTED = "eu.lavarde.spacetasker.sync.SYNC_STARTED";
+	public static final String SYNC_FINISHED = "eu.lavarde.spacetasker.sync.SYNC_FINISHED";
 
-	public static final String SYNC_RESULT = "com.nononsenseapps.notepad.sync.SYNC_RESULT";
+	public static final String SYNC_RESULT = "eu.lavarde.spacetasker.sync.SYNC_RESULT";
 	public static final int SUCCESS = 0;
 	public static final int LOGIN_FAIL = 1;
 	public static final int ERROR = 2;

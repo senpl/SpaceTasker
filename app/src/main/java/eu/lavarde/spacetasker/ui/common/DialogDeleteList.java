@@ -15,16 +15,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.widget.Toast;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.ui.base.DialogConfirmBase;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.ui.base.DialogConfirmBase;
 
-import static com.nononsenseapps.notepad.ui.list.TaskListFragment.LIST_ID_ALL;
+import static eu.lavarde.spacetasker.ui.list.TaskListFragment.LIST_ID_ALL;
 
 public class DialogDeleteList extends DialogConfirmBase {
 	static final String ID = "id";

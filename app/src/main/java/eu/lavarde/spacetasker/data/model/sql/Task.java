@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.model.sql;
+package eu.lavarde.spacetasker.data.model.sql;
 
 import android.app.SearchManager;
 import android.content.ContentResolver;
@@ -28,8 +28,8 @@ import android.os.AsyncTask;
 import android.provider.BaseColumns;
 import android.text.format.Time;
 
-import com.nononsenseapps.notepad.data.local.sql.LegacyDBHelper;
-import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
+import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper;
+import eu.lavarde.spacetasker.data.local.sql.MyContentProvider;
 
 import org.json.JSONException;
 import org.json.JSONObject;

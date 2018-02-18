@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -24,7 +24,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RelativeLayout;
 
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 /**
  * This class is designed to act as a simple version of the touch delegate. E.g.
@@ -32,7 +32,7 @@ import com.nononsenseapps.notepad.R;
  * 
  * Define it entirely in XML as the following example demonstrates:
  * 
- * <com.nononsenseapps.notepad.ui.common.DelegateFrame
+ * <eu.lavarde.spacetasker.ui.common.DelegateFrame
         xmlns:custom="http://schemas.android.com/apk/res-auto"
         android:id="@+id/datecheckcontainer"
         android:layout_width="wrap_content"

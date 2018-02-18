@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.ui.list;
+package eu.lavarde.spacetasker.ui.list;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.ActionMode;

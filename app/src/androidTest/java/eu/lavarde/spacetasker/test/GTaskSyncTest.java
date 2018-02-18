@@ -1,15 +1,15 @@
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.data.model.gtasks.GoogleTask;
-import com.nononsenseapps.notepad.data.model.gtasks.GoogleTaskList;
-import com.nononsenseapps.notepad.data.remote.gtasks.GoogleTaskSync;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.model.gtasks.GoogleTask;
+import eu.lavarde.spacetasker.data.model.gtasks.GoogleTaskList;
+import eu.lavarde.spacetasker.data.remote.gtasks.GoogleTaskSync;
 
 import android.database.Cursor;
 import android.test.AndroidTestCase;
@@ -17,10 +17,10 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;
 import android.util.Pair;
 
-import static com.nononsenseapps.notepad.data.local.sql.DatabaseHandler.resetTestDatabase;
-import static com.nononsenseapps.notepad.data.local.sql.DatabaseHandler.setEmptyTestDatabase;
-import static com.nononsenseapps.notepad.data.local.sql.DatabaseHandler.setFreshTestDatabase;
-import static com.nononsenseapps.notepad.data.local.sql.DatabaseHandler.setTestDatabase;
+import static eu.lavarde.spacetasker.data.local.sql.DatabaseHandler.resetTestDatabase;
+import static eu.lavarde.spacetasker.data.local.sql.DatabaseHandler.setEmptyTestDatabase;
+import static eu.lavarde.spacetasker.data.local.sql.DatabaseHandler.setFreshTestDatabase;
+import static eu.lavarde.spacetasker.data.local.sql.DatabaseHandler.setTestDatabase;
 
 public class GTaskSyncTest extends AndroidTestCase {
 	String balle = "balle";

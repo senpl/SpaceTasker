@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import android.content.Context;
 import android.test.AndroidTestCase;
@@ -23,8 +23,8 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.test.suitebuilder.annotation.Suppress;
 
 import com.nononsenseapps.build.Config;
-import com.nononsenseapps.notepad.*;
-import com.nononsenseapps.notepad.BuildConfig;
+import eu.lavarde.spacetasker.*;
+import eu.lavarde.spacetasker.BuildConfig;
 
 import java.util.Properties;
 

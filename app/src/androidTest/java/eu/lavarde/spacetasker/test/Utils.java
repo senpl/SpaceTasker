@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import android.support.annotation.NonNull;
 import android.support.test.espresso.matcher.BoundedMatcher;

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.util;
+package eu.lavarde.spacetasker.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -23,11 +23,11 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.ui.common.DialogPasswordSettings;
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSyncHelper;
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSynchronizer;
-import com.nononsenseapps.notepad.data.local.orgmode.SDSynchronizer;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.ui.common.DialogPasswordSettings;
+import eu.lavarde.spacetasker.data.remote.orgmodedropbox.DropboxSyncHelper;
+import eu.lavarde.spacetasker.data.remote.orgmodedropbox.DropboxSynchronizer;
+import eu.lavarde.spacetasker.data.local.orgmode.SDSynchronizer;
 
 /**
  * Helper class to save common options to shared preferences.

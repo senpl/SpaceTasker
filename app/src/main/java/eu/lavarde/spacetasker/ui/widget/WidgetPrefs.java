@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.widget;
+package eu.lavarde.spacetasker.ui.widget;
 
 import android.content.Context;
 import android.content.SharedPreferences;

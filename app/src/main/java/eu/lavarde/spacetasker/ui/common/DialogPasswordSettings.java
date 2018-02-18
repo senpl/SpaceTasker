@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -33,7 +33,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 /**
  * Fragment which handles password setting.

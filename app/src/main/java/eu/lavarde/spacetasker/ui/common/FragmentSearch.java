@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.app.SearchManager;
 import android.content.Context;
@@ -43,9 +43,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.databinding.FragmentSearchBinding;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.databinding.FragmentSearchBinding;
 
 public class FragmentSearch extends Fragment {
 	

@@ -15,14 +15,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.local.json.JSONBackup;
-import com.nononsenseapps.notepad.ui.base.DialogConfirmBaseV11;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.local.json.JSONBackup;
+import eu.lavarde.spacetasker.ui.base.DialogConfirmBaseV11;
 
 public class DialogRestoreBackup extends DialogConfirmBaseV11 {
 	static final String ID = "id";

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.settings;
+package eu.lavarde.spacetasker.ui.settings;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -39,31 +39,31 @@ import android.widget.Toast;
 
 import com.nononsenseapps.build.Config;
 import com.nononsenseapps.filepicker.FilePickerActivity;
-import com.nononsenseapps.notepad.BuildConfig;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.local.orgmode.SDSynchronizer;
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSyncHelper;
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSynchronizer;
-import com.nononsenseapps.notepad.data.service.OrgSyncService;
-import com.nononsenseapps.notepad.ui.common.DialogGoogleAccount;
-import com.nononsenseapps.notepad.ui.common.DialogPasswordSettings;
-import com.nononsenseapps.notepad.ui.orgmodedropbox.DropboxFilePickerActivity;
-import com.nononsenseapps.notepad.util.AsyncTaskHelper;
-import com.nononsenseapps.notepad.util.PermissionsHelper;
-import com.nononsenseapps.notepad.util.PreferenceHelper;
-import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
-import com.nononsenseapps.notepad.util.SyncGtaskHelper;
+import eu.lavarde.spacetasker.BuildConfig;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.local.orgmode.SDSynchronizer;
+import eu.lavarde.spacetasker.data.remote.orgmodedropbox.DropboxSyncHelper;
+import eu.lavarde.spacetasker.data.remote.orgmodedropbox.DropboxSynchronizer;
+import eu.lavarde.spacetasker.data.service.OrgSyncService;
+import eu.lavarde.spacetasker.ui.common.DialogGoogleAccount;
+import eu.lavarde.spacetasker.ui.common.DialogPasswordSettings;
+import eu.lavarde.spacetasker.ui.orgmodedropbox.DropboxFilePickerActivity;
+import eu.lavarde.spacetasker.util.AsyncTaskHelper;
+import eu.lavarde.spacetasker.util.PermissionsHelper;
+import eu.lavarde.spacetasker.util.PreferenceHelper;
+import eu.lavarde.spacetasker.util.SharedPreferencesHelper;
+import eu.lavarde.spacetasker.util.SyncGtaskHelper;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import static com.nononsenseapps.notepad.util.PermissionsHelper.hasPermissions;
-import static com.nononsenseapps.notepad.util.PermissionsHelper.permissionsGranted;
-import static com.nononsenseapps.notepad.util.SharedPreferencesHelper.disableDropboxSync;
-import static com.nononsenseapps.notepad.util.SharedPreferencesHelper.disableSdCardSync;
-import static com.nononsenseapps.notepad.util.SharedPreferencesHelper.getDropboxDir;
-import static com.nononsenseapps.notepad.util.SharedPreferencesHelper.getSdDir;
+import static eu.lavarde.spacetasker.util.PermissionsHelper.hasPermissions;
+import static eu.lavarde.spacetasker.util.PermissionsHelper.permissionsGranted;
+import static eu.lavarde.spacetasker.util.SharedPreferencesHelper.disableDropboxSync;
+import static eu.lavarde.spacetasker.util.SharedPreferencesHelper.disableSdCardSync;
+import static eu.lavarde.spacetasker.util.SharedPreferencesHelper.getDropboxDir;
+import static eu.lavarde.spacetasker.util.SharedPreferencesHelper.getSdDir;
 
 /**
  * Main top level settings fragment

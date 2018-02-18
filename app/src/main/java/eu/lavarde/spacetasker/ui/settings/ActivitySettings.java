@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.settings;
+package eu.lavarde.spacetasker.ui.settings;
 
 import android.accounts.AccountManager;
 import android.accounts.AccountManagerCallback;
@@ -31,9 +31,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.ui.base.ActivityBase;
-import com.nononsenseapps.notepad.util.SyncGtaskHelper;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.ui.base.ActivityBase;
+import eu.lavarde.spacetasker.util.SyncGtaskHelper;
 
 import java.io.IOException;
 

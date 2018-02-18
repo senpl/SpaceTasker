@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.util;
+package eu.lavarde.spacetasker.util;
 
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -26,7 +26,7 @@ import android.preference.RingtonePreference;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 /**
  * Utilities for Preferences

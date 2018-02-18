@@ -18,48 +18,48 @@
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <header
-        android:fragment="com.nononsenseapps.notepad.ui.settings.MainPrefs"
+        android:fragment="eu.lavarde.spacetasker.ui.settings.MainPrefs"
         android:icon="@drawable/ic_brightness_6_24dp_white"
         android:summary=""
         android:title="@string/settings_cat_appearance" />
     <header
-        android:fragment="com.nononsenseapps.notepad.ui.settings.ListPrefs"
+        android:fragment="eu.lavarde.spacetasker.ui.settings.ListPrefs"
         android:icon="@drawable/ic_folder_24dp_white"
         android:summary=""
         android:title="@string/settings_list" />
     <header
-        android:fragment="com.nononsenseapps.notepad.ui.settings.SyncPrefs"
+        android:fragment="eu.lavarde.spacetasker.ui.settings.SyncPrefs"
         android:icon="@drawable/ic_refresh_24dp_white"
         android:summary=""
         android:title="@string/settings_cat_syncing" />
     <header
-        android:fragment="com.nononsenseapps.notepad.ui.settings.NotificationPrefs"
+        android:fragment="eu.lavarde.spacetasker.ui.settings.NotificationPrefs"
         android:icon="@drawable/ic_alarm_24dp_white"
         android:summary=""
         android:title="@string/notifications" />
     <header
-        android:fragment="com.nononsenseapps.notepad.ui.common.DialogPasswordSettings"
+        android:fragment="eu.lavarde.spacetasker.ui.common.DialogPasswordSettings"
         android:icon="@drawable/ic_lock_outline_24dp_white"
         android:summary=""
         android:title="@string/password" />
     <header
-        android:fragment="com.nononsenseapps.notepad.ui.settings.BackupPrefs"
+        android:fragment="eu.lavarde.spacetasker.ui.settings.BackupPrefs"
         android:icon="@drawable/ic_sd_storage_24dp_white"
         android:summary=""
         android:title="@string/backup" />
     <header
-        android:fragment="com.nononsenseapps.notepad.ui.settings.ChangelogPrefs"
+        android:fragment="eu.lavarde.spacetasker.ui.settings.ChangelogPrefs"
         android:icon="@drawable/ic_help_24dp_white"
         android:summary=""
         android:title="@string/changelog_full_title" />
     <header
-        android:fragment="com.nononsenseapps.notepad.ui.settings.AboutPrefs"
+        android:fragment="eu.lavarde.spacetasker.ui.settings.AboutPrefs"
         android:icon="@drawable/ic_info_24dp_white"
         android:summary=""
         android:title="@string/about" />
 
     <!--
-    <header android:fragment="com.nononsenseapps.notepad.widget.ListWidgetConfigure$ThemeFragment"
+    <header android:fragment="eu.lavarde.spacetasker.widget.ListWidgetConfigure$ThemeFragment"
             android:title="Appereance"
             android:summary="Set the theme and background transparency">
         Arbitrary key/value pairs can be included with a header as

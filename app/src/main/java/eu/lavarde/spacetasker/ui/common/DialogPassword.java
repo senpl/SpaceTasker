@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
@@ -31,8 +31,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.databinding.FragmentDialogPasswordBinding;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.databinding.FragmentDialogPasswordBinding;
 
 public class DialogPassword extends DialogFragment {
 

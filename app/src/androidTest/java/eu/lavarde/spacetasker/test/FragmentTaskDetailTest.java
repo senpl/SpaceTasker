@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import android.app.Instrumentation;
 import android.content.Intent;
@@ -23,9 +23,9 @@ import android.support.v4.app.Fragment;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.ui.editor.ActivityEditor;
-import com.nononsenseapps.notepad.data.model.sql.Task;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.ui.editor.ActivityEditor;
+import eu.lavarde.spacetasker.data.model.sql.Task;
 import com.squareup.spoon.Spoon;
 
 public class FragmentTaskDetailTest extends ActivityInstrumentationTestCase2<ActivityEditor> {

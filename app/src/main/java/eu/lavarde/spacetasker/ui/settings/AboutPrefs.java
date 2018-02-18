@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.settings;
+package eu.lavarde.spacetasker.ui.settings;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 public class AboutPrefs extends Fragment {
 	@Override

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.settings;
+package eu.lavarde.spacetasker.ui.settings;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -33,11 +33,11 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 
-import com.nononsenseapps.notepad.util.Log;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
-import com.nononsenseapps.notepad.data.remote.gtasks.GoogleTasksClient;
-import com.nononsenseapps.notepad.util.SyncGtaskHelper;
+import eu.lavarde.spacetasker.util.Log;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.local.sql.MyContentProvider;
+import eu.lavarde.spacetasker.data.remote.gtasks.GoogleTasksClient;
+import eu.lavarde.spacetasker.util.SyncGtaskHelper;
 
 import java.io.IOException;
 

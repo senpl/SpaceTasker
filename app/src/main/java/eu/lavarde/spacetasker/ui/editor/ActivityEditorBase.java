@@ -15,10 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.editor;
+package eu.lavarde.spacetasker.ui.editor;
 
-import com.nononsenseapps.notepad.ui.base.ActivityBase;
-import com.nononsenseapps.notepad.util.ActivityHelper;
+import eu.lavarde.spacetasker.ui.base.ActivityBase;
+import eu.lavarde.spacetasker.util.ActivityHelper;
 
 /**
  * Same as ActivityBase except it loads Editor specific themes.

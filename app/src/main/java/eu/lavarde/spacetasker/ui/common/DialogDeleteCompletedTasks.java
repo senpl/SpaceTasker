@@ -15,15 +15,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.widget.Toast;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.ui.list.TaskListFragment;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.ui.list.TaskListFragment;
 
 public class DialogDeleteCompletedTasks extends DialogDeleteTask {
 	public static void showDialog(final FragmentManager fm, final long listId,

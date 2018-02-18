@@ -15,12 +15,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.util;
+package eu.lavarde.spacetasker.util;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
 
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

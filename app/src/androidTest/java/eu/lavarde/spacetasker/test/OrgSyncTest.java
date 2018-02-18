@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -6,12 +6,12 @@ import android.database.Cursor;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.nononsenseapps.notepad.data.model.sql.RemoteTask;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTaskList;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.data.local.orgmode.OrgConverter;
-import com.nononsenseapps.notepad.data.local.orgmode.SDSynchronizer;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTask;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTaskList;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.local.orgmode.OrgConverter;
+import eu.lavarde.spacetasker.data.local.orgmode.SDSynchronizer;
 
 import org.cowboyprogrammer.org.OrgFile;
 
@@ -21,9 +21,9 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import static com.nononsenseapps.notepad.data.local.sql.DatabaseHandler.resetTestDatabase;
-import static com.nononsenseapps.notepad.data.local.sql.DatabaseHandler.setEmptyTestDatabase;
-import static com.nononsenseapps.notepad.data.local.sql.DatabaseHandler.setTestDatabase;
+import static eu.lavarde.spacetasker.data.local.sql.DatabaseHandler.resetTestDatabase;
+import static eu.lavarde.spacetasker.data.local.sql.DatabaseHandler.setEmptyTestDatabase;
+import static eu.lavarde.spacetasker.data.local.sql.DatabaseHandler.setTestDatabase;
 
 /**
  * Test the synchronizer code.

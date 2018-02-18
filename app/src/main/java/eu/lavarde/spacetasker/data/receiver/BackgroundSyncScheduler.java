@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.receiver;
+package eu.lavarde.spacetasker.data.receiver;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -24,7 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.SystemClock;
 
-import com.nononsenseapps.notepad.data.service.OrgSyncService;
+import eu.lavarde.spacetasker.data.service.OrgSyncService;
 
 public class BackgroundSyncScheduler extends BroadcastReceiver {
     // Unique ID for schedule

@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.ui.list;
+package eu.lavarde.spacetasker.ui.list;
 
 
 import android.support.test.espresso.NoMatchingViewException;
@@ -6,9 +6,9 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.test.Utils;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.test.Utils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;

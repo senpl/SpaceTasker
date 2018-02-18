@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import android.app.Instrumentation;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.nononsenseapps.notepad.ui.dashclock.TasksSettings;
+import eu.lavarde.spacetasker.ui.dashclock.TasksSettings;
 import com.squareup.spoon.Spoon;
 
 /**

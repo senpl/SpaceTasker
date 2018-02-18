@@ -1,9 +1,9 @@
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
-import com.nononsenseapps.notepad.data.local.sql.DatabaseHandler;
-import com.nononsenseapps.notepad.data.local.sql.LegacyDBHelper;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.local.sql.DatabaseHandler;
+import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
 
 import android.content.Context;
 import android.database.Cursor;

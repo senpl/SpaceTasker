@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.model.sql;
+package eu.lavarde.spacetasker.data.model.sql;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -26,10 +26,10 @@ import android.os.AsyncTask;
 import android.provider.BaseColumns;
 import android.view.View;
 
-import com.nononsenseapps.notepad.data.receiver.NotificationHelper;
-import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
-import com.nononsenseapps.notepad.util.TimeFormatter;
-import com.nononsenseapps.notepad.ui.common.WeekDaysView;
+import eu.lavarde.spacetasker.data.receiver.NotificationHelper;
+import eu.lavarde.spacetasker.data.local.sql.MyContentProvider;
+import eu.lavarde.spacetasker.util.TimeFormatter;
+import eu.lavarde.spacetasker.ui.common.WeekDaysView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -509,7 +509,7 @@ public class Notification extends DAO {
 	// Task.Columns.FIELDS,
 	// Task.Columns.DBLIST
 	// + " IS ? AND "
-	// + com.nononsenseapps.notepad.data.model.sql.Notification.Columns.RADIUS
+	// + eu.lavarde.spacetasker.data.model.sql.Notification.Columns.RADIUS
 	// + " IS NULL",
 	// new String[] { Long.toString(listId) }, null);
 	//

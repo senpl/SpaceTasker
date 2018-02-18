@@ -63,7 +63,7 @@ android {
   }
 
   defaultConfig {
-    applicationId "com.nononsenseapps.notepad"
+    applicationId "eu.lavarde.spacetasker"
     minSdkVersion 14
     targetSdkVersion 23
     // 60000 to be above all previous versions before gitCommitCount was used

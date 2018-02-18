@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.nononsenseapps.notepad.data.service.gtasks;
+package eu.lavarde.spacetasker.data.service.gtasks;
 
 import android.app.Service;
 import android.content.Intent;

@@ -26,7 +26,7 @@
 
         <!-- Keeping as this class for compatibility with other layout -->
 
-        <com.nononsenseapps.notepad.ui.common.TitleNoteTextView
+        <eu.lavarde.spacetasker.ui.common.TitleNoteTextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,13 +47,13 @@
             android:layout_height="0dp"
             android:visibility="gone" />
 
-        <com.nononsenseapps.notepad.ui.common.NoteCheckBox
+        <eu.lavarde.spacetasker.ui.common.NoteCheckBox
             android:id="@+id/checkbox"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:visibility="gone" />
 
-        <com.nononsenseapps.notepad.ui.common.DateView
+        <eu.lavarde.spacetasker.ui.common.DateView
             android:id="@+id/date"
             android:layout_width="0dp"
             android:layout_height="0dp"

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.remote.gtasks;
+package eu.lavarde.spacetasker.data.remote.gtasks;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -25,9 +25,9 @@ import android.accounts.OperationCanceledException;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.nononsenseapps.notepad.data.model.gtasks.GoogleTask;
-import com.nononsenseapps.notepad.data.model.gtasks.GoogleTaskList;
-import com.nononsenseapps.notepad.util.Log;
+import eu.lavarde.spacetasker.data.model.gtasks.GoogleTask;
+import eu.lavarde.spacetasker.data.model.gtasks.GoogleTaskList;
+import eu.lavarde.spacetasker.util.Log;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -34,13 +34,13 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.DAO;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.databinding.FragmentDialogMovetolistBinding;
-import com.nononsenseapps.notepad.util.ArrayHelper;
-import com.nononsenseapps.notepad.util.AsyncTaskHelper;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.DAO;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.databinding.FragmentDialogMovetolistBinding;
+import eu.lavarde.spacetasker.util.ArrayHelper;
+import eu.lavarde.spacetasker.util.AsyncTaskHelper;
 
 import java.util.Collection;
 

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.list;
+package eu.lavarde.spacetasker.ui.list;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -28,21 +28,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.nononsenseapps.notepad.ui.settings.ActivitySettings;
-import com.nononsenseapps.notepad.data.receiver.NotificationHelper;
-import com.nononsenseapps.notepad.data.service.gtasks.SyncHelper;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.ui.common.DialogAbout;
-import com.nononsenseapps.notepad.ui.common.DialogEditList;
-import com.nononsenseapps.notepad.ui.common.NavigationDrawerFragment;
-import com.nononsenseapps.notepad.ui.editor.TaskDetailFragment;
-import com.nononsenseapps.notepad.data.receiver.BackgroundSyncScheduler;
-import com.nononsenseapps.notepad.data.service.OrgSyncService;
-import com.nononsenseapps.notepad.ui.base.ActivityBase;
-import com.nononsenseapps.notepad.ui.editor.ActivityEditor;
-import com.nononsenseapps.notepad.util.ListHelper;
-import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
+import eu.lavarde.spacetasker.ui.settings.ActivitySettings;
+import eu.lavarde.spacetasker.data.receiver.NotificationHelper;
+import eu.lavarde.spacetasker.data.service.gtasks.SyncHelper;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.ui.common.DialogAbout;
+import eu.lavarde.spacetasker.ui.common.DialogEditList;
+import eu.lavarde.spacetasker.ui.common.NavigationDrawerFragment;
+import eu.lavarde.spacetasker.ui.editor.TaskDetailFragment;
+import eu.lavarde.spacetasker.data.receiver.BackgroundSyncScheduler;
+import eu.lavarde.spacetasker.data.service.OrgSyncService;
+import eu.lavarde.spacetasker.ui.base.ActivityBase;
+import eu.lavarde.spacetasker.ui.editor.ActivityEditor;
+import eu.lavarde.spacetasker.util.ListHelper;
+import eu.lavarde.spacetasker.util.SharedPreferencesHelper;
 
 /**
  * Main List activity. Its purpose is to setup the views and layout for the benefit of

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.editor;
+package eu.lavarde.spacetasker.ui.editor;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,10 +25,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.local.sql.LegacyDBHelper;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
 
 /**
  * Container for editor fragment. Only used on phones.

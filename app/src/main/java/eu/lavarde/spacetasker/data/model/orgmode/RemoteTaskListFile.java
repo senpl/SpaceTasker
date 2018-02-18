@@ -15,9 +15,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.model.orgmode;
+package eu.lavarde.spacetasker.data.model.orgmode;
 
-import com.nononsenseapps.notepad.data.model.sql.RemoteTaskList;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTaskList;
 
 public class RemoteTaskListFile {
 

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -23,8 +23,8 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.res.Configuration;
 import android.preference.PreferenceManager;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.ui.settings.MainPrefs;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.ui.settings.MainPrefs;
 
 import java.util.Locale;
 

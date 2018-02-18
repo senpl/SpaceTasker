@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.settings;
+package eu.lavarde.spacetasker.ui.settings;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -25,15 +25,15 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceFragment;
 import android.widget.Toast;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.ui.base.DialogConfirmBaseV11.DialogConfirmedListener;
-import com.nononsenseapps.notepad.ui.common.DialogExportBackup;
-import com.nononsenseapps.notepad.ui.common.DialogRestoreBackup;
-import com.nononsenseapps.notepad.data.local.json.JSONBackup;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.ui.base.DialogConfirmBaseV11.DialogConfirmedListener;
+import eu.lavarde.spacetasker.ui.common.DialogExportBackup;
+import eu.lavarde.spacetasker.ui.common.DialogRestoreBackup;
+import eu.lavarde.spacetasker.data.local.json.JSONBackup;
 
 import java.io.FileNotFoundException;
 
-// import com.nononsenseapps.notepad.NotePad;
+// import eu.lavarde.spacetasker.NotePad;
 
 public class BackupPrefs extends PreferenceFragment {
 

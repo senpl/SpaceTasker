@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.receiver;
+package eu.lavarde.spacetasker.data.receiver;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -29,11 +29,11 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
-import com.nononsenseapps.notepad.data.service.gtasks.SyncAdapter;
-import com.nononsenseapps.notepad.util.Log;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.local.sql.MyContentProvider;
+import eu.lavarde.spacetasker.ui.settings.SyncPrefs;
+import eu.lavarde.spacetasker.data.service.gtasks.SyncAdapter;
+import eu.lavarde.spacetasker.util.Log;
 
 public class SyncStatusMonitor extends BroadcastReceiver {
     private static final String TAG = "SyncStatusMonitor";

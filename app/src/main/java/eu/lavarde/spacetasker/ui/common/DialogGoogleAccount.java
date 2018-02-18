@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -30,8 +30,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.remote.gtasks.GoogleTasksClient;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.remote.gtasks.GoogleTasksClient;
 
 /**
  * Dialog which allows the user to select a Google account. Requests permission to handle tasks

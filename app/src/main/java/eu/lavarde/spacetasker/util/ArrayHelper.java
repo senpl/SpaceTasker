@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.util;
+package eu.lavarde.spacetasker.util;
 
 import java.util.Collection;
 import java.util.Iterator;

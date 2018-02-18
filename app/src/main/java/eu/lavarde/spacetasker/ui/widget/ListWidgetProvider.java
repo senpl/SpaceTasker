@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.widget;
+package eu.lavarde.spacetasker.ui.widget;
 
 import android.annotation.TargetApi;
 import android.app.PendingIntent;
@@ -30,27 +30,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RemoteViews;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.data.receiver.NotePadBroadcastReceiver;
-import com.nononsenseapps.notepad.ui.editor.ActivityEditor;
-import com.nononsenseapps.notepad.ui.editor.TaskDetailFragment;
-import com.nononsenseapps.notepad.ui.list.ActivityList;
-import com.nononsenseapps.notepad.util.Log;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.receiver.NotePadBroadcastReceiver;
+import eu.lavarde.spacetasker.ui.editor.ActivityEditor;
+import eu.lavarde.spacetasker.ui.editor.TaskDetailFragment;
+import eu.lavarde.spacetasker.ui.list.ActivityList;
+import eu.lavarde.spacetasker.util.Log;
 
 /**
  * Thewidget's AppWidgetProvider.
  */
 public class ListWidgetProvider extends AppWidgetProvider {
 	// private static final String TAG = "WIDGETPROVIDER";
-	public static final String COMPLETE_ACTION = "com.nononsenseapps.notepad.widget.COMPLETE";
-	public static final String CLICK_ACTION = "com.nononsenseapps.notepad.widget.CLICK";
-	public static final String OPEN_ACTION = "com.nononsenseapps.notepad.widget.OPENAPP";
-	public static final String CONFIG_ACTION = "com.nononsenseapps.notepad.widget.CONFIG";
-	public static final String CREATE_ACTION = "com.nononsenseapps.notepad.widget.CREATE";
-	public static final String EXTRA_NOTE_ID = "com.nononsenseapps.notepad.widget.note_id";
-	public static final String EXTRA_LIST_ID = "com.nononsenseapps.notepad.widget.list_id";
+	public static final String COMPLETE_ACTION = "eu.lavarde.spacetasker.widget.COMPLETE";
+	public static final String CLICK_ACTION = "eu.lavarde.spacetasker.widget.CLICK";
+	public static final String OPEN_ACTION = "eu.lavarde.spacetasker.widget.OPENAPP";
+	public static final String CONFIG_ACTION = "eu.lavarde.spacetasker.widget.CONFIG";
+	public static final String CREATE_ACTION = "eu.lavarde.spacetasker.widget.CREATE";
+	public static final String EXTRA_NOTE_ID = "eu.lavarde.spacetasker.widget.note_id";
+	public static final String EXTRA_LIST_ID = "eu.lavarde.spacetasker.widget.list_id";
 
 	public ListWidgetProvider() {
 

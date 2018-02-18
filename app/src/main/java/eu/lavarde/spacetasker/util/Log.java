@@ -15,9 +15,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.util;
+package eu.lavarde.spacetasker.util;
 
-import com.nononsenseapps.notepad.BuildConfig;
+import eu.lavarde.spacetasker.BuildConfig;
 
 public final class Log {
 

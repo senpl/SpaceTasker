@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.dashclock;
+package eu.lavarde.spacetasker.ui.dashclock;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -26,7 +26,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On

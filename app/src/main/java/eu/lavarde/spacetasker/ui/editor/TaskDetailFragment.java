@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.editor;
+package eu.lavarde.spacetasker.ui.editor;
 
 import android.content.Context;
 import android.content.Intent;
@@ -51,25 +51,25 @@ import android.widget.Toast;
 import com.android.datetimepicker.date.DatePickerDialog;
 import com.android.datetimepicker.date.DatePickerDialog.OnDateSetListener;
 import com.android.datetimepicker.time.TimePickerDialog;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Notification;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.ui.base.DialogConfirmBase.DialogConfirmedListener;
-import com.nononsenseapps.notepad.ui.common.DialogDeleteTask;
-import com.nononsenseapps.notepad.ui.common.DialogPassword;
-import com.nononsenseapps.notepad.ui.common.DialogPassword.PasswordConfirmedListener;
-import com.nononsenseapps.notepad.ui.common.MenuStateController;
-import com.nononsenseapps.notepad.ui.common.NotificationItemHelper;
-import com.nononsenseapps.notepad.ui.common.StyledEditText;
-import com.nononsenseapps.notepad.ui.settings.MainPrefs;
-import com.nononsenseapps.notepad.util.FragmentHelper;
-import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
-import com.nononsenseapps.notepad.util.TimeFormatter;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Notification;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.ui.base.DialogConfirmBase.DialogConfirmedListener;
+import eu.lavarde.spacetasker.ui.common.DialogDeleteTask;
+import eu.lavarde.spacetasker.ui.common.DialogPassword;
+import eu.lavarde.spacetasker.ui.common.DialogPassword.PasswordConfirmedListener;
+import eu.lavarde.spacetasker.ui.common.MenuStateController;
+import eu.lavarde.spacetasker.ui.common.NotificationItemHelper;
+import eu.lavarde.spacetasker.ui.common.StyledEditText;
+import eu.lavarde.spacetasker.ui.settings.MainPrefs;
+import eu.lavarde.spacetasker.util.FragmentHelper;
+import eu.lavarde.spacetasker.util.SharedPreferencesHelper;
+import eu.lavarde.spacetasker.util.TimeFormatter;
 
 import java.util.Calendar;
 
-import static com.nononsenseapps.notepad.util.ListHelper.getARealList;
+import static eu.lavarde.spacetasker.util.ListHelper.getARealList;
 
 /**
  * A fragment representing a single Note detail screen.

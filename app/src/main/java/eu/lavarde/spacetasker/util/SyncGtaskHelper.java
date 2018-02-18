@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.util;
+package eu.lavarde.spacetasker.util;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -28,9 +28,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
-import com.nononsenseapps.notepad.data.service.gtasks.GTasksSyncDelay;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
+import eu.lavarde.spacetasker.data.service.gtasks.GTasksSyncDelay;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.local.sql.MyContentProvider;
 
 import java.util.Calendar;
 

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.service;
+package eu.lavarde.spacetasker.data.service;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -33,18 +33,18 @@ import android.os.Process;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSynchronizer;
-import com.nononsenseapps.notepad.data.local.orgmode.Monitor;
-import com.nononsenseapps.notepad.data.local.orgmode.SDSynchronizer;
-import com.nononsenseapps.notepad.data.local.orgmode.SynchronizerInterface;
-import com.nononsenseapps.notepad.util.Log;
-import com.nononsenseapps.notepad.BuildConfig;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.ui.settings.PrefsActivity;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
-import com.nononsenseapps.notepad.data.service.gtasks.SyncAdapter;
-import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
+import eu.lavarde.spacetasker.data.remote.orgmodedropbox.DropboxSynchronizer;
+import eu.lavarde.spacetasker.data.local.orgmode.Monitor;
+import eu.lavarde.spacetasker.data.local.orgmode.SDSynchronizer;
+import eu.lavarde.spacetasker.data.local.orgmode.SynchronizerInterface;
+import eu.lavarde.spacetasker.util.Log;
+import eu.lavarde.spacetasker.BuildConfig;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.ui.settings.PrefsActivity;
+import eu.lavarde.spacetasker.ui.settings.SyncPrefs;
+import eu.lavarde.spacetasker.data.service.gtasks.SyncAdapter;
+import eu.lavarde.spacetasker.util.SharedPreferencesHelper;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -55,9 +55,9 @@ public class OrgSyncService extends Service {
 
 	private static final String TAG = "OrgSyncService";
 
-    public static final String ACTION_START = "com.nononsenseapps.notepad" +
+    public static final String ACTION_START = "eu.lavarde.spacetasker" +
                                               ".sync.START";
-    public static final String ACTION_PAUSE = "com.nononsenseapps.notepad" +
+    public static final String ACTION_PAUSE = "eu.lavarde.spacetasker" +
                                               ".sync.PAUSE";
 
 	// Msg arguments

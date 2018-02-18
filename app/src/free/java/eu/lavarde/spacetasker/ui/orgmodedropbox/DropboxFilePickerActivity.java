@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.orgmodedropbox;
+package eu.lavarde.spacetasker.ui.orgmodedropbox;
 
 /**
  * Dummy class. See Play build flavor for real one.

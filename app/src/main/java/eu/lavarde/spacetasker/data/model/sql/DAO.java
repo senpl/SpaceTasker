@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.model.sql;
+package eu.lavarde.spacetasker.data.model.sql;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -25,7 +25,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
+import eu.lavarde.spacetasker.data.local.sql.MyContentProvider;
 
 import java.util.ArrayList;
 

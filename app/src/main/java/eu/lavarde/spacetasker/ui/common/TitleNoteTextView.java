@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -33,7 +33,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 /**
  * A TextView that highlights the first line and makes links clickable. The text

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.content.Context;
 import android.view.View;
@@ -28,12 +28,12 @@ import com.android.datetimepicker.date.DatePickerDialog.OnDateSetListener;
 import com.android.datetimepicker.time.RadialPickerLayout;
 import com.android.datetimepicker.time.TimePickerDialog;
 import com.android.datetimepicker.time.TimePickerDialog.OnTimeSetListener;
-import com.nononsenseapps.notepad.util.TimeFormatter;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Notification;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.ui.editor.TaskDetailFragment;
-import com.nononsenseapps.notepad.ui.common.WeekDaysView.onCheckedDaysChangeListener;
+import eu.lavarde.spacetasker.util.TimeFormatter;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Notification;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.ui.editor.TaskDetailFragment;
+import eu.lavarde.spacetasker.ui.common.WeekDaysView.onCheckedDaysChangeListener;
 
 import java.util.Calendar;
 import java.util.Date;

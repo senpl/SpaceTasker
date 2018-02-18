@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.ui.list;
+package eu.lavarde.spacetasker.ui.list;
 
 import android.database.Cursor;
 import android.support.v4.view.MotionEventCompat;
@@ -6,10 +6,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.CompoundButton;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.databinding.TasklistItemRichBinding;
-import com.nononsenseapps.notepad.ui.common.NoteCheckBox;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.databinding.TasklistItemRichBinding;
+import eu.lavarde.spacetasker.ui.common.NoteCheckBox;
 
 class ItemViewHolder extends ViewHolder implements View.OnClickListener,
         View.OnLongClickListener {

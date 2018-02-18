@@ -1,12 +1,12 @@
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
 
-import com.nononsenseapps.notepad.data.model.sql.DAO;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.model.sql.DAO;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;

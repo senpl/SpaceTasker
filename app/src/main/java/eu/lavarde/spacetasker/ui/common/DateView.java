@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.common;
+package eu.lavarde.spacetasker.ui.common;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -24,8 +24,8 @@ import android.text.format.Time;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.util.TimeFormatter;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.util.TimeFormatter;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

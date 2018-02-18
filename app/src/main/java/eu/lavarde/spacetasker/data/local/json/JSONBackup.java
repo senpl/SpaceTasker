@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.json;
+package eu.lavarde.spacetasker.data.local.json;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -23,12 +23,12 @@ import android.database.Cursor;
 import android.os.Environment;
 import android.util.Log;
 
-import com.nononsenseapps.notepad.data.model.sql.Notification;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTask;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTaskList;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.data.receiver.NotificationHelper;
+import eu.lavarde.spacetasker.data.model.sql.Notification;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTask;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTaskList;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.receiver.NotificationHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;

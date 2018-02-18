@@ -15,16 +15,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.model.gtasks;
+package eu.lavarde.spacetasker.data.model.gtasks;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 
-import com.nononsenseapps.notepad.data.local.sql.LegacyDBHelper.NotePad;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTask;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.remote.gtasks.GoogleTasksAPI;
-import com.nononsenseapps.notepad.util.RFC3339Date;
+import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper.NotePad;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTask;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.remote.gtasks.GoogleTasksAPI;
+import eu.lavarde.spacetasker.util.RFC3339Date;
 
 public class GoogleTask extends RemoteTask {
 

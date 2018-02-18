@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.settings;
+package eu.lavarde.spacetasker.ui.settings;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -44,22 +44,22 @@ import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
 import com.nononsenseapps.build.Config;
-import com.nononsenseapps.notepad.ui.orgmodedropbox.DropboxFilePickerActivity;
+import eu.lavarde.spacetasker.ui.orgmodedropbox.DropboxFilePickerActivity;
 import com.nononsenseapps.filepicker.FilePickerActivity;
-import com.nononsenseapps.notepad.util.Log;
-import com.nononsenseapps.notepad.BuildConfig;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
-import com.nononsenseapps.notepad.data.remote.gtasks.GoogleTasksClient;
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSyncHelper;
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSynchronizer;
-import com.nononsenseapps.notepad.data.service.OrgSyncService;
-import com.nononsenseapps.notepad.data.local.orgmode.SDSynchronizer;
+import eu.lavarde.spacetasker.util.Log;
+import eu.lavarde.spacetasker.BuildConfig;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.local.sql.MyContentProvider;
+import eu.lavarde.spacetasker.data.remote.gtasks.GoogleTasksClient;
+import eu.lavarde.spacetasker.data.remote.orgmodedropbox.DropboxSyncHelper;
+import eu.lavarde.spacetasker.data.remote.orgmodedropbox.DropboxSynchronizer;
+import eu.lavarde.spacetasker.data.service.OrgSyncService;
+import eu.lavarde.spacetasker.data.local.orgmode.SDSynchronizer;
 
 import java.io.File;
 import java.io.IOException;
 
-// import com.nononsenseapps.notepad.NotePad;
+// import eu.lavarde.spacetasker.NotePad;
 
 public class SyncPrefs extends PreferenceFragment implements
         OnSharedPreferenceChangeListener {

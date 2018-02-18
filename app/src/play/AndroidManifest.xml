@@ -23,7 +23,7 @@
 
         <!-- Dropbox stuff -->
         <activity
-            android:name="com.nononsenseapps.notepad.ui.orgmodedropbox.DropboxFilePickerActivity"
+            android:name="eu.lavarde.spacetasker.ui.orgmodedropbox.DropboxFilePickerActivity"
             android:label="@string/app_name"
             android:theme="@style/FilePickerTheme">
         </activity>

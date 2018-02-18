@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.widget;
+package eu.lavarde.spacetasker.ui.widget;
 
 import android.annotation.TargetApi;
 import android.app.ActionBar;
@@ -45,13 +45,13 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.databinding.ActivityWidgetConfigBinding;
-import com.nononsenseapps.notepad.ui.common.TitleNoteTextView;
-import com.nononsenseapps.notepad.util.Log;
-import com.nononsenseapps.notepad.util.TimeFormatter;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.databinding.ActivityWidgetConfigBinding;
+import eu.lavarde.spacetasker.ui.common.TitleNoteTextView;
+import eu.lavarde.spacetasker.util.Log;
+import eu.lavarde.spacetasker.util.TimeFormatter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

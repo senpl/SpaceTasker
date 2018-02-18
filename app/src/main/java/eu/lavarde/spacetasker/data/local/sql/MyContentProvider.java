@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.sql;
+package eu.lavarde.spacetasker.data.local.sql;
 
 import android.app.SearchManager;
 import android.content.ContentProvider;
@@ -29,13 +29,13 @@ import android.database.sqlite.SQLiteStatement;
 import android.net.Uri;
 import android.util.Log;
 
-import com.nononsenseapps.notepad.data.local.UpdateNotifier;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTask;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTaskList;
-import com.nononsenseapps.notepad.data.model.sql.DAO;
-import com.nononsenseapps.notepad.data.model.sql.Notification;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.local.UpdateNotifier;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTask;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTaskList;
+import eu.lavarde.spacetasker.data.model.sql.DAO;
+import eu.lavarde.spacetasker.data.model.sql.Notification;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
 
 import java.util.ArrayList;
 

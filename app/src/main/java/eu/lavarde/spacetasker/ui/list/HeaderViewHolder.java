@@ -1,11 +1,11 @@
-package com.nononsenseapps.notepad.ui.list;
+package eu.lavarde.spacetasker.ui.list;
 
 import android.database.Cursor;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.databinding.TasklistHeaderBinding;
-import com.nononsenseapps.notepad.util.TimeFormatter;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.databinding.TasklistHeaderBinding;
+import eu.lavarde.spacetasker.util.TimeFormatter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

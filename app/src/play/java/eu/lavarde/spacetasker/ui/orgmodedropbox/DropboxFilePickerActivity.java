@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nononsenseapps.notepad.ui.orgmodedropbox;
+package eu.lavarde.spacetasker.ui.orgmodedropbox;
 
 import android.os.Bundle;
 
@@ -22,7 +22,7 @@ import com.dropbox.client2.DropboxAPI;
 import com.dropbox.client2.android.AndroidAuthSession;
 import com.nononsenseapps.filepicker.AbstractFilePickerActivity;
 import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
-import com.nononsenseapps.notepad.data.remote.orgmodedropbox.DropboxSyncHelper;
+import eu.lavarde.spacetasker.data.remote.orgmodedropbox.DropboxSyncHelper;
 
 public class DropboxFilePickerActivity extends
         AbstractFilePickerActivity<DropboxAPI.Entry> {

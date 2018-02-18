@@ -15,16 +15,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.ui.widget;
+package eu.lavarde.spacetasker.ui.widget;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.nononsenseapps.notepad.util.TimeFormatter;
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.ui.editor.TaskDetailFragment;
-import com.nononsenseapps.notepad.ui.common.TitleNoteTextView;
+import eu.lavarde.spacetasker.util.TimeFormatter;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.ui.editor.TaskDetailFragment;
+import eu.lavarde.spacetasker.ui.common.TitleNoteTextView;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;

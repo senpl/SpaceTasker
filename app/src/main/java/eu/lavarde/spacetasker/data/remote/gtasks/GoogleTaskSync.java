@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.remote.gtasks;
+package eu.lavarde.spacetasker.data.remote.gtasks;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -29,15 +29,15 @@ import android.preference.PreferenceManager;
 import android.util.Pair;
 
 import com.nononsenseapps.build.Config;
-import com.nononsenseapps.notepad.data.model.gtasks.GoogleTask;
-import com.nononsenseapps.notepad.data.model.gtasks.GoogleTaskList;
-import com.nononsenseapps.notepad.util.Log;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
-import com.nononsenseapps.notepad.util.PermissionsHelper;
-import com.nononsenseapps.notepad.util.SyncGtaskHelper;
-import com.nononsenseapps.notepad.util.RFC3339Date;
+import eu.lavarde.spacetasker.data.model.gtasks.GoogleTask;
+import eu.lavarde.spacetasker.data.model.gtasks.GoogleTaskList;
+import eu.lavarde.spacetasker.util.Log;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.ui.settings.SyncPrefs;
+import eu.lavarde.spacetasker.util.PermissionsHelper;
+import eu.lavarde.spacetasker.util.SyncGtaskHelper;
+import eu.lavarde.spacetasker.util.RFC3339Date;
 
 import org.json.JSONException;
 

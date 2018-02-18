@@ -15,14 +15,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.remote.orgmodedropbox;
+package eu.lavarde.spacetasker.data.remote.orgmodedropbox;
 
 import android.app.Activity;
 
-import com.nononsenseapps.notepad.data.local.orgmode.Monitor;
-import com.nononsenseapps.notepad.data.local.orgmode.SynchronizerInterface;
-import com.nononsenseapps.notepad.data.service.OrgSyncService;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
+import eu.lavarde.spacetasker.data.local.orgmode.Monitor;
+import eu.lavarde.spacetasker.data.local.orgmode.SynchronizerInterface;
+import eu.lavarde.spacetasker.data.service.OrgSyncService;
+import eu.lavarde.spacetasker.ui.settings.SyncPrefs;
 
 import org.cowboyprogrammer.org.OrgFile;
 

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.orgmode;
+package eu.lavarde.spacetasker.data.local.orgmode;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -23,10 +23,10 @@ import android.database.Cursor;
 import android.util.Log;
 import android.util.Pair;
 
-import com.nononsenseapps.notepad.data.model.sql.RemoteTask;
-import com.nononsenseapps.notepad.data.model.sql.RemoteTaskList;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTask;
+import eu.lavarde.spacetasker.data.model.sql.RemoteTaskList;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
 
 import org.cowboyprogrammer.org.parser.OrgParser;
 import org.cowboyprogrammer.org.parser.RegexParser;

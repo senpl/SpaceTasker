@@ -15,16 +15,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.local.orgmode;
+package eu.lavarde.spacetasker.data.local.orgmode;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Environment;
 import android.os.FileObserver;
 
-import com.nononsenseapps.notepad.data.service.OrgSyncService;
-import com.nononsenseapps.notepad.util.PermissionsHelper;
-import com.nononsenseapps.notepad.util.SharedPreferencesHelper;
+import eu.lavarde.spacetasker.data.service.OrgSyncService;
+import eu.lavarde.spacetasker.util.PermissionsHelper;
+import eu.lavarde.spacetasker.util.SharedPreferencesHelper;
 
 import org.cowboyprogrammer.org.OrgFile;
 import org.cowboyprogrammer.org.parser.OrgParser;

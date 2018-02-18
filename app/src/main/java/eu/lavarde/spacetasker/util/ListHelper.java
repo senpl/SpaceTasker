@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.util;
+package eu.lavarde.spacetasker.util;
 
 import android.content.Context;
 import android.content.Intent;
@@ -23,12 +23,12 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.preference.PreferenceManager;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.data.local.sql.LegacyDBHelper;
-import com.nononsenseapps.notepad.data.model.sql.Task;
-import com.nononsenseapps.notepad.data.model.sql.TaskList;
-import com.nononsenseapps.notepad.ui.editor.TaskDetailFragment;
-import com.nononsenseapps.notepad.ui.list.TaskListFragment;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper;
+import eu.lavarde.spacetasker.data.model.sql.Task;
+import eu.lavarde.spacetasker.data.model.sql.TaskList;
+import eu.lavarde.spacetasker.ui.editor.TaskDetailFragment;
+import eu.lavarde.spacetasker.ui.list.TaskListFragment;
 
 /**
  * Simple utility class to hold some general functions.

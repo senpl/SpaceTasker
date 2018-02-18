@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nononsenseapps.notepad.ui.orgmodedropbox;
+package eu.lavarde.spacetasker.ui.orgmodedropbox;
 
 import android.annotation.SuppressLint;
 import android.net.Uri;
@@ -28,7 +28,7 @@ import com.dropbox.client2.DropboxAPI;
 import com.dropbox.client2.android.AndroidAuthSession;
 import com.dropbox.client2.exception.DropboxException;
 import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
-import com.nononsenseapps.notepad.R;
+import eu.lavarde.spacetasker.R;
 
 import java.io.File;
 

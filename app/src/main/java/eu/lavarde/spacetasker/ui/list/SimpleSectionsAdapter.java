@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.ui.list;
+package eu.lavarde.spacetasker.ui.list;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,9 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.databinding.TasklistHeaderBinding;
-import com.nononsenseapps.notepad.databinding.TasklistItemRichBinding;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.databinding.TasklistHeaderBinding;
+import eu.lavarde.spacetasker.databinding.TasklistItemRichBinding;
 
 class SimpleSectionsAdapter extends RecyclerView.Adapter<ViewHolder> {
     final static int itemType = 0;

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import android.app.Instrumentation;
 import android.support.v4.app.Fragment;
@@ -23,8 +23,8 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
-import com.nononsenseapps.notepad.R;
-import com.nononsenseapps.notepad.ui.list.ActivityList;
+import eu.lavarde.spacetasker.R;
+import eu.lavarde.spacetasker.ui.list.ActivityList;
 import com.squareup.spoon.Spoon;
 
 public class FragmentTaskListsTest extends ActivityInstrumentationTestCase2<ActivityList> {

@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.ui.list;
+package eu.lavarde.spacetasker.ui.list;
 
 import android.database.Cursor;
 import android.support.v7.widget.RecyclerView;

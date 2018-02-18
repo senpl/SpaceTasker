@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nononsenseapps.notepad.data.remote.orgmodedropbox;
+package eu.lavarde.spacetasker.data.remote.orgmodedropbox;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -25,10 +25,10 @@ import com.dropbox.client2.DropboxAPI;
 import com.dropbox.client2.android.AndroidAuthSession;
 import com.dropbox.client2.exception.DropboxException;
 import com.dropbox.client2.exception.DropboxServerException;
-import com.nononsenseapps.notepad.data.local.orgmode.Monitor;
-import com.nononsenseapps.notepad.data.local.orgmode.Synchronizer;
-import com.nononsenseapps.notepad.data.local.orgmode.SynchronizerInterface;
-import com.nononsenseapps.notepad.ui.settings.SyncPrefs;
+import eu.lavarde.spacetasker.data.local.orgmode.Monitor;
+import eu.lavarde.spacetasker.data.local.orgmode.Synchronizer;
+import eu.lavarde.spacetasker.data.local.orgmode.SynchronizerInterface;
+import eu.lavarde.spacetasker.ui.settings.SyncPrefs;
 
 import org.cowboyprogrammer.org.OrgFile;
 import org.cowboyprogrammer.org.parser.OrgParser;

@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.database;
+package eu.lavarde.spacetasker.database;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -24,7 +24,7 @@
      to come from a domain that you own or have control over.
 --><!-- Note that versionCode and versionName are overwritten in build.gradle -->
 <manifest
-    package="com.nononsenseapps.notepad"
+    package="eu.lavarde.spacetasker"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="internalOnly">
@@ -51,18 +51,18 @@
 
     <!-- Define my permissions for the provider -->
     <permission
-        android:name="com.nononsenseapps.notepad.permissions.read"
+        android:name="eu.lavarde.spacetasker.permissions.read"
         android:description="@string/permission_read_desc"
         android:label="@string/permission_read_label"
         android:permissionGroup="android.permission-group.PERSONAL_INFO" />
     <permission
-        android:name="com.nononsenseapps.notepad.permissions.write"
+        android:name="eu.lavarde.spacetasker.permissions.write"
         android:description="@string/permission_write_desc"
         android:label="@string/permission_write_label"
         android:permissionGroup="android.permission-group.PERSONAL_INFO" />
 
-    <uses-permission android:name="com.nononsenseapps.notepad.permissions.read" />
-    <uses-permission android:name="com.nononsenseapps.notepad.permissions.write" />
+    <uses-permission android:name="eu.lavarde.spacetasker.permissions.read" />
+    <uses-permission android:name="eu.lavarde.spacetasker.permissions.write" />
 
     <application
         android:allowBackup="true"
@@ -74,7 +74,7 @@
 
         <!-- Broadcast receiver for accepting actions from widget for example -->
         <receiver
-            android:name="com.nononsenseapps.notepad.data.receiver.NotePadBroadcastReceiver"
+            android:name="eu.lavarde.spacetasker.data.receiver.NotePadBroadcastReceiver"
             tools:ignore="ExportedReceiver">
             <intent-filter>
                 <action android:name="com.nononsenseapps.completenote" />
@@ -82,13 +82,13 @@
         </receiver>
 
         <activity
-            android:name="com.nononsenseapps.notepad.ui.list.ActivityList"
+            android:name="eu.lavarde.spacetasker.ui.list.ActivityList"
             android:label="@string/app_name"
             android:theme="@style/LightTheme"
             android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.app.default_searchable"
-                android:value="com.nononsenseapps.notepad.ActivitySearch_" />
+                android:value="eu.lavarde.spacetasker.ActivitySearch_" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -124,14 +124,14 @@
 
         <!-- Editor -->
         <activity
-            android:name="com.nononsenseapps.notepad.ui.editor.ActivityEditor"
+            android:name="eu.lavarde.spacetasker.ui.editor.ActivityEditor"
             android:label=""
             android:theme="@style/LightTheme.DialogWhenLarge"
             android:windowSoftInputMode="adjustResize"/>
 
         <!-- Search activity -->
         <activity
-            android:name="com.nononsenseapps.notepad.ActivitySearch_"
+            android:name="eu.lavarde.spacetasker.ActivitySearch_"
             android:label="@string/search_hint"
             android:launchMode="singleTop"
             android:theme="@style/ThemeHoloLightDarkActonBar">
@@ -146,7 +146,7 @@
 
         <!-- Deleted tasks activity -->
         <activity
-            android:name="com.nononsenseapps.notepad.ActivitySearchDeleted_"
+            android:name="eu.lavarde.spacetasker.ActivitySearchDeleted_"
             android:label="@string/archive"
             android:launchMode="singleTop"
             android:theme="@style/ThemeHoloLightDarkActonBar">
@@ -160,12 +160,12 @@
         </activity>
 
         <activity
-            android:name="com.nononsenseapps.notepad.ui.settings.PrefsActivity"
-            android:parentActivityName="com.nononsenseapps.notepad.ui.list.ActivityList"
+            android:name="eu.lavarde.spacetasker.ui.settings.PrefsActivity"
+            android:parentActivityName="eu.lavarde.spacetasker.ui.list.ActivityList"
             android:theme="@style/LightTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.nononsenseapps.notepad.ui.list.ActivityList"/>
+                android:value="eu.lavarde.spacetasker.ui.list.ActivityList"/>
 
             <intent-filter>
                 <category android:name="android.intent.category.PREFERENCE"/>
@@ -177,13 +177,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.nononsenseapps.notepad.ui.settings.ActivitySettings"
+            android:name="eu.lavarde.spacetasker.ui.settings.ActivitySettings"
             android:label="@string/menu_preferences"
-            android:parentActivityName="com.nononsenseapps.notepad.ui.list.ActivityList"
+            android:parentActivityName="eu.lavarde.spacetasker.ui.list.ActivityList"
             android:theme="@style/LightTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.nononsenseapps.notepad.ui.list.ActivityList"/>
+                android:value="eu.lavarde.spacetasker.ui.list.ActivityList"/>
 
             <intent-filter>
                 <category android:name="android.intent.category.PREFERENCE"/>
@@ -201,7 +201,7 @@
             android:theme="@style/FilePickerTheme"/>
 
         <service
-            android:name="com.nononsenseapps.notepad.data.service.gtasks.SyncService"
+            android:name="eu.lavarde.spacetasker.data.service.gtasks.SyncService"
             android:exported="true"
             tools:ignore="ExportedService">
             <intent-filter>
@@ -214,7 +214,7 @@
         </service>
 
         <!-- List Widget -->
-        <receiver android:name="com.nononsenseapps.notepad.ui.widget.ListWidgetProvider">
+        <receiver android:name="eu.lavarde.spacetasker.ui.widget.ListWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -225,12 +225,12 @@
         </receiver>
 
         <service
-            android:name="com.nononsenseapps.notepad.ui.widget.ListWidgetService"
+            android:name="eu.lavarde.spacetasker.ui.widget.ListWidgetService"
             android:exported="false"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <activity
-            android:name="com.nononsenseapps.notepad.widget.ListWidgetConfig_"
+            android:name="eu.lavarde.spacetasker.widget.ListWidgetConfig_"
             android:theme="@style/ThemeWidgetConfig"
             tools:ignore="ExportedActivity">
             <intent-filter>
@@ -257,9 +257,9 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.DELETE" />
-                <action android:name="com.nononsenseapps.notepad.ACTION.COMPLETE" />
-                <action android:name="com.nononsenseapps.notepad.ACTION.SNOOZE" />
-                <action android:name="com.nononsenseapps.notepad.ACTION.RESCHEDULE" />
+                <action android:name="eu.lavarde.spacetasker.ACTION.COMPLETE" />
+                <action android:name="eu.lavarde.spacetasker.ACTION.SNOOZE" />
+                <action android:name="eu.lavarde.spacetasker.ACTION.RESCHEDULE" />
 
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -269,7 +269,7 @@
 
         <!-- Dashclock -->
         <service
-            android:name="com.nononsenseapps.notepad.ui.dashclock.TasksExtension"
+            android:name="eu.lavarde.spacetasker.ui.dashclock.TasksExtension"
             android:icon="@drawable/ic_stat_notification_edit"
             android:label="@string/dashclock_nononsense_notes"
             android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
@@ -285,11 +285,11 @@
                 android:value="Displays your tasks from NoNonsense Notes." />
             <meta-data
                 android:name="settingsActivity"
-                android:value="com.nononsenseapps.notepad.dashclock.TasksSettings" />
+                android:value="eu.lavarde.spacetasker.dashclock.TasksSettings" />
         </service>
 
         <activity
-            android:name="com.nononsenseapps.notepad.ui.dashclock.TasksSettings"
+            android:name="eu.lavarde.spacetasker.ui.dashclock.TasksSettings"
             android:exported="true"
             android:label="@string/dashclock_title_activity_tasks_settings"
             android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA"
@@ -297,7 +297,7 @@
 
         <!-- DataBase provider -->
         <provider
-            android:name="com.nononsenseapps.notepad.data.local.sql.MyContentProvider"
+            android:name="eu.lavarde.spacetasker.data.local.sql.MyContentProvider"
             android:authorities="com.nononsenseapps.NotePad"
             android:enabled="true"
             android:exported="true"
@@ -305,7 +305,7 @@
 
         <!-- Receiver that schedules background sync for File and Dropbox -->
         <receiver
-            android:name="com.nononsenseapps.notepad.data.receiver.BackgroundSyncScheduler"
+            android:name="eu.lavarde.spacetasker.data.receiver.BackgroundSyncScheduler"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -315,7 +315,7 @@
         </receiver>
         <!-- Service that syncs with files -->
         <service
-            android:name="com.nononsenseapps.notepad.data.service.OrgSyncService"
+            android:name="eu.lavarde.spacetasker.data.service.OrgSyncService"
             android:enabled="true"
             android:exported="false"
             android:label="File Watcher"></service>

@@ -1,4 +1,4 @@
-package com.nononsenseapps.notepad.database;
+package eu.lavarde.spacetasker.database;
 
 import android.database.sqlite.SQLiteDatabase;
 

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.notepad.data.model.sql;
+package eu.lavarde.spacetasker.data.model.sql;
 
 import java.util.Calendar;
 
@@ -29,8 +29,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-import com.nononsenseapps.notepad.data.local.sql.LegacyDBHelper;
-import com.nononsenseapps.notepad.data.local.sql.MyContentProvider;
+import eu.lavarde.spacetasker.data.local.sql.LegacyDBHelper;
+import eu.lavarde.spacetasker.data.local.sql.MyContentProvider;
 
 public class TaskList extends DAO {
 

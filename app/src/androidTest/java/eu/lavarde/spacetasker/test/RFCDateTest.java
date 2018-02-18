@@ -1,11 +1,11 @@
-package com.nononsenseapps.notepad.test;
+package eu.lavarde.spacetasker.test;
 
 import java.util.Calendar;
 
 import android.test.AndroidTestCase;
 import android.util.Log;
 
-import com.nononsenseapps.notepad.util.RFC3339Date;
+import eu.lavarde.spacetasker.util.RFC3339Date;
 
 public class RFCDateTest extends AndroidTestCase {
 

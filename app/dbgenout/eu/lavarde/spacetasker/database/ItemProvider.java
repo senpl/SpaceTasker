@@ -1,5 +1,5 @@
 
-package com.nononsenseapps.notepad.database;
+package eu.lavarde.spacetasker.database;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -8,7 +8,7 @@ import android.database.Cursor;
 import android.net.Uri;
 
 public class ItemProvider extends ContentProvider {
-    public static final String AUTHORITY = "com.nononsenseapps.notepad.database.AUTHORITY";
+    public static final String AUTHORITY = "eu.lavarde.spacetasker.database.AUTHORITY";
     public static final String SCHEME = "content://";
 
     private static final UriMatcher sURIMatcher = new UriMatcher(
