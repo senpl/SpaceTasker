@@ -174,7 +174,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 	private static final int DATABASE_VERSION = 15;
-	public static final String DATABASE_NAME = "nononsense_notes.db";
+	public static final String DATABASE_NAME = "spacetasker.db";
 
 	private final Context context;
 	private final String testPrefix;
