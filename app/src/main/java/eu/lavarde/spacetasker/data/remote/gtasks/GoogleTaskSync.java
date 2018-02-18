@@ -28,7 +28,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Pair;
 
-import com.nononsenseapps.build.Config;
+import eu.lavarde.build.Config;
 import eu.lavarde.spacetasker.data.model.gtasks.GoogleTask;
 import eu.lavarde.spacetasker.data.model.gtasks.GoogleTaskList;
 import eu.lavarde.spacetasker.util.Log;

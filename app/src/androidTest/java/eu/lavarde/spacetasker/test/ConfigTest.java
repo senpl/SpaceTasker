@@ -22,7 +22,7 @@ import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.test.suitebuilder.annotation.Suppress;
 
-import com.nononsenseapps.build.Config;
+import eu.lavarde.build.Config;
 import eu.lavarde.spacetasker.*;
 import eu.lavarde.spacetasker.BuildConfig;
 

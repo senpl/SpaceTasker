@@ -25,7 +25,7 @@ import com.dropbox.client2.DropboxAPI;
 import com.dropbox.client2.android.AndroidAuthSession;
 import com.dropbox.client2.exception.DropboxException;
 import com.dropbox.client2.session.AppKeyPair;
-import com.nononsenseapps.build.Config;
+import eu.lavarde.build.Config;
 
 /**
  * This class has some utility functions for dealing with Dropbox. You need

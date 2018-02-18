@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nononsenseapps.build;
+package eu.lavarde.build;
 
 import android.content.Context;
 import android.content.res.AssetManager;

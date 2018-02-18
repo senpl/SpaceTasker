@@ -37,7 +37,7 @@ import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.nononsenseapps.build.Config;
+import eu.lavarde.build.Config;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 import eu.lavarde.spacetasker.BuildConfig;
 import eu.lavarde.spacetasker.R;

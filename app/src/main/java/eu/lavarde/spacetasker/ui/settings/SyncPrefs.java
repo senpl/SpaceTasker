@@ -43,7 +43,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
-import com.nononsenseapps.build.Config;
+import eu.lavarde.build.Config;
 import eu.lavarde.spacetasker.ui.orgmodedropbox.DropboxFilePickerActivity;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 import eu.lavarde.spacetasker.util.Log;
