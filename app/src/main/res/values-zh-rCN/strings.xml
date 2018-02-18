@@ -185,7 +185,7 @@
   <string name="dashclock_show_overdue_tasks">显示过期任务</string>
   <string name="dashclock_overdue_tasks_show">过期任务将被显示</string>
   <string name="dashclock_overdue_tasks_hide">过期任务将被隐藏</string>
-  <string name="dashclock_title_activity_tasks_settings">NoNonsense 便签设置</string>
+  <string name="dashclock_title_activity_tasks_settings">SpaceTasker 便签设置</string>
   <string name="dashclock_pref_header_general">一般</string>
   <string name="dashclock_due_upper_limit_title">仅限最晚过期的任务</string>
   <string name="dashclock_today">今天</string>

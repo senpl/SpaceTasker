@@ -186,7 +186,7 @@
   <string name="dashclock_show_overdue_tasks">Vis forfaldne opgaver</string>
   <string name="dashclock_overdue_tasks_show">Forfaldne opgaver vil blive vist</string>
   <string name="dashclock_overdue_tasks_hide">Forfaldne opgaver vil blive skjult</string>
-  <string name="dashclock_title_activity_tasks_settings">NoNonsense Notes Indstillinger</string>
+  <string name="dashclock_title_activity_tasks_settings">SpaceTasker Indstillinger</string>
   <string name="dashclock_pref_header_general">Generelt</string>
   <string name="dashclock_due_upper_limit_title">Begræns til opgaver med forfaldsdato senest</string>
   <string name="dashclock_today">Idag</string>

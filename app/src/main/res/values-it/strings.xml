@@ -174,7 +174,7 @@
   <string name="dashclock_show_overdue_tasks">Mostra attività scadute</string>
   <string name="dashclock_overdue_tasks_show">Le attività scadute verranno mostrate</string>
   <string name="dashclock_overdue_tasks_hide">Le attività scadute verranno nascoste</string>
-  <string name="dashclock_title_activity_tasks_settings">Impostazioni NoNonsense Notes</string>
+  <string name="dashclock_title_activity_tasks_settings">Impostazioni SpaceTasker</string>
   <string name="dashclock_pref_header_general">Generale</string>
   <string name="dashclock_due_upper_limit_title">Limite per attività scadute al più tardi</string>
   <string name="dashclock_today">Oggi</string>

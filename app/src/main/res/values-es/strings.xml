@@ -177,7 +177,7 @@
   <string name="dashclock_show_overdue_tasks">Mostrar tareas pasadas</string>
   <string name="dashclock_overdue_tasks_show">Las tareas pasadas se mostrarán</string>
   <string name="dashclock_overdue_tasks_hide">Las tareas pasadas se ocultarán</string>
-  <string name="dashclock_title_activity_tasks_settings">Ajustes NoNonsense Notes</string>
+  <string name="dashclock_title_activity_tasks_settings">Ajustes SpaceTasker</string>
   <string name="dashclock_today">Hoy</string>
   <string name="dashclock_tomorrow">Mañana</string>
   <string name="dashclock_next7">Próximos 7 dias</string>

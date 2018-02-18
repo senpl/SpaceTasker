@@ -142,7 +142,7 @@
   <string name="dashclock_show_overdue_tasks">Mostrar tarefas pasadas</string>
   <string name="dashclock_overdue_tasks_show">Mostraranse as tarefas pasadas</string>
   <string name="dashclock_overdue_tasks_hide">Agocharanse as tarefas pasadas</string>
-  <string name="dashclock_title_activity_tasks_settings">Axustes de NoNonsense Notes</string>
+  <string name="dashclock_title_activity_tasks_settings">Axustes de SpaceTasker</string>
   <string name="dashclock_pref_header_general">Xeral</string>
   <string name="dashclock_today">Hoxe</string>
   <string name="dashclock_tomorrow">Mañá</string>

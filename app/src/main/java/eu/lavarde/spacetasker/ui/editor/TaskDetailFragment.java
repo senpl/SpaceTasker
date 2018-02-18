@@ -417,7 +417,7 @@ public class TaskDetailFragment extends Fragment implements OnDateSetListener {
                         .EXTRA_SUBJECT, text.substring(0, titleEnd)));*/
             } catch (RuntimeException e) {
                 // Can crash when too many transactions overflow the buffer
-                Log.d("nononsensenotes", e.getLocalizedMessage());
+                Log.d("spacetasker", e.getLocalizedMessage());
             }
         }
     }

@@ -195,7 +195,7 @@
   <string name="dashclock_show_overdue_tasks">Hiện nhiệm vụ quá hạn</string>
   <string name="dashclock_overdue_tasks_show">Hiện các nhiệm vụ quá hạn</string>
   <string name="dashclock_overdue_tasks_hide">Ẩn các nhiệm vụ quá hạn</string>
-  <string name="dashclock_title_activity_tasks_settings">Cài đặt NoNonsense Notes</string>
+  <string name="dashclock_title_activity_tasks_settings">Cài đặt SpaceTasker</string>
   <string name="dashclock_pref_header_general">Chung</string>
   <string name="dashclock_due_upper_limit_title">Áp dụng cho các nhiệm vụ kết thúc muộn nhất vào</string>
   <string name="dashclock_today">Hôm nay</string>

@@ -271,7 +271,7 @@
         <service
             android:name="eu.lavarde.spacetasker.ui.dashclock.TasksExtension"
             android:icon="@drawable/ic_stat_notification_edit"
-            android:label="@string/dashclock_nononsense_notes"
+            android:label="@string/dashclock_spacetasker"
             android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
             <intent-filter>
                 <action android:name="com.google.android.apps.dashclock.Extension" />
@@ -282,7 +282,7 @@
                 android:value="1" />
             <meta-data
                 android:name="description"
-                android:value="Displays your tasks from NoNonsense Notes." />
+                android:value="Displays your tasks from SpaceTasker." />
             <meta-data
                 android:name="settingsActivity"
                 android:value="eu.lavarde.spacetasker.dashclock.TasksSettings" />

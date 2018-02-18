@@ -189,7 +189,7 @@
   <string name="dashclock_show_overdue_tasks">Показване на просрочените задачи</string>
   <string name="dashclock_overdue_tasks_show">Просрочените задачи ще бъдат показвани</string>
   <string name="dashclock_overdue_tasks_hide">Просрочените задачи ще бъдат скрити</string>
-  <string name="dashclock_title_activity_tasks_settings">Настройки на NoNonsense бележки</string>
+  <string name="dashclock_title_activity_tasks_settings">Настройки на SpaceTasker бележки</string>
   <string name="dashclock_pref_header_general">Общи</string>
   <string name="dashclock_due_upper_limit_title">Ограничаване до последните задачи</string>
   <string name="dashclock_today">Днес</string>

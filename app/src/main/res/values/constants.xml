@@ -83,7 +83,7 @@
     <!-- <string name="key_pref_group_on_lists">group_on_lists</string> -->
 
     <string name="preferences_week_start_day_default">-1</string>
-    <string name="dashclock_nononsense_notes">NoNonsense Notes</string>
+    <string name="dashclock_spacetasker">SpaceTasker</string>
     <string name="dashclock_tasks_count">%d</string>
     <!-- These are intended for the upper_limit_values array -->
     <string name="dashclock_pref_today">Today</string>

@@ -190,7 +190,7 @@
   <string name="dashclock_show_overdue_tasks">Wys laat take</string>
   <string name="dashclock_overdue_tasks_show">Laat take sal vertoon</string>
   <string name="dashclock_overdue_tasks_hide">Laat take sal nie vertoon nie</string>
-  <string name="dashclock_title_activity_tasks_settings">NoNonsense Notes Instellings</string>
+  <string name="dashclock_title_activity_tasks_settings">SpaceTasker Instellings</string>
   <string name="dashclock_pref_header_general">Algemeen</string>
   <string name="dashclock_due_upper_limit_title">Wys slegs take wat moet klaarkom teen</string>
   <string name="dashclock_today">Vandag</string>

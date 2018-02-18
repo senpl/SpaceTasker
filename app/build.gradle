@@ -69,7 +69,7 @@ android {
     // 60000 to be above all previous versions before gitCommitCount was used
     versionCode 60000 + gitCommitCount
     versionName gitTag
-    archivesBaseName = "nononsensenotes-${gitTag}".toString()
+    archivesBaseName = "spacetasker-${gitTag}".toString()
 
     resValue "string", "VERSION_NAME", "${gitTag}"
     resValue "string", "GIT_SHA", "${gitSha}"

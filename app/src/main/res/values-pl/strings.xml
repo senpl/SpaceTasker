@@ -188,7 +188,7 @@
   <string name="dashclock_show_overdue_tasks">Wyświetl zaległe zadania</string>
   <string name="dashclock_overdue_tasks_show">Zaległe zadania będą wyświetlane</string>
   <string name="dashclock_overdue_tasks_hide">Zaległe zadania nie będą wyświetlane</string>
-  <string name="dashclock_title_activity_tasks_settings">Ustawienia notesu NoNonsense</string>
+  <string name="dashclock_title_activity_tasks_settings">Ustawienia SpaceTasker</string>
   <string name="dashclock_pref_header_general">Ogólny</string>
   <string name="dashclock_due_upper_limit_title">Ogranicz do zadań występujących</string>
   <string name="dashclock_today">Dziś</string>

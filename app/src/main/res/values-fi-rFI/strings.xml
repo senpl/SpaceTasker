@@ -189,7 +189,7 @@
   <string name="dashclock_show_overdue_tasks">Näytä erääntyneet tehtävät</string>
   <string name="dashclock_overdue_tasks_show">Erääntyneet tehtävät näytetään</string>
   <string name="dashclock_overdue_tasks_hide">Erääntyneet tehtävät piilotetaan</string>
-  <string name="dashclock_title_activity_tasks_settings">NoNonsense -muistiinpanojen asetukset</string>
+  <string name="dashclock_title_activity_tasks_settings">SpaceTasker -muistiinpanojen asetukset</string>
   <string name="dashclock_pref_header_general">Yleiset</string>
   <string name="dashclock_due_upper_limit_title">Rajaa seuraavaksi erääntyviin tehtäviin</string>
   <string name="dashclock_today">Tänään</string>

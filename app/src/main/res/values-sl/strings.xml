@@ -188,7 +188,7 @@
   <string name="dashclock_show_overdue_tasks">Pokaži zapadla opravila</string>
   <string name="dashclock_overdue_tasks_show">Bo prikazan zapadla opravila</string>
   <string name="dashclock_overdue_tasks_hide">Zapadla opravila bo skrit</string>
-  <string name="dashclock_title_activity_tasks_settings">NoNonsense opomba nastavitve</string>
+  <string name="dashclock_title_activity_tasks_settings">SpaceTasker nastavitve</string>
   <string name="dashclock_pref_header_general">Splošno</string>
   <string name="dashclock_due_upper_limit_title">Omejitev naloge zaradi najkasneje</string>
   <string name="dashclock_today">Danes</string>

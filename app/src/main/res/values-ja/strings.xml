@@ -188,7 +188,7 @@
   <string name="dashclock_show_overdue_tasks">期限切れタスクを表示</string>
   <string name="dashclock_overdue_tasks_show">期限切れタスクが表示されます</string>
   <string name="dashclock_overdue_tasks_hide">期限切れタスクが表示されません</string>
-  <string name="dashclock_title_activity_tasks_settings">NoNonsense Notes設定</string>
+  <string name="dashclock_title_activity_tasks_settings">SpaceTasker設定</string>
   <string name="dashclock_pref_header_general">一般</string>
   <string name="dashclock_due_upper_limit_title">タスクの期限で限定</string>
   <string name="dashclock_today">今日</string>
