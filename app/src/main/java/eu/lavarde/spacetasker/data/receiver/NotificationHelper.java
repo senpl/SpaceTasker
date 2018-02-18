@@ -54,7 +54,7 @@ public class NotificationHelper extends BroadcastReceiver {
 	private static final String ACTION_COMPLETE = "eu.lavarde.spacetasker.ACTION.COMPLETE";
 	private static final String ACTION_SNOOZE = "eu.lavarde.spacetasker.ACTION.SNOOZE";
 	private static final String ACTION_RESCHEDULE = "eu.lavarde.spacetasker.ACTION.RESCHEDULE";
-	private static final String TAG = "nononsenseapps.NotificationHelper";
+	private static final String TAG = "spacetasker.NotificationHelper";
 
 	private static ContextObserver observer = null;
 

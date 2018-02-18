@@ -9,7 +9,7 @@ import eu.lavarde.spacetasker.util.RFC3339Date;
 
 public class RFCDateTest extends AndroidTestCase {
 
-	static final String TAG = "nononsenseapps rfctest";
+	static final String TAG = "spacetasker rfctest";
 	
 	// Sun May  5 23:53:10 2013
 	static final long atime = 1367790790000L;

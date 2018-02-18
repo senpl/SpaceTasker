@@ -379,9 +379,9 @@ public class MyContentProvider extends ContentProvider {
 			String selection, String[] selectionArgs, String sortOrder) {
 		Cursor result = null;
 		final long id;
-		// if (selection != null) Log.d("nononsenseapps", selection);
+		// if (selection != null) Log.d("spacetasker", selection);
 		// if (selectionArgs != null)
-		// Log.d("nononsenseapps", DAO.arrayToCommaString(selectionArgs));
+		// Log.d("spacetasker", DAO.arrayToCommaString(selectionArgs));
 		switch (sURIMatcher.match(uri)) {
 		case TaskList.BASEURICODE:
 			result = DatabaseHandler
@@ -655,7 +655,7 @@ public class MyContentProvider extends ContentProvider {
 		case Task.LEGACYVISIBLEITEMCODE:
 		default:
 
-			Log.d("nononsenseapps db",
+			Log.d("spacetasker db",
 					"Faulty queryURI provided: " + uri.toString());
 			return null;
 

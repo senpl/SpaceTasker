@@ -224,7 +224,7 @@ public class DBProviderMovementTest extends AndroidTestCase {
 
 	private ArrayList<Task> moveAndAssert(final TaskList tl, final int fromPos,
 			final int toPos) {
-		Log.i("nononsenseapps test", "Testing move from: " + fromPos + " to "
+		Log.d("spacetasker test", "Testing move from: " + fromPos + " to "
 				+ toPos);
 		// Get ordered
 		final ArrayList<Task> oldtasks = getTasks(tl._id);
@@ -255,7 +255,7 @@ public class DBProviderMovementTest extends AndroidTestCase {
 				newtarget = t;
 			}
 		}
-		Log.d("nononsenseapps test", "old, target, new, newtarget: "
+		Log.d("spacetasker test", "old, target, new, newtarget: "
 				+ movingTask.left + "," + movingTask.right + " "
 				+ targetTask.left + "," + targetTask.right + " " + newone.left
 				+ "," + newone.right + " " + newtarget.left + ","

@@ -143,10 +143,10 @@ public class TaskDetailFragment extends Fragment implements OnDateSetListener {
                         // Don't want updates while editing
                         // getLoaderManager().destroyLoader(LOADER_EDITOR_TASK);
                         // Only update the list if that changes
-                        Log.d("nononsenseapps listedit", "Updating list in task from " + mTask
+                        Log.d("spacetasker listedit", "Updating list in task from " + mTask
                                 .dblist);
                         mTask.dblist = new Task(c).dblist;
-                        Log.d("nononsenseapps listedit", "Updating list in task to " + mTask
+                        Log.d("spacetasker listedit", "Updating list in task to " + mTask
                                 .dblist);
                         if (mTaskOrg != null) {
                             mTaskOrg.dblist = mTask.dblist;
@@ -344,7 +344,7 @@ public class TaskDetailFragment extends Fragment implements OnDateSetListener {
     }
 
     void fillUIFromTask() {
-        Log.d("nononsenseapps editor", "fillUI, act: " + getActivity());
+        Log.d("spacetasker editor", "fillUI, act: " + getActivity());
         if (isLocked()) {
             FragmentHelper.handle(new Runnable() {
                 @Override

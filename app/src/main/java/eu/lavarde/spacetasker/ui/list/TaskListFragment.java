@@ -358,7 +358,7 @@ public class TaskListFragment extends Fragment
     /*mAdapter.setDropListener(new DropListener() {
       @Override
       public void drop(int from, int to) {
-        Log.d("nononsenseapps drag", "Position from " + from + " to " + to);
+        Log.d("spacetasker drag", "Position from " + from + " to " + to);
 
         final Task fromTask = new Task((Cursor) mAdapter.getItem(from));
         final Task toTask = new Task((Cursor) mAdapter.getItem(to));

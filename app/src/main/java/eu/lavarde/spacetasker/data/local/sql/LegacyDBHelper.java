@@ -938,7 +938,7 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 				newCol = Task.Columns.COMPLETED;
 			}
 
-			//Log.d("nononsenseapps db", "legacy converted field:" + newCol);
+			//Log.d("spacetasker db", "legacy converted field:" + newCol);
 			newCols[i] = newCol;
 		}
 		return newCols;
@@ -979,7 +979,7 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 					val = null;
 				}
 			}
-			//Log.d("nononsenseapps db", "legacy notes col: " + val);
+			//Log.d("spacetasker db", "legacy notes col: " + val);
 			retval[i] = val;
 		}
 		return retval;

@@ -27,7 +27,7 @@ import eu.lavarde.spacetasker.util.Log;
 
 public class GoogleTaskList extends RemoteTaskList {
 
-	private static final String TAG = "nononsenseapps";
+	private static final String TAG = "spacetasker";
 	public static final String SERVICENAME = "googletasks";
 	//public String id = null;
 	public String title = null;

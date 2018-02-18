@@ -50,7 +50,7 @@ import java.util.List;
 import retrofit.RetrofitError;
 
 public class GoogleTaskSync {
-	static final String TAG = "nononsenseapps gtasksync";
+	static final String TAG = "spacetasker gtasksync";
 	public static final boolean NOTIFY_AUTH_FAILURE = true;
 	public static final String PREFS_LAST_SYNC_ETAG = "lastserveretag";
 	public static final String PREFS_GTASK_LAST_SYNC_TIME = "gtasklastsync";
@@ -659,7 +659,7 @@ public class GoogleTaskSync {
 			}
 			else {
 //				if (localTask != null) {
-//					Log.d("nononsenseapps gtasksync", "going to upload: " + localTask.title + ", l." + localTask.updated + " r." + remoteTask.updated);
+//					Log.d("spacetasker gtasksync", "going to upload: " + localTask.title + ", l." + localTask.updated + " r." + remoteTask.updated);
 //				}
                 Log.d(TAG, "add to sync list: " + remoteTask.title);
 				taskPairs
@@ -670,7 +670,7 @@ public class GoogleTaskSync {
 		// Add local lists without a remote version to pairs
 		for (final Task t : loadNewTasksFromDB(context, listPair.first._id,
 				listPair.second.account)) {
-			//Log.d("nononsenseapps gtasksync", "adding local only: " + t.title);
+			//Log.d("spacetasker gtasksync", "adding local only: " + t.title);
 			taskPairs.add(new Pair<Task, GoogleTask>(t, null));
 		}
 

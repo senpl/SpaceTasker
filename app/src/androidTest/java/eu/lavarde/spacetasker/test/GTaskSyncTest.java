@@ -275,7 +275,7 @@ public class GTaskSyncTest extends AndroidTestCase {
 		GoogleTaskSync.mergeTasksWithLocalDB(mContext, account, remoteTasks,
 				tl._id);
 
-		Log.d("nononsenseapps gtasktest",
+		Log.d("spacetasker gtasktest",
 				"remoteTasks size: " + remoteTasks.size());
 		assertEquals("mergeTasks did not equal expected size!", remoteTasksInDB
 				.get(gl).size() + remoteOnlyCount, remoteTasks.size());
@@ -292,7 +292,7 @@ public class GTaskSyncTest extends AndroidTestCase {
 			// And that list is set!
 			assertTrue("List id was not set", gt.listdbid > 0);
 
-			Log.d("nononsenseapps gtasktest", gt.remoteId);
+			Log.d("spacetasker gtasktest", gt.remoteId);
 		}
 
 		assertEquals("Only two tasks were remote only!", remoteOnlyCount,
@@ -312,13 +312,13 @@ public class GTaskSyncTest extends AndroidTestCase {
 		assertNotNull(pairs);
 		// for (Pair<TaskList, GoogleTaskList> pair : pairs) {
 		// if (pair.first == null) {
-		// Log.d("nononsenseapps gtasktest", "r: " + pair.second.title);
+		// Log.d("spacetasker gtasktest", "r: " + pair.second.title);
 		// }
 		// else if (pair.second == null) {
-		// Log.d("nononsenseapps gtasktest", "l: " + pair.first.title);
+		// Log.d("spacetasker gtasktest", "l: " + pair.first.title);
 		// }
 		// else
-		// Log.d("nononsenseapps gtasktest", "l: " + pair.first.title
+		// Log.d("spacetasker gtasktest", "l: " + pair.first.title
 		// + ", r: " + pair.second.title);
 		// }
 		assertEquals("Resulting list seems to have wrong size", initialSize
@@ -410,7 +410,7 @@ public class GTaskSyncTest extends AndroidTestCase {
 				if (pair.first.updated > pair.second.updated){
 					localNewestCount++;
 
-					Log.d("nononsenseapps gtasksync", "local newest: "
+					Log.d("spacetasker gtasksync", "local newest: "
 							+ pair.first.title + " : " + pair.second.title);
 				}
 				else {
@@ -424,7 +424,7 @@ public class GTaskSyncTest extends AndroidTestCase {
 					assertNotNull("Title is not allowed to be null",
 							pair.first.title);
 
-					Log.d("nononsenseapps gtasksync", "remote newest: "
+					Log.d("spacetasker gtasksync", "remote newest: "
 							+ pair.first.title + " : " + pair.second.title);
 				}
 			}
@@ -436,9 +436,9 @@ public class GTaskSyncTest extends AndroidTestCase {
 				localTasks.get(tl).size() - remoteTasksInDB.get(gl).size(),
 				remoteNullCount);
 
-		Log.d("nononsenseapps gtasksync", "localnewest: "
+		Log.d("spacetasker gtasksync", "localnewest: "
 				+ localTaskNewestCount + " vs " + localNewestCount);
-		Log.d("nononsenseapps gtasksync", "remotenewest: "
+		Log.d("spacetasker gtasksync", "remotenewest: "
 				+ remoteTaskNewestCount + " vs " + remoteNewestCount);
 
 		assertTrue("local count", localNewestCount > 0);
