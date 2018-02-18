@@ -45,7 +45,7 @@ import java.util.List;
 
 public class JSONBackup {
 	public static final String DEFAULT_BACKUP_DIR = Environment
-			.getExternalStorageDirectory().toString() + "/NoNonsenseNotes";
+			.getExternalStorageDirectory().toString() + "/SpaceTasker";
 	public static final String DEFAULT_BACKUP_FILENAME = "/backup.json";
 	public static final String DEFAULT_BACKUP_FILEPATH = DEFAULT_BACKUP_DIR
 			+ DEFAULT_BACKUP_FILENAME;

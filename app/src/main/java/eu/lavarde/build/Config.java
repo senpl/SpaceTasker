@@ -49,7 +49,7 @@ public class Config {
                 props.load(inputStream);
                 inputStream.close();
             } catch (IOException e) {
-                Log.e("NoNonsenseNotes Props:", e.getLocalizedMessage());
+                Log.e("SpaceTasker Props:", e.getLocalizedMessage());
             }
         }
         return props;

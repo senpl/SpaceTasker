@@ -49,7 +49,7 @@ public class DropboxSynchronizer extends Synchronizer implements
         SynchronizerInterface {
 
     // Where files are kept. User changeable in preferences.
-    public static final String DEFAULT_DIR = "/NoNonsenseNotes/";
+    public static final String DEFAULT_DIR = "/SpaceTasker/";
     public static final String PREF_DIR = SyncPrefs.KEY_DROPBOX_DIR;
     public static final String PREF_ENABLED = SyncPrefs.KEY_DROPBOX_ENABLE;
     public final static String SERVICENAME = "DROPBOXORG";

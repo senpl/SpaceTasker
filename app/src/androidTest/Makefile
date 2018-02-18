@@ -15,14 +15,14 @@ uninstall:
 	adb uninstall eu.lavarde.spacetasker.test
 
 makeinstallmother:
-	cd ../NoNonsenseNotes/;make debug install
+	cd ../SpaceTasker/;make debug install
 
 #For class: -Dspoon.test.class=fully.qualified.ClassName
 #For method in that class, also: -Dspoon.test.method=testAllTheThings
 # FIXME what is this good for?
 testspoon:
 	java -jar spoon-runner-1.0.2-jar-with-dependencies.jar \
---apk ../NoNonsenseNotes/bin/SpaceTasker-debug.apk \
+--apk ../SpaceTasker/bin/SpaceTasker-debug.apk \
 --test-apk bin/Test-debug.apk \
 --sdk ~/android-sdk-linux
 

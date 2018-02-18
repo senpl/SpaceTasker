@@ -49,7 +49,7 @@ public class SDSynchronizer extends Synchronizer implements
 
 	// Where files are kept. User changeable in preferences.
 	public static final String DEFAULT_ORG_DIR = Environment
-			.getExternalStorageDirectory().toString() + "/NoNonsenseNotes";
+			.getExternalStorageDirectory().toString() + "/SpaceTasker";
     public final static String SERVICENAME = "SDORG";
     protected String ORG_DIR;
     protected final boolean configured;
