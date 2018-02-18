@@ -115,13 +115,13 @@
 
                     <eu.lavarde.spacetasker.ui.common.DelegateFrame
                         android:id="@+id/checkboxcontainer"
-                        xmlns:nononsenseapps="http://nononsenseapps.com"
+			xmlns:spacetasker="http://lavarde.eu/spacetasker"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:clickable="true"
-                        nononsenseapps:enlargedView="@+id/taskCompleted">
+                        spacetasker:enlargedView="@+id/taskCompleted">
 
                         <CheckBox
                             android:id="@+id/taskCompleted"

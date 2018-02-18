@@ -3,4 +3,4 @@
 BASE="."
 
 echo 'Send base strings.xml file from working dir.'
-scp "$BASE/res/values/strings.xml" linode:/www/translate.nononsenseapps.com/public_html/res/values/
+scp "$BASE/res/values/strings.xml" FIXMEserver:/www/translate.FIXMElavarde.eu/public_html/res/values/
