@@ -59,8 +59,6 @@ import eu.lavarde.spacetasker.data.local.orgmode.SDSynchronizer;
 import java.io.File;
 import java.io.IOException;
 
-// import eu.lavarde.spacetasker.NotePad;
-
 public class SyncPrefs extends PreferenceFragment implements
         OnSharedPreferenceChangeListener {
 

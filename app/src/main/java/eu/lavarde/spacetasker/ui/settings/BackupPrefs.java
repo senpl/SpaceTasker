@@ -33,8 +33,6 @@ import eu.lavarde.spacetasker.data.local.json.JSONBackup;
 
 import java.io.FileNotFoundException;
 
-// import eu.lavarde.spacetasker.NotePad;
-
 public class BackupPrefs extends PreferenceFragment {
 
 	public static final String KEY_IMPORT = "backup_import";
