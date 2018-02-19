@@ -1,10 +1,10 @@
-**Q: Why is a task manager named "Notes"?**
+**Q: Why is a task manager having "Notes"?**
 
 *A: The app started with only the note taking features. Syncing with
 Google Tasks seemed like a good idea because everyone already has a
 Google account. Then it only made sense to support the rest of the
-features of Google Tasks. I'm not happy with the current state of things
-and am thinking about ways to separate the two concepts (Notes/Tasks)*
+features of Google Tasks, but the concept of "Notes" remained here
+and there throughout the application.
 
 **Q: Can you make a theme with yellow background and black lines?**
 
