@@ -48,7 +48,7 @@ public class TaskList extends DAO {
 		return Uri.withAppendedPath(URI, Long.toString(id));
 	}
 
-	public static final String CONTENT_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.list";
+	public static final String CONTENT_TYPE = "vnd.android.cursor.item/vnd.spacetasker.list";
 
 	public static final int BASEURICODE = 101;
 	public static final int BASEITEMCODE = 102;

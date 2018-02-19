@@ -88,7 +88,7 @@ public class Task extends DAO {
 	public static final String HEADER_KEY_NODATE = "nodate";
 	public static final String HEADER_KEY_COMPLETE = "complete";
 
-	public static final String CONTENT_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.note";
+	public static final String CONTENT_TYPE = "vnd.android.cursor.item/vnd.spacetasker.note";
 
 	public static final Uri URI = Uri.withAppendedPath(
 			Uri.parse(MyContentProvider.SCHEME + MyContentProvider.AUTHORITY),

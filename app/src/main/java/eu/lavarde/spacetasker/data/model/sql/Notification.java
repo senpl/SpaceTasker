@@ -59,7 +59,7 @@ public class Notification extends DAO {
 	public static final String WITH_TASK_VIEW_NAME = "notification_with_tasks";
 	public static final String WITH_TASK_PATH = TABLE_NAME + "/with_task_info";
 
-	public static final String CONTENT_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps."
+	public static final String CONTENT_TYPE = "vnd.android.cursor.item/vnd.spacetasker."
 									+ TABLE_NAME;
 
 	public static final Uri URI = Uri.withAppendedPath(

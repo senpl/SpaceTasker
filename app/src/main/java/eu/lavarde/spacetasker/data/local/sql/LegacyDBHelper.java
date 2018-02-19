@@ -308,13 +308,13 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 			 * notes.
 			 */
 			// public static final String CONTENT_TYPE =
-			// "vnd.android.cursor.dir/vnd.nononsenseapps.note";
+			// "vnd.android.cursor.dir/vnd.spacetasker.note";
 
 			/**
 			 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 			 * note.
 			 */
-			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.note";
+			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.spacetasker.note";
 
 			public static final String CONTENT_TYPE = CONTENT_ITEM_TYPE;
 
@@ -512,13 +512,13 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 			 * The MIME type of {@link #CONTENT_URI} providing a directory.
 			 */
 			// public static final String CONTENT_TYPE =
-			// "vnd.android.cursor.dir/vnd.nononsenseapps.list";
+			// "vnd.android.cursor.dir/vnd.spacetasker.list";
 
 			/**
 			 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 			 * item.
 			 */
-			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.list";
+			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.spacetasker.list";
 
 			public static final String CONTENT_TYPE = CONTENT_ITEM_TYPE;
 
@@ -638,13 +638,13 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 			 * The MIME type of {@link #CONTENT_URI} providing a directory of
 			 * notes.
 			 */
-			public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps.gtask";
+			public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.spacetasker.gtask";
 
 			/**
 			 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 			 * note.
 			 */
-			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.gtask";
+			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.spacetasker.gtask";
 
 			/*
 			 * Column definitions
@@ -757,13 +757,13 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 			 * The MIME type of {@link #CONTENT_URI} providing a directory of
 			 * notes.
 			 */
-			public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps.gtasklist";
+			public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.spacetasker.gtasklist";
 
 			/**
 			 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 			 * note.
 			 */
-			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps.gtasklist";
+			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.spacetasker.gtasklist";
 
 			/*
 			 * Column definitions
@@ -896,14 +896,14 @@ public class LegacyDBHelper extends SQLiteOpenHelper {
 			 * The MIME type of {@link #CONTENT_URI} providing a directory of
 			 * notes.
 			 */
-			public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.nononsenseapps."
+			public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.spacetasker."
 					+ TABLE_NAME;
 
 			/**
 			 * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
 			 * note.
 			 */
-			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps."
+			public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.spacetasker."
 					+ TABLE_NAME;
 		}
 	}

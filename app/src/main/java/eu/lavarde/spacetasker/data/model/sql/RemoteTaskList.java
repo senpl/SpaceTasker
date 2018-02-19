@@ -34,7 +34,7 @@ public class RemoteTaskList extends DAO {
 	// SQL convention says Table name should be "singular"
 	public static final String TABLE_NAME = "remotetasklist";
 
-	public static final String CONTENT_TYPE = "vnd.android.cursor.item/vnd.nononsenseapps."
+	public static final String CONTENT_TYPE = "vnd.android.cursor.item/vnd.spacetasker."
 			+ TABLE_NAME;
 
 	public static final Uri URI = Uri.withAppendedPath(
