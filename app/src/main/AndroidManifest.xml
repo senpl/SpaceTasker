@@ -77,7 +77,7 @@
             android:name="eu.lavarde.spacetasker.data.receiver.SpaceTaskerBroadcastReceiver"
             tools:ignore="ExportedReceiver">
             <intent-filter>
-                <action android:name="com.nononsenseapps.completenote" />
+                <action android:name="eu.lavarde.spacetasker.completetask" />
             </intent-filter>
         </receiver>
 
@@ -105,7 +105,7 @@
                 <action android:name="android.intent.action.INSERT" />
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
-                <action android:name="com.nononsenseapps.completenote" />
+                <action android:name="eu.lavarde.spacetasker.completetask" />
 
                 <category android:name="android.intent.category.DEFAULT" />
 

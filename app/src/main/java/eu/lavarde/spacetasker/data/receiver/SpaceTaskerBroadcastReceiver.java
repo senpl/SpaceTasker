@@ -42,7 +42,7 @@ public class SpaceTaskerBroadcastReceiver extends BroadcastReceiver {
 				// Broadcast that it has been completed, primarily for
 				// AndroidAgendaWidget
 				context.sendBroadcast(new Intent(
-												context.getString(R.string.note_completed_broadcast_intent)));
+												context.getString(R.string.task_completed_broadcast_intent)));
 			}
 		}
 

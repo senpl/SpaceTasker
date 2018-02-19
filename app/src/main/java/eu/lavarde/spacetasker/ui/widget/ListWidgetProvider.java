@@ -88,7 +88,7 @@ public class ListWidgetProvider extends AppWidgetProvider {
 				Intent bintent = new Intent(context,
 						SpaceTaskerBroadcastReceiver.class);
 				bintent.setAction(context
-						.getString(R.string.complete_note_broadcast_intent));
+						.getString(R.string.complete_task_broadcast_intent));
 				bintent.putExtra(Task.Columns._ID, noteId);
 				context.sendBroadcast(bintent);
 			}
