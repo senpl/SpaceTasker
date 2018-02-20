@@ -87,7 +87,7 @@
                                android:hint="@string/editor_note_hint"
                                style="@style/TextAppearance.AppCompat.Subhead"/>-->
 
-                <com.nononsenseapps.notepad.ui.common.StyledEditText
+                <eu.lavarde.spacetasker.ui.common.StyledEditText
                     android:id="@+id/taskText"
                     style="@style/EditorTextStyle"
                     android:layout_width="match_parent"
@@ -113,15 +113,15 @@
                     android:layout_below="@+id/taskText"
                     android:layout_marginTop="16dp">
 
-                    <com.nononsenseapps.notepad.ui.common.DelegateFrame
+                    <eu.lavarde.spacetasker.ui.common.DelegateFrame
                         android:id="@+id/checkboxcontainer"
-                        xmlns:nononsenseapps="http://nononsenseapps.com"
+			xmlns:spacetasker="http://lavarde.eu/spacetasker"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:clickable="true"
-                        nononsenseapps:enlargedView="@+id/taskCompleted">
+                        spacetasker:enlargedView="@+id/taskCompleted">
 
                         <CheckBox
                             android:id="@+id/taskCompleted"
@@ -131,7 +131,7 @@
                             android:gravity="center"
                             android:nextFocusDown="@+id/notificationAdd"
                             android:nextFocusRight="@+id/dueDateBox"/>
-                    </com.nononsenseapps.notepad.ui.common.DelegateFrame>
+                    </eu.lavarde.spacetasker.ui.common.DelegateFrame>
 
                     <ImageButton
                         android:id="@+id/dueCancelButton"

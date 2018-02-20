@@ -57,9 +57,9 @@
 
     <string name="gtask_status_uncompleted">needsAction</string>
     <string name="gtask_status_completed">completed</string>
-    <string name="complete_note_broadcast_intent">com.nononsenseapps.completenote</string>
+    <string name="complete_task_broadcast_intent">eu.lavarde.spacetasker.completetask</string>
     <!-- For when they HAVE been completed, for AndroidAgendaWidget primarily -->
-    <string name="note_completed_broadcast_intent">com.nononsenseapps.notecompleted</string>
+    <string name="task_completed_broadcast_intent">eu.lavarde.spacetasker.taskcompleted</string>
     <!-- Theme constants should contain "light" if a light timepicker is appropriate -->
     <string name="const_theme_dark">dark</string>
     <string name="const_theme_black">black</string>
@@ -83,7 +83,7 @@
     <!-- <string name="key_pref_group_on_lists">group_on_lists</string> -->
 
     <string name="preferences_week_start_day_default">-1</string>
-    <string name="dashclock_nononsense_notes">NoNonsense Notes</string>
+    <string name="dashclock_spacetasker">SpaceTasker</string>
     <string name="dashclock_tasks_count">%d</string>
     <!-- These are intended for the upper_limit_values array -->
     <string name="dashclock_pref_today">Today</string>
@@ -95,6 +95,7 @@
     <string name="libraries_used">Libraries used</string>
 
     <string name="app_about">Copyright (&#169;) 2015 Jonas Kalderstam.\n\n
+Copyright (&#169;) 2018 Eric Lavarde.\n\n
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -105,7 +106,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 General Public License for more details.\n\n
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see http://www.gnu.org/licenses.\n\n
-Report bugs and issues: https://github.com/spacecowboy/NotePad/issues.\n\n
-Help translate the app: http://translate.nononsenseapps.com.</string>
+Report bugs and issues: https://github.com/ericzolf/SpaceTasker/issues.\n\n
+Help translate the app: TODO find a fitting translation service.</string>
 
 </resources>

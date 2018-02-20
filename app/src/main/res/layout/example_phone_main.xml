@@ -30,7 +30,7 @@
         android:layout_height="match_parent"
     	android:layout_marginLeft="@dimen/editor_side_margin"
     	android:layout_marginRight="@dimen/editor_side_margin"
-        class="com.nononsenseapps.notepad.fragments.TaskDetailFragment_"
+        class="eu.lavarde.spacetasker.fragments.TaskDetailFragment_"
         tools:layout="@layout/fragment_task_detail" />
 
     <!-- The navigation drawer -->

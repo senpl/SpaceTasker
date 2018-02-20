@@ -24,7 +24,7 @@
     android:background="@color/navdrawer_background"
     android:fitsSystemWindows="true"
     app:headerLayout="@layout/nav_header"
-    tools:context="com.nononsenseapps.notepad.fragment.NavigationDrawerFragment">-->
+    tools:context="eu.lavarde.spacetasker.fragment.NavigationDrawerFragment">-->
 
 <android.support.v7.widget.RecyclerView
     android:id="@+id/left_drawer"

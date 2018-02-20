@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:autoLink="web|email|map"
-            android:text="For latest information go to http://www.nononsenseapps.com"
+            android:text="For latest information go to https://github.com/ericzolf/SpaceTasker"
             android:textStyle="bold" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:autoLink="web|email|map"
-            android:text="Go to http://translate.nononsenseapps.com to help translate the app to your native language." />
+            android:text="Go to FIXME-URL to help translate the app to your native language." />
 
         <TextView
             android:layout_width="fill_parent"

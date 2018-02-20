@@ -16,7 +16,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:configure="com.nononsenseapps.notepad.widget.ListWidgetConfig_"
+    android:configure="eu.lavarde.spacetasker.widget.ListWidgetConfig_"
     android:initialLayout="@layout/widget_layout"
     android:minHeight="110dp"
     android:minResizeHeight="110dp"

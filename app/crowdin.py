@@ -31,9 +31,9 @@ Now, we want the structure to be named values-es/strings.xml instead.
 
 Example yaml:
 
-project_identifier: nononsensenotes
+project_identifier: FIXME
 api_key: some-key-here
-base_path: /home/jonas/workspace/NotePad/app
+base_path: /home/jonas/workspace/FIXME/app
 
 # Only files named here are renamed.
 files:

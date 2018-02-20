@@ -26,7 +26,7 @@
         android:fillViewport="true"
         android:isScrollContainer="true"
         android:scrollbars="vertical"
-        tools:context="com.nononsenseapps.notepad.ui.widget.ListWidgetConfig"
+        tools:context="eu.lavarde.spacetasker.ui.widget.ListWidgetConfig"
         tools:ignore="Overdraw">
 
         <LinearLayout
@@ -36,7 +36,7 @@
             android:orientation="vertical"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            tools:context="com.nononsenseapps.notepad.ui.widget.ListWidgetConfig">
+            tools:context="eu.lavarde.spacetasker.ui.widget.ListWidgetConfig">
 
             <Spinner
                 android:id="@+id/listSpinner"
