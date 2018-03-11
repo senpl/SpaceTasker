@@ -197,6 +197,7 @@ public class SyncGtaskHelper {
 
         if (!accountName.isEmpty()) {
             Account account = getAccount(AccountManager.get(context), accountName);
+            // TODO cleanly fail if account is null, can be due to Google forcing a gmail address
             // Don't start a new sync if one is already going
             if (!ContentResolver.isSyncActive(account, MyContentProvider.AUTHORITY)) {
                 Bundle options = new Bundle();
