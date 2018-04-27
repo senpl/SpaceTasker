@@ -18,9 +18,10 @@
 buildscript {
   repositories {
     jcenter()
+      google()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.0.1'
+    classpath 'com.android.tools.build:gradle:3.1.2'
     // the latest version of the android-apt plugin for annotations
     classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
     // For publishing stuff to Google Play
@@ -34,6 +35,7 @@ apply plugin: 'com.github.triplet.play'
 
 repositories {
   jcenter()
+    google()
 }
 
 play {
@@ -142,7 +144,7 @@ dependencies {
   implementation project(':external:datetimepicker')
   // Dropbox and non-free stuff
   playImplementation fileTree(dir: 'src/play/libs', include: '*.jar')
-  playBetaImplementation fileTree(dir: 'src/play/libs', include: '*.jar')
+//  playBetaImplementation fileTree(dir: 'src/play/libs', include: '*.jar')
   // Tests
   androidTestImplementation 'com.squareup.spoon:spoon-client:1.1.1'
   androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2', {
