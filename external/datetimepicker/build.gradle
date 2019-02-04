@@ -22,7 +22,7 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.1.2'
+    classpath 'com.android.tools.build:gradle:3.3.0'
   }
 }
 
@@ -35,7 +35,6 @@ dependencies {
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '26.0.2'
 
     lintOptions {
         abortOnError false
@@ -54,5 +53,9 @@ android {
 
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
+    }
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
     }
 }
